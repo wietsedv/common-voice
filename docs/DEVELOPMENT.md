@@ -253,6 +253,18 @@ yarn lint
 
 > For now this is not automatically checked on Pull Requests or blocking while we fix existing issues.
 
+## Linting
+
+We're using ESLint (with Typescript) and Prettier to lint the project.
+
+Install ESlint and Prettier extentions into your code editor or you can run this for all files with:
+
+```bash
+yarn lint
+```
+
+> For now this is not automatically checked on Pull Requests or blocking while we fix existing issues.
+
 ## Authentication
 
 If you want to work with login-related features (Profile, Dashboard, Goals, ...) you'll need to set up authentication:

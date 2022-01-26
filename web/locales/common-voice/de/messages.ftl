@@ -42,7 +42,6 @@ ba = Baschkirisch
 bas = Basaa
 be = Weißrussisch
 bg = Bulgarisch
-bm = Bambara
 bn = Bengali
 bo = Tibetisch
 br = Bretonisch
