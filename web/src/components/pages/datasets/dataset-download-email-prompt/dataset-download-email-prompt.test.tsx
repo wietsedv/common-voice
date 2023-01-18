@@ -55,7 +55,6 @@ describe('DatasetDownloadEmailPrompt', () => {
           releaseId={selectedDataset.id.toString()}
           checksum={selectedDataset.checksum}
           size={selectedDataset.size}
-          isSubscribedToMailingList={false}
         />
       )
       const results = await axe(renderResult.container)
@@ -72,7 +71,6 @@ describe('DatasetDownloadEmailPrompt', () => {
           releaseId={selectedDataset.id.toString()}
           checksum={selectedDataset.checksum}
           size={selectedDataset.size}
-          isSubscribedToMailingList={false}
         />
       )
 
@@ -92,7 +90,6 @@ describe('DatasetDownloadEmailPrompt', () => {
           releaseId={selectedDataset.id.toString()}
           checksum={selectedDataset.checksum}
           size={selectedDataset.size}
-          isSubscribedToMailingList={false}
         />
       )
     })
@@ -112,7 +109,6 @@ describe('DatasetDownloadEmailPrompt', () => {
           releaseId={selectedDataset.id.toString()}
           checksum={selectedDataset.checksum}
           size={selectedDataset.size}
-          isSubscribedToMailingList={false}
         />
       )
 
@@ -178,7 +174,6 @@ describe('DatasetDownloadEmailPrompt', () => {
           releaseId={selectedDataset.id.toString()}
           checksum={selectedDataset.checksum}
           size={selectedDataset.size}
-          isSubscribedToMailingList={false}
         />
       )
 
