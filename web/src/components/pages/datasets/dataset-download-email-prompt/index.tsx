@@ -54,6 +54,7 @@ const DatasetDownloadEmailPrompt = ({
   checksum,
   size,
   getString,
+  isSubscribedToMailingList,
 }: DownloadFormProps) => {
   const api = useAPI()
 
@@ -212,12 +213,14 @@ const DatasetDownloadEmailPrompt = ({
               onChange={handleInputChange}
               required
             />
-            <LabeledCheckbox
-              label={<Localized id="confirm-join-mailing-list" />}
-              name="confirmJoinMailingList"
-              checked={confirmJoinMailingList}
-              onChange={handleInputChange}
-            />
+            {!isSubscribedToMailingList && (
+              <LabeledCheckbox
+                label={<Localized id="confirm-join-mailing-list" />}
+                name="confirmJoinMailingList"
+                checked={confirmJoinMailingList}
+                onChange={handleInputChange}
+              />
+            )}
           </div>
           <div className="input-group button-container">
             <div>
@@ -251,9 +254,7 @@ const DatasetDownloadEmailPrompt = ({
             </div>
             <div className="donate-btn-container">
               <DonateButton />
-              <Localized
-                id="why-donate-datasets-page"
-                elems={{ b: <strong /> }}>
+              <Localized id="why-donate" elems={{ b: <strong /> }}>
                 <p className="why-donate" />
               </Localized>
             </div>

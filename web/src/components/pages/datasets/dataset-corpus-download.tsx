@@ -34,6 +34,7 @@ const DatasetCorpusDownload = ({
   getString,
   languagesWithDatasets,
   initialLanguage,
+  isSubscribedToMailingList,
 }: Props) => {
   const [isLoading, setIsLoading] = useState(true)
   const [selectedDataset, setSelectedDataset] = useState<LanguageDataset>()
