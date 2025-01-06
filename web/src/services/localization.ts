@@ -7,7 +7,7 @@ import { Flags } from '../stores/flags';
 import API from './api';
 import MessageOverwrites = Flags.MessageOverwrites;
 
-export const DEFAULT_LOCALE = 'en';
+export const DEFAULT_LOCALE = 'nl';
 
 export function negotiateLocales(
   locales: ReadonlyArray<string>,
@@ -67,7 +67,7 @@ export async function createLocalization(
   const localeMessages: any = await Promise.all(
     currentLocales.map(async (locale: string) => [
       locale,
-      await api.fetchLocaleMessages(locale),
+      await api.fetchLocaleMessages(DEFAULT_LOCALE),
     ])
   );
 

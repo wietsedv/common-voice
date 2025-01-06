@@ -7,7 +7,7 @@ import { hashSentence } from '../../utility';
 import { redis, useRedis } from '../../redis';
 
 const CWD = process.cwd();
-const SENTENCES_FOLDER = path.resolve(CWD, 'server/data/');
+const SENTENCES_FOLDER = path.resolve(CWD, 'server/data-custom/');
 
 // for sources with sentences that are likely to have repeats across
 // locales, we want to generate a unique hash for each locale + sentence,
