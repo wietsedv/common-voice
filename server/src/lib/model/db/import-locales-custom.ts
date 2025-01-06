@@ -8,10 +8,10 @@ type Locale = {
 
 const LOCALES: Locale[] = [
   { code: 'nl', name: 'Nederlands', is_contributable: false },
-  { code: 'gos-HOG', name: 'Gronings - Hogelandsters', is_contributable: true },
-  { code: 'gos-OLD', name: 'Gronings - Oldambsters', is_contributable: true },
-  { code: 'gos-VEE', name: 'Gronings - Veenkoloniaals', is_contributable: true },
-  { code: 'gos-WES', name: 'Gronings - Westerkwartiers', is_contributable: true },
+  { code: 'gos-HO', name: 'Gronings - Hogelandsters', is_contributable: true },
+  { code: 'gos-OL', name: 'Gronings - Oldambsters', is_contributable: true },
+  { code: 'gos-VE', name: 'Gronings - Veenkoloniaals', is_contributable: true },
+  { code: 'gos-WE', name: 'Gronings - Westerkwartiers', is_contributable: true },
   { code: 'drt', name: 'Drents', is_contributable: true },
   { code: 'stl', name: 'Stellingwerfs', is_contributable: true },
   { code: 'sdz', name: 'Sallands', is_contributable: true },

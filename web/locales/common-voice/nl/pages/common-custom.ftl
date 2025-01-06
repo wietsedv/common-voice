@@ -2,10 +2,10 @@
 
 ## Languages
 
-gos-HOG = Gronings - Hogelandsters
-gos-OLD = Gronings - Oldambsters
-gos-VEE = Gronings - Veenkoloniaals
-gos-WES = Gronings - Westerkwartiers
+gos-HO = Gronings - Hogelandsters
+gos-OL = Gronings - Oldambsters
+gos-VE = Gronings - Veenkoloniaals
+gos-WE = Gronings - Westerkwartiers
 drt = Drents
 stl = Stellingwerfs
 sdz = Sallands
