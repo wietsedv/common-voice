@@ -104,7 +104,7 @@ const LanguagesPage = ({ getString }: WithLocalizationProps) => {
     filteredLaunched: [],
     localeMessages: null,
     showAllInProgress: false,
-    showAllLaunched: false,
+    showAllLaunched: true,
     query: '',
     modalOptions: null,
   } as State)
@@ -337,7 +337,7 @@ const LanguagesPage = ({ getString }: WithLocalizationProps) => {
               </p>
             )}
           </div>
-          <div className="text">
+          {/* <div className="text">
             <div className="inner">
               <p>
                 <Localized id="request-language-text" />{' '}
@@ -350,7 +350,7 @@ const LanguagesPage = ({ getString }: WithLocalizationProps) => {
                 <Localized id="request-language-button"></Localized>
               </LinkButton>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="language-sections">
           <section className="launched">
@@ -362,18 +362,18 @@ const LanguagesPage = ({ getString }: WithLocalizationProps) => {
                 handleQueryKeyDown={handleQueryKeyDown}
                 toggleSearch={toggleSearch}
               />
-              <h2 className="language-sections__heading">
+              {/* <h2 className="language-sections__heading">
                 <Localized id="language-section-launched" />
                 {launchedCountLabel}
-              </h2>
+              </h2> */}
             </div>
-            <PageTextContent>
+            {/* <PageTextContent>
               <Localized
                 id="language-section-launched-description"
                 elems={descriptionElems}>
                 <p />
               </Localized>
-            </PageTextContent>
+            </PageTextContent> */}
             <div className="languages-page__language-cards">
               {isLoading && (
                 <>
@@ -394,7 +394,7 @@ const LanguagesPage = ({ getString }: WithLocalizationProps) => {
                 ))}
             </div>
 
-            {!query && (
+            {/* {!query && (
               <Localized
                 id={'languages-show-' + (showAllLaunched ? 'less' : 'more')}>
                 <button
@@ -403,10 +403,10 @@ const LanguagesPage = ({ getString }: WithLocalizationProps) => {
                   onClick={toggleShowAllLaunched}
                 />
               </Localized>
-            )}
+            )} */}
           </section>
 
-          <section className="in-progress">
+          {/* <section className="in-progress">
             <h2 className="language-sections__heading">
               <Localized id="language-section-in-progress" />
               {inProgressCountLabel}
@@ -450,14 +450,14 @@ const LanguagesPage = ({ getString }: WithLocalizationProps) => {
                 />
               </Localized>
             )}
-          </section>
+          </section> */}
         </div>
-        <section className="donate-banner-section">
+        {/* <section className="donate-banner-section">
           <DonateBanner
             donateCTALocalizedId="languages-donate-banner-cta"
             donateCTAExplanationLocalizedId="languages-donate-banner-cta-explanation"
           />
-        </section>
+        </section> */}
       </Page>
     </React.Fragment>
   )

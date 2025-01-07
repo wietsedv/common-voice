@@ -74,7 +74,7 @@ const ContributeMenu: React.FC<ContributeMenuProps> = ({
       <div className="contribute-wrapper datasets">
         <LocalizedNavLink
           id={menuLabel}
-          to={URLS.DATASETS}
+          to={URLS.LANGUAGES}
           onClick={toggleMenu}
         />
         <Tooltip

@@ -18,6 +18,10 @@ import { NavItem } from './nav'
 import { MenuConfig } from './contribute-menu'
 
 export const menuItems: Record<NavItem, MenuConfig> = {
+  languages: {
+    menuTooltip: 'community-and-languages-menu-item-tooltip',
+    menuAriaLabel: 'community-and-languages-menu-item-aria-label',
+  },
   speak: {
     items: [
       {
@@ -28,14 +32,14 @@ export const menuItems: Record<NavItem, MenuConfig> = {
         menuItemAriaLabel: 'read-sentences-menu-item-aria-label',
         type: 'scripted',
       },
-      {
-        icon: ChatBubbleIcon,
-        localizedId: 'answer-questions',
-        menuItemTooltip: 'answer-questions-menu-item-tooltip',
-        menuItemAriaLabel: 'answer-questions-menu-item-aria-label',
-        type: 'spontaneous',
-        externalHref: URLS.PROMPTS,
-      },
+      // {
+      //   icon: ChatBubbleIcon,
+      //   localizedId: 'answer-questions',
+      //   menuItemTooltip: 'answer-questions-menu-item-tooltip',
+      //   menuItemAriaLabel: 'answer-questions-menu-item-aria-label',
+      //   type: 'spontaneous',
+      //   externalHref: URLS.PROMPTS,
+      // },
     ],
     menuTooltip: 'speak-contribute-menu-tooltip',
     menuAriaLabel: 'speak-contribute-menu-aria-label',
@@ -50,15 +54,15 @@ export const menuItems: Record<NavItem, MenuConfig> = {
         menuItemAriaLabel: 'validate-readings-menu-item-aria-label',
         type: 'scripted',
       },
-      {
-        icon: CheckCircle,
-        localizedId: 'review-transcriptions',
-        requiresAuth: true,
-        menuItemTooltip: 'review-transcriptions-menu-item-tooltip',
-        menuItemAriaLabel: 'review-transcriptions-menu-item-aria-label',
-        type: 'spontaneous',
-        externalHref: URLS.CHECK_TRANSCRIPT,
-      },
+      // {
+      //   icon: CheckCircle,
+      //   localizedId: 'review-transcriptions',
+      //   requiresAuth: true,
+      //   menuItemTooltip: 'review-transcriptions-menu-item-tooltip',
+      //   menuItemAriaLabel: 'review-transcriptions-menu-item-aria-label',
+      //   type: 'spontaneous',
+      //   externalHref: URLS.CHECK_TRANSCRIPT,
+      // },
     ],
     menuTooltip: 'listen-contribute-menu-tooltip',
     menuAriaLabel: 'listen-contribute-menu-aria-label',
@@ -82,40 +86,41 @@ export const menuItems: Record<NavItem, MenuConfig> = {
         menuItemAriaLabel: 'review-sentences-menu-item-aria-label',
         type: 'scripted',
       },
-      {
-        icon: FilePlus,
-        localizedId: 'add-questions',
-        requiresAuth: true,
-        menuItemTooltip: 'add-questions-menu-item-tooltip',
-        menuItemAriaLabel: 'add-questions-menu-item-aria-label',
-        type: 'spontaneous',
-        externalHref: URLS.QUESTION,
-      },
-      {
-        icon: ReviewQuestionsIcon,
-        localizedId: 'review-questions',
-        requiresAuth: true,
-        menuItemTooltip: 'review-questions-menu-item-tooltip',
-        menuItemAriaLabel: 'review-questions-menu-item-aria-label',
-        type: 'spontaneous',
-        externalHref: URLS.REVIEW_QUESTIONS,
-      },
-      {
-        icon: TranscribeIcon,
-        localizedId: 'transcribe-audio',
-        menuItemTooltip: 'transcribe-audio-menu-item-tooltip',
-        menuItemAriaLabel: 'transcribe-audio-menu-item-aria-label',
-        type: 'spontaneous',
-        externalHref: URLS.TRANSCRIBE,
-      },
+      // {
+      //   icon: FilePlus,
+      //   localizedId: 'add-questions',
+      //   requiresAuth: true,
+      //   menuItemTooltip: 'add-questions-menu-item-tooltip',
+      //   menuItemAriaLabel: 'add-questions-menu-item-aria-label',
+      //   type: 'spontaneous',
+      //   externalHref: URLS.QUESTION,
+      // },
+      // {
+      //   icon: ReviewQuestionsIcon,
+      //   localizedId: 'review-questions',
+      //   requiresAuth: true,
+      //   menuItemTooltip: 'review-questions-menu-item-tooltip',
+      //   menuItemAriaLabel: 'review-questions-menu-item-aria-label',
+      //   type: 'spontaneous',
+      //   externalHref: URLS.REVIEW_QUESTIONS,
+      // },
+      // {
+      //   icon: TranscribeIcon,
+      //   localizedId: 'transcribe-audio',
+      //   menuItemTooltip: 'transcribe-audio-menu-item-tooltip',
+      //   menuItemAriaLabel: 'transcribe-audio-menu-item-aria-label',
+      //   type: 'spontaneous',
+      //   externalHref: URLS.TRANSCRIBE,
+      // },
     ],
+    renderContributableLocaleLock: true,
     menuTooltip: 'write-contribute-menu-tooltip',
     menuAriaLabel: 'write-contribute-menu-aria-label',
   },
-  download: {
-    menuTooltip: 'download-contribute-menu-tooltip',
-    menuAriaLabel: 'download-contribute-menu-aria-label',
-  },
+  // download: {
+  //   menuTooltip: 'download-contribute-menu-tooltip',
+  //   menuAriaLabel: 'download-contribute-menu-aria-label',
+  // },
   about: {
     items: [
       {

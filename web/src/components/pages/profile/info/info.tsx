@@ -293,7 +293,7 @@ function ProfileInfo({
             </Tooltip>
 
             <div className="checkboxes">
-              <LabeledCheckbox
+              {/* <LabeledCheckbox
                 label={
                   <>
                     <Localized id="email-opt-in-info-title">
@@ -307,7 +307,7 @@ function ProfileInfo({
                 onChange={handleChangeFor('sendEmails')}
                 checked={sendEmails}
                 name="email-opt-in"
-              />
+              /> */}
 
               <LabeledCheckbox
                 {...(user.account || isSubmitted ? { disabled: true } : {})}

@@ -1,6 +1,6 @@
 export const DAILY_GOALS = Object.freeze({
-  speak: [1200, 2500],
-  listen: [2400],
+  speak: [500, 500],
+  listen: [500],
 });
 
 export const BENEFITS = [
