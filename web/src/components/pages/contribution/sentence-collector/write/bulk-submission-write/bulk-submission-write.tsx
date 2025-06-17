@@ -107,7 +107,7 @@ const BulkSubmissionWrite = () => {
                   elems={{
                     emailFragment: (
                       <a
-                        href="mailto:commonvoice@mozilla.com"
+                        href="mailto:wietse.de.vries@rug.nl"
                         target="_blank"
                         rel="noreferrer"
                       />

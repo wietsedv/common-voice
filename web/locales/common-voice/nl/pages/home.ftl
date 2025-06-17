@@ -1,7 +1,7 @@
 ## Home Page
 
 home-title = Het Common Voice-project is een initiatief van Mozilla om machines te helpen leren hoe echte mensen spreken.
-default-tagline = Mozilla Common Voice is een initiatief om machines te helpen leren hoe echte mensen spreken.
+default-tagline = Common Voice is een initiatief om machines te helpen leren hoe echte mensen spreken.
 home-cta = Laat uw stem horen, draag hier bij!
 wall-of-text-start = Spraak is natuurlijk, spraak is menselijk. Daarom zijn we gefascineerd in het maken van een bruikbare spraaktechnologie voor onze machines. Maar voor het maken van spraaksystemen is een extreem grote hoeveelheid spraakgegevens nodig.
 wall-of-text-more-mobile = De meeste gegevens die door grote bedrijven worden gebruikt, zijn voor de meeste mensen niet beschikbaar. We denken dat dat innovatie belemmert. Daarom hebben we Project Common Voice gestart, een project dat spraakherkenning voor iedereen beschikbaar helpt te maken.

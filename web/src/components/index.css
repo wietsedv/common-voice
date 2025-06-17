@@ -237,7 +237,7 @@ button {
 .Logo {
     @media (--md-up) {
         margin-inline-end: var(--standard-margin);
-        width: 10rem;
+        width: 14rem;
     }
 
     @media (--xl-up) {

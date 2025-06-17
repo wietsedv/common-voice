@@ -8,16 +8,22 @@ type Locale = {
 
 const LOCALES: Locale[] = [
   { code: 'nl', name: 'Nederlands', is_contributable: false },
-  { code: 'gos-HO', name: 'Gronings - Hogelandsters', is_contributable: true },
-  { code: 'gos-OL', name: 'Gronings - Oldambsters', is_contributable: true },
-  { code: 'gos-VE', name: 'Gronings - Veenkoloniaals', is_contributable: true },
-  { code: 'gos-WE', name: 'Gronings - Westerkwartiers', is_contributable: true },
-  { code: 'drt', name: 'Drents', is_contributable: true },
-  { code: 'stl', name: 'Stellingwerfs', is_contributable: true },
+  { code: 'act', name: 'Achterhoeks', is_contributable: true },
+
+  { code: 'drt-NV', name: 'Drents: Noordenvelds', is_contributable: true },
+  { code: 'drt-MD', name: 'Drents: Midden-Drents', is_contributable: true },
+  { code: 'drt-ZO', name: 'Drents: Zuudoost-Zaand', is_contributable: true },
+  { code: 'drt-ZW', name: 'Drents: Zuudwest-Zuud', is_contributable: true },
+
+  { code: 'gos-HO', name: 'Gronings: Hogelandsters', is_contributable: true },
+  { code: 'gos-VE', name: 'Gronings: Veenkoloniaals', is_contributable: true },
+  { code: 'gos-WE', name: 'Gronings: Westerkwartiers', is_contributable: true },
+  { code: 'gos-WO', name: 'Gronings: Westerwolds en Oldambsters', is_contributable: true },
+
   { code: 'sdz', name: 'Sallands', is_contributable: true },
+  { code: 'stl', name: 'Stellingwerfs', is_contributable: true },
   { code: 'twd', name: 'Twents', is_contributable: true },
   { code: 'vel', name: 'Veluws', is_contributable: true },
-  { code: 'act', name: 'Achterhoeks', is_contributable: true },
 ]
 
 const db = getMySQLInstance()

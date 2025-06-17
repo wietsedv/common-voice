@@ -1,1 +1,1 @@
-export const COMMON_VOICE_EMAIL = 'commonvoice@mozilla.com';
+export const COMMON_VOICE_EMAIL = 'wietse.de.vries@rug.nl';

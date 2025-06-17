@@ -11,7 +11,7 @@ export default function ContactModal({ onRequestClose }: Props) {
   return (
     <Modal innerClassName="contact-modal" onRequestClose={onRequestClose}>
       <form
-        action="mailto:commonvoice@mozilla.com"
+        action="mailto:wietse.de.vries@rug.nl"
         method="post"
         encType="text/plain">
         <div className="title-and-action">

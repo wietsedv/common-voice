@@ -239,7 +239,7 @@ class Layout extends React.PureComponent<LayoutProps, LayoutState> {
                   )}
                 />
               )}
-              <Logo />
+              <Logo locale={locale} />
               <Nav
                 id="main-nav"
                 shouldExpandNavItems={
@@ -304,14 +304,14 @@ class Layout extends React.PureComponent<LayoutProps, LayoutState> {
             />
           )}
         </div>
-        <NonProductionBanner />
+        {/* <NonProductionBanner /> */}
         <main
           id="content"
           className={className}
           data-testid={pathParts[2] ? pathParts.slice(2).join(' ') : 'home'}>
           {children ? children : <Content location={location} />}
         </main>
-        {shouldHideFooter ? <></> : <Footer />}
+        {/* {shouldHideFooter ? <></> : <Footer />} */}
         <div
           id="navigation-modal"
           className={this.state.isMenuVisible ? 'active' : ''}>

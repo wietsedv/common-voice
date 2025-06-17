@@ -8,7 +8,7 @@ import PageHeading from '../../../ui/page-heading';
 
 import './request.css';
 
-const EMAIL_ADDRESS = 'commonvoice@mozilla.com';
+const EMAIL_ADDRESS = 'wietse.de.vries@rug.nl';
 
 const LanguagesRequestSuccessPage = () => {
   return (

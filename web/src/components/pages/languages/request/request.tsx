@@ -24,7 +24,7 @@ import { trackGtag } from '../../../../services/tracker-ga4'
 
 const logger = new ClientLogger({ name: 'LanguagesRequestFormPage' })
 
-const EMAIL_ADDRESS = 'commonvoice@mozilla.com'
+const EMAIL_ADDRESS = 'wietse.de.vries@rug.nl';
 
 import './request.css'
 

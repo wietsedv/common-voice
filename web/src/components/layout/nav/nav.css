@@ -299,6 +299,7 @@ header {
         }
 
         & .contribute-menu {
+            margin-top: 4px;
             padding: 0 1rem;
             display: block;
         }
