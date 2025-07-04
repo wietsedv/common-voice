@@ -37,23 +37,23 @@ services:
         '-backend',
         'filesystem',
       ]
-  bundler:
-    build:
-      context: ./bundler
-      dockerfile: Dockerfile
-    container_name: bundler
-    user: '${UID:-1000}:${GID:-1000}'
-    links:
-      - db
-      - redis
-      - storage
-    volumes:
-      - ./bundler:/home/node/code
-    networks:
-      - voice-web
-    # ports:
-    #   - 9001:9001
-    command: bash -c "npm ci && npm run build && npm start"
+  # bundler:
+  #   build:
+  #     context: ./bundler
+  #     dockerfile: Dockerfile
+  #   container_name: bundler
+  #   user: '${UID:-1000}:${GID:-1000}'
+  #   links:
+  #     - db
+  #     - redis
+  #     - storage
+  #   volumes:
+  #     - ./bundler:/home/node/code
+  #   networks:
+  #     - voice-web
+  #   # ports:
+  #   #   - 9001:9001
+  #   command: bash -c "npm ci && npm run build && npm start"
   web:
     build:
       context: .
@@ -72,7 +72,7 @@ services:
       - voice-web
     ports:
       - 9000:9000
-    command: bash -c "/code/docker/wait-for-it.sh storage:8080 -- /code/docker/prepare_storage.sh && yarn --frozen-lockfile && yarn start"
+    command: bash -c "/code/docker/wait-for-it.sh storage:8080 -- /code/docker/prepare_storage.sh && yarn --frozen-lockfile && yarn build && yarn start:prod"
 
 networks:
   voice-web:

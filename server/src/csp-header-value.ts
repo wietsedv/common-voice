@@ -12,6 +12,10 @@ const SOURCES = {
   ],
   'img-src': [
     "'self'",
+    'https://praoten.nl',
+    'https://praotn.nl',
+    'https://proaten.nl',
+    'https://proatn.nl',
     'https://*.google-analytics.com',
     'www.gstatic.com',
     'https://www.gstatic.com',
@@ -32,6 +36,10 @@ const SOURCES = {
   'media-src': [
     'data:',
     'blob:',
+    'https://praoten.nl',
+    'https://praotn.nl',
+    'https://proaten.nl',
+    'https://proatn.nl',
     'https://*.amazonaws.com',
     'https://*.amazon.com',
     'https://*.googleapis.com',
@@ -71,6 +79,10 @@ const SOURCES = {
   'connect-src': [
     "'self'",
     'blob:',
+    'https://praoten.nl',
+    'https://praotn.nl',
+    'https://proaten.nl',
+    'https://proatn.nl',
     'https://pontoon.mozilla.org/graphql',
     'https://*.amazonaws.com',
     'https://*.amazon.com',
