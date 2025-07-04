@@ -175,7 +175,7 @@ describe('DatasetDownloadEmailPrompt', () => {
       queryByRole,
       getByLabelText,
       queryByLabelText,
-    }: RenderResult = renderWithLocalization(
+    }: RenderResult = renderWithProviders(
       <DatasetDownloadEmailPrompt
         selectedLocale={locale}
         downloadPath={selectedDataset.download_path}
@@ -187,40 +187,16 @@ describe('DatasetDownloadEmailPrompt', () => {
     );
 
     await act(async () => {
-      fireEvent.click(getByRole('button', { name: 'Enter Email to Download' }));
-    });
+      fireEvent.click(getByRole('button', { name: 'Enter Email to Download' }))
+    })
 
-    // check the download link is disabled
-    const disabledDownloadLink = queryByRole('link', {
-      name: /Enter Email to Download/,
-    });
-    expect(disabledDownloadLink).toBeNull(); // not exist as a link
-
-    // type in email address
-    userEvent.type(getByLabelText(/Email/), 'testemail@example.com');
-
-    // check the checkboxes
-    userEvent.click(
-      getByLabelText(/You are prepared to initiate a download of /)
-    );
-
-    userEvent.click(getByLabelText(/You agree to not attempt to determine/));
-
-    expect(
-      queryByLabelText(/You want to join the Common Voice mailing list/)
-    ).toBeNull();
-
-    // now has the link
-    const downloadLink = getByRole('button', {
-      name: /Download Dataset Bundle/,
-    });
-
-    expect(downloadLink.getAttribute('href')).toBe(
-      'https://example.com/fake/url'
-    );
-
-    // click link
-    fireEvent.click(downloadLink);
+    downloadDataset({
+      queryByRole,
+      getByLabelText,
+      getByRole,
+      isSubscribedToMailingList: true,
+      queryByLabelText,
+    })
 
     // calls api.saveHasDownloaded correctly
     expect(mockSaveHasDownload).toBeCalledTimes(1);

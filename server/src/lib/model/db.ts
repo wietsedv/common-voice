@@ -240,35 +240,6 @@ export default class DB {
 
     return rows
   }
-  /**
-   * Get valid and random clips per language
-   * @param languageId
-   * @param limit
-   * @returns
-   */
-  async getClipsToBeValidated(
-    languageId: number,
-    limit: number
-  ): Promise<DBClip[]> {
-    const [rows] = await this.mysql.query(
-      `
-        SELECT c.id as id, 
-        c.path as path, 
-        s.has_valid_clip as has_valid_clip,
-        c.client_id as client_id, 
-        s.text as sentence,
-        c.original_sentence_id as original_sentence_id
-        FROM clips c
-        LEFT JOIN sentences s ON s.id = c.original_sentence_id and c.locale_id = ?
-        WHERE c.is_valid IS NULL AND s.clips_count <= 15
-        ORDER BY rand()
-        limit ?
-      `,
-      [languageId, limit]
-    );
-
-    return rows;
-  }
 
   async getClipCount(): Promise<number> {
     return this.clip.getCount()

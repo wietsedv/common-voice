@@ -1,0 +1,20 @@
+svg#map {
+    width: 750px;
+    height: 750px;
+
+.provincie {
+    fill: #ddd;
+    stroke: #fff;
+    stroke-width: 1;
+}
+.regio {
+    fill: #999;
+    stroke: #fff;
+    stroke-width: 1;
+    cursor: pointer;
+}
+.regio:hover {
+    fill: #ff7f0e;
+}
+
+}

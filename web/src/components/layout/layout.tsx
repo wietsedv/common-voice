@@ -239,14 +239,15 @@ class Layout extends React.PureComponent<LayoutProps, LayoutState> {
                   )}
                 />
               )}
-              <Logo locale={locale} />
+              <Logo />
+              {locale !== "nl" ?
               <Nav
                 id="main-nav"
                 shouldExpandNavItems={
                   this.state.shouldExpandNavItems || !isContributionPageActive
                 }
                 isContributionPageActive={isContributionPageActive}
-              />
+              /> : <div />}
             </div>
             <div>
               {user.account ? (

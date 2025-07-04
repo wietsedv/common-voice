@@ -25,12 +25,12 @@ const Home = () => {
     <Page className="home">
       <HeroSection isLocaleContributable={isLocaleContributable} />
       <ActionItemsSection isLocaleContributable={isLocaleContributable} />
-      <CommunitySection />
-      <FeaturedSection />
-      <DevelopersSection />
-      <GetInvolvedSection isLocaleContributable={isLocaleContributable} />
-      <PartnerSection />
-      <PartnersSection />
+      {/* <CommunitySection /> */}
+      {/* <FeaturedSection /> */}
+      {/* <DevelopersSection /> */}
+      {/* <GetInvolvedSection isLocaleContributable={isLocaleContributable} /> */}
+      {/* <PartnerSection /> */}
+      {/* <PartnersSection /> */}
     </Page>
   )
 }

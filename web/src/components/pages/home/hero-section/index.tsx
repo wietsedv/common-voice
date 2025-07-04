@@ -6,6 +6,8 @@ import classNames from 'classnames'
 import { LinkButton } from '../../../ui/ui'
 import { ArrowRight, MicIcon, Play } from '../../../ui/icons'
 
+import {Map} from "../../../map"
+
 import { LocaleLink } from '../../../locale-helpers'
 import URLS from '../../../../urls'
 
@@ -18,8 +20,8 @@ type Props = {
 }
 
 export const HeroSection: React.FC<Props> = ({ isLocaleContributable }) => {
-  const imageUrl = require('./assets/hero-hd.webp')
-  const isLoaded = usePreloadImage(imageUrl)
+  // const imageUrl = require('./assets/hero-hd.webp')
+  // const isLoaded = usePreloadImage(imageUrl)
 
   const linkDisabled = !isLocaleContributable
 
@@ -28,54 +30,20 @@ export const HeroSection: React.FC<Props> = ({ isLocaleContributable }) => {
       <div className="hero-container">
         <div className="hero-text-wrapper">
           <div className="hero-text-container">
-            <Localized id="hero-title">
-              <h1 />
-            </Localized>
+            <h1>Technologie die Nedersaksisch spreekt</h1>
             <Localized id="hero-subtitle-1" elems={{ bold: <b /> }}>
               <p />
             </Localized>
             <Localized id="hero-subtitle-2">
               <p />
             </Localized>
-            <Localized id="get-started" elems={{ icon: <ArrowRight /> }}>
+            {/* <Localized id="get-started" elems={{ icon: <ArrowRight /> }}>
               <LinkButton rounded to={`${URLS.ROOT}?page=home#action-items`} />
-            </Localized>
+            </Localized> */}
           </div>
         </div>
         <div className="hero-image-container">
-          <div
-            className="hero-background"
-            style={{ backgroundImage: isLoaded ? `url(${imageUrl})` : 'none' }}>
-            <div className="buttons">
-              <div className="listen-container">
-                <LocaleLink
-                  className={classNames('listen', {
-                    disabled: linkDisabled,
-                  })}
-                  to={URLS.LISTEN}>
-                  <Play />
-                </LocaleLink>
-                <div className="background" />
-              </div>
-              <LocaleLink
-                className={classNames('speak', { disabled: linkDisabled })}
-                to={URLS.SPEAK}>
-                <MicIcon />
-              </LocaleLink>
-            </div>
-          </div>
-          <div className="sound-waves-container">
-            <img
-              src={require('./assets/sound-waves-1.png')}
-              alt="Sound waves"
-              className="sound-waves"
-            />
-            <img
-              src={require('./assets/sound-waves-2.png')}
-              alt="Sound waves"
-              className="sound-waves"
-            />
-          </div>
+          <Map />
         </div>
       </div>
     </section>

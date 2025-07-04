@@ -1,0 +1,6 @@
+# Deployment
+
+```bash
+
+docker compose 
+```

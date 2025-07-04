@@ -11,13 +11,16 @@ const LogoImage = ({ isReverse }: Props) => {
 
   const host = window.location.host;
 
-  if (host == "praatfrysk.nl") { // fries
-    return <h1>Praat Frysk</h1>
+  if (host == "proaten.nl") {
+    return <h1>Proaten</h1>
   }
-  if (host == "proatsaksisch.nl") {  // gronings
-    return <h1>Proat Saksisch</h1>
+  if (host == "proatn.nl") {
+    return <h1>Proatn</h1>
   }
-  return <h1>Praot Saksisch</h1>
+  if (host == "praotn.nl") {
+    return <h1>Proatn</h1>
+  }
+  return <h1>Praoten</h1>
 };
 
 export default LogoImage;

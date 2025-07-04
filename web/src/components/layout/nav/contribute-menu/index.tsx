@@ -66,7 +66,7 @@ const ContributeMenu: React.FC<ContributeMenuProps> = ({
 
   const handleClick = () => {
     setShowMenu(menuLabel)
-    trackGtag(`${menuLabel}-menu-label-click`)
+    //trackGtag(`${menuLabel}-menu-label-click`)
   }
 
   if (!menuItems) {

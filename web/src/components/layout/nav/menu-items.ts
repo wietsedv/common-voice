@@ -113,7 +113,6 @@ export const menuItems: Record<NavItem, MenuConfig> = {
       //   externalHref: URLS.TRANSCRIBE,
       // },
     ],
-    renderContributableLocaleLock: true,
     menuTooltip: 'write-contribute-menu-tooltip',
     menuAriaLabel: 'write-contribute-menu-aria-label',
   },
