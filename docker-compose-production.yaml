@@ -67,7 +67,7 @@ services:
     volumes:
       - .:/code
     environment:
-      - DOTENV_CONFIG_PATH=/code/.env-production-docker
+      - DOTENV_CONFIG_PATH=/code/.env-local-docker
     networks:
       - voice-web
     ports:
