@@ -37,7 +37,8 @@ export const setupAuthRouter = async () => {
   const client = new fxaIssuer.Client({
     client_id: CLIENT_ID,
     client_secret: CLIENT_SECRET,
-    redirect_uris: [callbackURL(ENVIRONMENT)],
+    // redirect_uris: [callbackURL(ENVIRONMENT)],
+    redirect_uris: ['https://praoten.nl/callback', 'https://praotn.nl/callback', 'https://proaten.nl/callback', 'https://proatn.nl/callback'],
     response_types: ['code'],
     token_endpoint_auth_method: 'client_secret_post',
   })
@@ -99,8 +100,10 @@ export const setupAuthRouter = async () => {
       state,
     }
 
+    const redirectUri = `${req.protocol}://${req.get('host')}/callback`;
     res.redirect(
       client.authorizationUrl({
+        redirect_uri: redirectUri,
         scope: 'openid email profile',
         state,
       })
