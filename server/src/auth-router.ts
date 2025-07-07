@@ -117,7 +117,8 @@ export const setupAuthRouter = async () => {
     }
     const { state } = request.session.auth
 
-    const tokenSet = await client.callback(callbackURL(ENVIRONMENT), params, {
+    const redirectUri = `${request.protocol}://${request.get('host')}/callback`;
+    const tokenSet = await client.callback(redirectUri, params, {
       state,
     })
 
