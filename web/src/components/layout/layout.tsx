@@ -8,7 +8,6 @@ import * as React from 'react'
 import { connect } from 'react-redux'
 import { RouteComponentProps, Redirect, withRouter } from 'react-router'
 import { Tooltip } from 'react-tooltip'
-import { trackGlobal } from '../../services/tracker'
 import StateTree from '../../stores/tree'
 import { User } from '../../stores/user'
 import { Locale } from '../../stores/locale'
@@ -146,7 +145,6 @@ class Layout extends React.PureComponent<LayoutProps, LayoutState> {
 
   private handleLocaleChange = async (locale: string) => {
     const { history } = this.props
-    trackGlobal('change-language', locale)
     history.push(replacePathLocale(history.location.pathname, locale))
   }
 

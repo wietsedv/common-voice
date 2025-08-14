@@ -1,6 +1,5 @@
 import { Localized } from '@fluent/react';
 import * as React from 'react';
-import { trackLanding } from '../../../services/tracker';
 import { useTypedSelector } from '../../../stores/tree';
 import URLS from '../../../urls';
 import RegisterSection from '../../register-section/register-section';
@@ -32,7 +31,6 @@ export default function Landing() {
             <LinkButton
               rounded
               to={URLS.SPEAK}
-              onClick={() => trackLanding('speak')}
             />
           </Localized>
         ) : (
@@ -40,7 +38,6 @@ export default function Landing() {
             <LinkButton
               rounded
               href="/login"
-              onClick={() => trackLanding('profile')}
             />
           </Localized>
         )}
@@ -57,8 +54,7 @@ export default function Landing() {
 
           <LinkButton
             rounded
-            to={URLS.ABOUT}
-            onClick={() => trackLanding('about')}>
+            to={URLS.ABOUT}>
             <Localized id="show-wall-of-text">
               <div className="hidden-md-up" />
             </Localized>

@@ -5,7 +5,6 @@ import { useAPI } from '../../../../hooks/store-hooks';
 import Modal, { ModalProps } from '../../../modal/modal';
 import { ArrowLeft } from '../../../ui/icons';
 import { Button, Checkbox } from '../../../ui/ui';
-import { trackGtag } from '../../../../services/tracker-ga4';
 
 import './report.css';
 
@@ -121,7 +120,6 @@ export const ReportModal = withLocalization(({
               .concat(otherText || []),
           });
           setSubmitStatus('submitted');
-          trackGtag(`report-${kind}`, { locale })
           onSubmitted();
         }}>
         <Localized id="report">

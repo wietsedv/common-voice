@@ -19,7 +19,6 @@ import StateTree from '../../../../stores/tree'
 import { Uploads } from '../../../../stores/uploads'
 import { User } from '../../../../stores/user'
 import API from '../../../../services/api'
-import { getTrackClass } from '../../../../services/tracker'
 import URLS from '../../../../urls'
 import { localeConnector, LocalePropsFromState } from '../../../locale-helpers'
 import Modal, { ModalButtons } from '../../../modal/modal'
@@ -40,7 +39,6 @@ import { SentenceRecording } from './sentence-recording'
 import SpeakErrorContent from './speak-error-content'
 import { USER_LANGUAGES } from './firstSubmissionCTA/firstPostSubmissionCTA'
 import { castTrueString } from '../../../../utility'
-import { trackGtag } from '../../../../services/tracker-ga4'
 
 import './speak.css'
 
@@ -210,13 +208,11 @@ class SpeakPage extends React.Component<Props, State> {
       reRecordIndex = 4
     } else if (event.key === 'Esc' || event.key === 'Escape') {
       if (this.isRecording) {
-        trackGtag('discard-ongoing', { locale: this.props.locale })
         await this.discardRecording()
       }
     }
 
     if (reRecordIndex !== null) {
-      trackGtag('rerecord-clip', { locale: this.props.locale })
       await this.discardRecording()
       this.setState({
         rerecordIndex: reRecordIndex,
@@ -256,8 +252,6 @@ class SpeakPage extends React.Component<Props, State> {
         rerecordIndex: null,
       }
     })
-
-    trackGtag('record-clip', { locale: this.props.locale })
   }
 
   private getRecordingError = (): RecordingError => {
@@ -288,7 +282,6 @@ class SpeakPage extends React.Component<Props, State> {
   }
 
   private rerecord = async (i: number) => {
-    trackGtag('rerecord-clip', { locale: this.props.locale })
     await this.discardRecording()
 
     this.setState({
@@ -369,7 +362,6 @@ class SpeakPage extends React.Component<Props, State> {
     const id = this.state.clips[current]?.sentence?.id
     api.skipSentence(id)
     removeSentences([id])
-    trackGtag('skip-sentence', { locale: this.props.locale })
     this.setState(({ clips }) => {
       const newClips = [...clips]
       newClips[current] = { recording: null, sentence: null }
@@ -479,7 +471,6 @@ class SpeakPage extends React.Component<Props, State> {
         }
       }),
       async () => {
-        trackGtag('submit-clips', { locale })
         refreshUser()
         addNotification(
           <>
@@ -630,7 +621,6 @@ class SpeakPage extends React.Component<Props, State> {
                       <Button
                         outline
                         rounded
-                        className={getTrackClass('fs', 'exit-submit-clips')}
                         onClick={() => {
                           if (this.upload()) this.handleAbortConfirm(onConfirm)
                         }}
@@ -640,17 +630,12 @@ class SpeakPage extends React.Component<Props, State> {
                       <Button
                         outline
                         rounded
-                        className={getTrackClass(
-                          'fs',
-                          'exit-continue-recording'
-                        )}
                         onClick={() => this.handleAbortCancel(onCancel)}
                       />
                     </Localized>
                   </ModalButtons>
                   <Localized id="record-abort-delete">
                     <TextButton
-                      className={getTrackClass('fs', 'exit-delete-clips')}
                       onClick={onConfirm}
                     />
                   </Localized>
@@ -747,7 +732,6 @@ class SpeakPage extends React.Component<Props, State> {
             shouldShowSecondCTA={this.state.shouldShowSecondCTA}
             primaryButtons={
               <RecordButton
-                trackClass="speak-record"
                 status={recordingStatus}
                 onClick={this.handleRecordClick}
                 data-testid="record-button"

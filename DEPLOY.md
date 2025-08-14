@@ -1,5 +1,7 @@
 # Deployment
 
+Push 
+
 ```bash
 cd common-voice
 docker compose down

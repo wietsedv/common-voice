@@ -37,6 +37,6 @@ export default ({
     }
     style={style}>
     <div className="contents">{children}</div>
-    <div className="num">{num}</div>
+    <div className="num visible">{num}</div>
   </div>
 );

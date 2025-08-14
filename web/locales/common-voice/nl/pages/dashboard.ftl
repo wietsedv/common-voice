@@ -1,6 +1,6 @@
 ## Dashboard
 
-your-languages = Uw talen
+your-languages = Uw varianten
 toward-next-goal = Naar het volgende doel
 goal-reached = Doel bereikt
 clips-you-recorded = Door u opgenomen fragmenten

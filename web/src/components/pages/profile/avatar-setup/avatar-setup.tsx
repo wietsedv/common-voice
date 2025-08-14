@@ -6,7 +6,6 @@ import {
 import * as React from 'react';
 import { connect } from 'react-redux';
 import API from '../../../../services/api';
-import { trackProfile } from '../../../../services/tracker';
 import { Locale } from '../../../../stores/locale';
 import { Notifications } from '../../../../stores/notifications';
 import StateTree from '../../../../stores/tree';
@@ -137,7 +136,6 @@ class AvatarSetup extends React.Component<Props, State> {
         interval: setInterval(this.getPolling.bind(this), 1500),
       });
       addNotification(getString('avatar-uploaded'));
-      trackProfile('give-avatar', locale);
     } catch (e) {
       if (e.message.includes('too_large')) {
         addNotification(getString('file_' + e.message), 'error');

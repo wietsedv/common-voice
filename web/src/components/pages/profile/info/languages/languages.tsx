@@ -154,15 +154,6 @@ function ProfileInfoLanguages({
             <span className="no-languages" />
           </Localized>
         )}
-
-        <div style={{ marginTop: 10 }}>
-          <Localized id="request-language-text" />{' '}
-          <LocaleLink to={URLS.LANGUAGE_REQUEST} className="link">
-            <Localized id="request-language-button">
-              <i />
-            </Localized>
-          </LocaleLink>
-        </div>
       </div>
     </>
   )

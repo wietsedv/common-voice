@@ -24,6 +24,9 @@ const LOCALES: Locale[] = [
   { code: 'stl', name: 'Stellingwerfs', is_contributable: true },
   { code: 'twd', name: 'Twents', is_contributable: true },
   { code: 'vel', name: 'Veluws', is_contributable: true },
+
+  { code: 'urk', name: 'Urkers', is_contributable: true },
+  { code: 'spk', name: 'Spakenburgers', is_contributable: true },
 ]
 
 const db = getMySQLInstance()

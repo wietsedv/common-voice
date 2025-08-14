@@ -2,7 +2,6 @@ import { Localized } from '@fluent/react';
 import * as React from 'react';
 import { useState } from 'react';
 import { useAPI } from '../../hooks/store-hooks';
-import { trackGlobal } from '../../services/tracker';
 import URLS from '../../urls';
 import {
   LocaleLink,
@@ -37,7 +36,6 @@ export default function SubscribeNewsletter() {
         setStatus('submitting');
         try {
           await api.subscribeToNewsletter(email);
-          trackGlobal('footer-newsletter', locale);
           setStatus('submitted');
         } catch (e) {
           setStatus('error');

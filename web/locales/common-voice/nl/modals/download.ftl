@@ -5,5 +5,5 @@ download-helpus = Help ons een gemeenschap rond spraaktechnologie te bouwen, bli
 download-form-email =
     .label = Voer uw e-mailadres in
     .value = Bedankt, we houden contact.
-download-back = Terug naar Common Voice-gegevenssets
+download-back = Terug naar gegevenssets
 download-no = Nee, bedankt

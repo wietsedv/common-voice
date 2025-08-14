@@ -20,7 +20,6 @@ import ErrorPage from '../../error-page/error-page'
 import PageTextContent from '../../../ui/page-text-content'
 import Page from '../../../ui/page'
 import ClientLogger from '../../../../logger'
-import { trackGtag } from '../../../../services/tracker-ga4'
 
 const logger = new ClientLogger({ name: 'LanguagesRequestFormPage' })
 
@@ -99,8 +98,6 @@ const LanguagesRequestFormPage = () => {
         languageLocale: navigator?.language,
         platforms,
       })
-
-      trackGtag('request-language', { platforms })
 
       // redirect to languages/success path if email sent correctly
       history.push(toLocaleRoute(URLS.LANGUAGE_REQUEST_SUCCESS))

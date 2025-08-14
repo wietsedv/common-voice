@@ -27,7 +27,6 @@ import ReviewShortcutsModal from './review-shortcuts-modal'
 import { useAccount, useSentences } from '../../../../../hooks/store-hooks'
 import useReview from './use-review'
 import { useLocale } from '../../../../locale-helpers'
-import { trackGtag } from '../../../../../services/tracker-ga4'
 
 import URLS from '../../../../../urls'
 
@@ -66,7 +65,6 @@ const Review: React.FC<Props> = ({ getString }) => {
 
   const handleToggleShortcutsModal = () => {
     setShowShortcutsModal(!showShortcutsModal)
-    trackGtag('show-shortcuts-btn-click')
   }
 
   const handleReportButtonClick = () => {
@@ -212,7 +210,7 @@ const Review: React.FC<Props> = ({ getString }) => {
       </div>
       <div className="buttons">
         <div>
-          <LinkButton
+          {/* <LinkButton
             rounded
             outline
             className="guidelines-button"
@@ -222,7 +220,7 @@ const Review: React.FC<Props> = ({ getString }) => {
             <Localized id="guidelines">
               <span />
             </Localized>
-          </LinkButton>
+          </LinkButton> */}
           <ReportButton onClick={handleReportButtonClick} />
           <Tooltip title={getString('shortcuts')} arrow>
             <Button

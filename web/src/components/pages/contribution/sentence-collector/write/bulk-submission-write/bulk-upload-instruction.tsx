@@ -2,7 +2,6 @@ import { Localized } from '@fluent/react'
 import * as React from 'react'
 import { FileRejection } from 'react-dropzone'
 
-import { trackBulkSubmission } from '../../../../../../services/tracker'
 import { useLocale } from '../../../../../locale-helpers'
 
 type Props = {
@@ -22,7 +21,6 @@ const BulkUploadInstruction: React.FC<Props> = ({
 
   const handleClick = () => {
     openDialog()
-    trackBulkSubmission('upload-button-click', locale)
   }
 
   if (!isUploadError) {

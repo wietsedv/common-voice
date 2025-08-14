@@ -9,7 +9,6 @@ import {
 import { useLocale } from '../../../../locale-helpers'
 import { Sentences } from '../../../../../stores/sentences'
 import { Notifications } from '../../../../../stores/notifications'
-import { trackGtag } from '../../../../../services/tracker-ga4'
 
 const TOO_MANY_REQUESTS_ERROR = 'Too Many Requests'
 
@@ -94,7 +93,6 @@ const useReview = ({ getString, showReportModal }: UseReviewParams) => {
       })
 
       dispatch(Notifications.actions.addPill(getString('vote-yes'), 'success'))
-      trackGtag('vote-yes-sentence', { locale: currentLocale })
     } catch (error) {
       handleError({
         error: error.toString(),
@@ -116,7 +114,6 @@ const useReview = ({ getString, showReportModal }: UseReviewParams) => {
       })
 
       dispatch(Notifications.actions.addPill(getString('vote-no'), 'success'))
-      trackGtag('vote-no-sentence', { locale: currentLocale })
     } catch (error) {
       handleError({
         error: error.toString(),
@@ -139,7 +136,6 @@ const useReview = ({ getString, showReportModal }: UseReviewParams) => {
           'success'
         )
       )
-      trackGtag('skip-sentence-review', { locale: currentLocale })
     } catch (error) {
       handleError({
         error: error.toString(),

@@ -1,6 +1,6 @@
 # GUIDELINES PAGE
 guidelines-header = Richtlijnen voor bijdragen
-guidelines-header-subtitle = Leer hoe u zinnen en audiofragmenten aan de Common Voice-gegevensset kunt bijdragen en valideren
+guidelines-header-subtitle = Leer hoe u zinnen en audiofragmenten aan de gegevensset kunt bijdragen en valideren
 voice-collection = Spraakcollectie
 sentence-collection = Zinnenverzameling
 question-collection = Vragenverzameling
@@ -53,7 +53,7 @@ volume-explanation = Er zullen natuurlijke variaties in volume tussen lezers zij
 reader-effects-explanation = De meeste opnames zijn van mensen die met hun natuurlijke stem praten. U kunt af en toe een afwijkende opname accepteren die wordt geschreeuwd, gefluisterd of duidelijk wordt afgeleverd met een ‘dramatische’ stem. Wijs gezongen opnames en opnames met een computergegenereerde stem af.
 just-unsure-explanation = Als u iets tegenkomt dat niet in deze richtlijnen wordt behandeld, stem dan naar uw beste oordeel. Als u echt niet kunt beslissen, gebruik dan de knop Overslaan en ga door naar de volgende opname.
 still-have-questions = Nog steeds vragen?
-contact-common-voice = Neem contact op met het Common Voice-team
+contact-common-voice = Neem contact op met het ons
 
 ## Sentence collection nav ids
 

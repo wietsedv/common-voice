@@ -3,7 +3,6 @@ import * as React from 'react';
 import { useEffect, useState } from 'react';
 import { DAILY_GOALS } from '../../../../constants';
 import { useAccount, useAPI } from '../../../../hooks/store-hooks';
-import { trackDashboard } from '../../../../services/tracker';
 import URLS from '../../../../urls';
 import {
   LocaleLink,
@@ -35,9 +34,6 @@ export default function ProgressCard({
   const [overallCurrent, setOverallCurrent] = useState(null);
 
   async function fetchAndSetOverallCount() {
-    if (!locale) {
-      trackDashboard('change-language', globalLocale);
-    }
     api = api.forLocale(locale || null);
     setOverallCurrent(
       await (type === 'speak'
@@ -138,9 +134,6 @@ export default function ProgressCard({
             to={toLocaleRouteBuilder(locale || globalLocale)(
               isSpeak ? URLS.SPEAK : URLS.LISTEN
             )}
-            onClick={() =>
-              trackDashboard(isSpeak ? 'speak-cta' : 'listen-cta', globalLocale)
-            }
           />
         </Localized>
       </div>

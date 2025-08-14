@@ -5,7 +5,6 @@ import { RouteComponentProps, withRouter } from 'react-router'
 import NavigationPrompt from 'react-router-navigation-prompt'
 
 import { Clip as ClipType } from 'common'
-import { getTrackClass } from '../../../../services/tracker'
 import { Clips } from '../../../../stores/clips'
 import { Locale } from '../../../../stores/locale'
 import { User } from '../../../../stores/user'
@@ -34,7 +33,6 @@ import { PlayButton } from '../../../primary-buttons/primary-buttons'
 import Pill from '../pill'
 import ListenErrorContent from './listen-error-content'
 import Modal, { ModalButtons } from '../../../modal/modal'
-import { trackGtag } from '../../../../services/tracker-ga4'
 
 import './listen.css'
 
@@ -46,7 +44,7 @@ export const VoteButton = ({
 }: { kind: 'yes' | 'no' } & React.ButtonHTMLAttributes<any>) => (
   <button
     type="button"
-    className={['vote-button', kind, getTrackClass('fs', `vote-${kind}`)].join(
+    className={['vote-button', kind].join(
       ' '
     )}
     {...props}>
@@ -167,7 +165,6 @@ class ListenPage extends React.Component<Props, State> {
 
   private hasPlayed = () => {
     this.setState({ hasPlayed: true, isPlaying: false })
-    trackGtag('listen-clip', { locale: this.props.locale })
   }
 
   private vote = (isValid: boolean) => {
@@ -238,7 +235,6 @@ class ListenPage extends React.Component<Props, State> {
       return
     }
     this.vote(true)
-    trackGtag('vote-yes', { locale: this.props.locale })
   }
 
   private voteNo = () => {
@@ -247,7 +243,6 @@ class ListenPage extends React.Component<Props, State> {
       return
     }
     this.vote(false)
-    trackGtag('vote-no', { locale: this.props.locale })
   }
 
   private handleSkip = () => {
@@ -256,8 +251,6 @@ class ListenPage extends React.Component<Props, State> {
     this.stop()
     api.skipClip(clips[this.getClipIndex()].id)
     removeClip(clips[this.getClipIndex()].id)
-
-    trackGtag('skip-clip', { locale: this.props.locale })
 
     let replacementSet = [...clips]
 
@@ -420,7 +413,6 @@ class ListenPage extends React.Component<Props, State> {
                 <PlayButton
                   isPlaying={isPlaying}
                   onClick={this.play}
-                  trackClass="play-clip"
                   data-testid="play-button"
                 />
                 <VoteButton

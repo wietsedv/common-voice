@@ -452,12 +452,6 @@ const LanguagesPage = ({ getString }: WithLocalizationProps) => {
             )}
           </section> */}
         </div>
-        {/* <section className="donate-banner-section">
-          <DonateBanner
-            donateCTALocalizedId="languages-donate-banner-cta"
-            donateCTAExplanationLocalizedId="languages-donate-banner-cta-explanation"
-          />
-        </section> */}
       </Page>
     </React.Fragment>
   )

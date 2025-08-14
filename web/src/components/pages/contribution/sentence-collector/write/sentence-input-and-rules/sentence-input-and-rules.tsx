@@ -16,7 +16,6 @@ import { useMultipleComboBox } from '../../../../../multiple-combobox/use-multip
 import { useAccount } from '../../../../../../hooks/store-hooks'
 import { WriteMode } from '../sentence-write'
 import { StateError } from '../sentence-write/types'
-import { trackGtag } from '../../../../../../services/tracker-ga4'
 
 type Props = {
   handleSentenceInputChange: (
@@ -67,12 +66,6 @@ export const SentenceInputAndRules: React.FC<Props> = ({
     })
 
   const account = useAccount()
-
-  const handleDetailsToggle = (
-    evt: React.SyntheticEvent<HTMLDetailsElement>
-  ) => {
-    trackGtag('how-to-cite-toggle', { isOpen: evt.currentTarget.open })
-  }
 
   return (
     <div className="inputs-and-instruction">
@@ -140,8 +133,7 @@ export const SentenceInputAndRules: React.FC<Props> = ({
           <div className="expandable-container">
             <ExpandableInformation
               summaryLocalizedId="how-to-cite"
-              dataTestId="how-to-cite"
-              onToggle={handleDetailsToggle}>
+              dataTestId="how-to-cite">
               <Localized id="how-to-cite-explanation-bold">
                 <span className="bold" />
               </Localized>

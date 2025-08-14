@@ -22,7 +22,6 @@ import { LanguageDataset } from './metadata-viewer/types'
 import { DesktopMetaDataViewer } from './metadata-viewer/desktop/metadata-viewer'
 
 import './dataset-corpus-download.css'
-import { trackGtag } from '../../../services/tracker-ga4'
 
 interface Props extends WithLocalizationProps {
   languagesWithDatasets: { id: number; name: string }[]
@@ -57,12 +56,7 @@ const DatasetCorpusDownload = ({
   }
 
   const handleRowSelect = (selectedId: number, index: number) => {
-    const selectedDataset = languageDatasets.find(d => d.id === selectedId)
-
-    trackGtag('datasets-table-row-click', {
-      datasetLocaleId: selectedDataset.locale_id,
-      datasetId: selectedDataset.dataset_id,
-    })
+    // const selectedDataset = languageDatasets.find(d => d.id === selectedId)
 
     setSelectedDataset(languageDatasets.find(d => d.id === selectedId))
     setSelectedTableRowIndex(index)

@@ -14,7 +14,6 @@ import {
   useAPI,
   useLocalStorageState,
 } from '../../../../hooks/store-hooks'
-import { trackProfile } from '../../../../services/tracker'
 import { AGES, GENDERS } from '../../../../stores/demographics'
 import { Notifications } from '../../../../stores/notifications'
 import { useTypedSelector } from '../../../../stores/tree'
@@ -132,7 +131,6 @@ function ProfileInfo({
 
   const submit = useCallback(() => {
     if (!user.account) {
-      trackProfile('create', locale)
 
       if (termsStatus == null) {
         setTermsStatus('show')

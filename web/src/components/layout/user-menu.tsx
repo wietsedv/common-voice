@@ -3,7 +3,6 @@ import classNames from 'classnames';
 import * as React from 'react';
 import { useState } from 'react';
 import { useAccount } from '../../hooks/store-hooks';
-import { trackNav } from '../../services/tracker';
 import URLS from '../../urls';
 import { LocaleLink, useLocale } from '../locale-helpers';
 import {
@@ -61,7 +60,7 @@ export default function UserMenu() {
                 },
               ].map(({ route, icon, id }) => (
                 <li key={route}>
-                  <LocaleLink to={route} onClick={() => trackNav(id, locale)}>
+                  <LocaleLink to={route}>
                     {icon}
                     <Localized id={id}>
                       <span />

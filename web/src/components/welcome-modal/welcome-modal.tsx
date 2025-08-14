@@ -7,7 +7,6 @@ import { pick } from 'common'
 
 import Modal, { ModalProps } from '../modal/modal'
 import { Button, Checkbox } from '../ui/ui'
-import { trackChallenge } from '../../services/tracker'
 import { useAccount, useAction } from '../../hooks/store-hooks'
 import { User } from '../../stores/user'
 import { Enrollment } from '../../../../common/challenge'
@@ -35,8 +34,6 @@ export default ({ challengeToken, teamToken, ...props }: WelcomeModalProps) => {
   const saveAccount = useAction(User.actions.saveAccount)
   const [locale, toLocaleRoute] = useLocale()
   const [redirectChallenge, setRedirectChallenge] = useState(null)
-
-  useEffect(() => trackChallenge('modal-welcome'), [])
 
   const parseEnrollment = (
     queryString: string,

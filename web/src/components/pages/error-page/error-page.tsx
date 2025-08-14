@@ -2,7 +2,6 @@ import * as React from 'react';
 import { useEffect } from 'react';
 import { Localized } from '@fluent/react';
 
-import { trackError } from '../../../services/tracker';
 import { LocaleLink } from '../../locale-helpers';
 import { GitHubLink, DiscourseLink, MatrixLink } from '../../shared/links';
 import { GithubIconCode, DiscourseIconCode, MatrixIcon } from '../../ui/icons';
@@ -22,10 +21,6 @@ interface Props {
 }
 
 const ErrorPage = ({ children, errorCode, prevPath }: Props) => {
-  useEffect(() => {
-    trackError(errorCode, prevPath || '');
-  }, []);
-
   const headingLocalisationId =
     errorCode === '500'
       ? 'error-something-went-wrong'

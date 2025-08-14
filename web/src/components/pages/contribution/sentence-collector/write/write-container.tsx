@@ -22,8 +22,6 @@ import {
 import { RATE_LIMIT_EXCEEDED } from '../../../../../hooks/use-bulk-submission-upload'
 import { SentenceSubmissionError } from 'common'
 
-import { trackSingleSubmission } from '../../../../../services/tracker'
-
 import './write-container.css'
 
 export type WriteSubmissionToggleOptions = 'single' | 'bulk' | 'small-batch'
@@ -77,7 +75,6 @@ const WriteContainer = () => {
     variants && [].concat(variantNames)
 
   const handleToggle = (option: WriteSubmissionToggleOptions) => {
-    trackSingleSubmission('toggle-button-click', locale)
     setActiveWriteOption(option)
   }
 

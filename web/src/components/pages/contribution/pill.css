@@ -95,7 +95,7 @@
 
     &.open {
         justify-content: space-between;
-        width: 175px;
+        /* width: 175px; */
 
         @media (--sm-down) {
             width: auto;
@@ -108,7 +108,7 @@
         & .num {
             border: solid 1px #f5f4f3;
             margin: 7px 15px 7px 7px;
-            background: var(--desert-storm);
+            /* background: var(--desert-storm); */
 
             @media (--md-up) {
                 margin: 0;

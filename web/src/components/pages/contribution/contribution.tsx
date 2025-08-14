@@ -11,11 +11,6 @@ import { Locale } from '../../../stores/locale';
 import StateTree from '../../../stores/tree';
 import { User } from '../../../stores/user';
 import { Sentence } from 'common';
-import {
-  trackListening,
-  trackRecording,
-  getTrackClass,
-} from '../../../services/tracker';
 import URLS from '../../../urls';
 import { LocaleLink, LocaleNavLink } from '../../locale-helpers';
 import Modal from '../../modal/modal';
@@ -180,13 +175,6 @@ class ContributionPage extends React.Component<ContributionPageProps, State> {
 
   private toggleShortcutsModal = () => {
     const showShortcutsModal = !this.state.showShortcutsModal;
-    if (showShortcutsModal) {
-      const { locale, type } = this.props;
-      (type == 'listen' ? trackListening : (trackRecording as any))(
-        'view-shortcuts',
-        locale
-      );
-    }
     return this.setState({ showShortcutsModal });
   };
 
@@ -221,10 +209,6 @@ class ContributionPage extends React.Component<ContributionPageProps, State> {
     if (!shortcut) return;
 
     shortcut.action();
-    ((type === 'listen' ? trackListening : trackRecording) as any)(
-      'shortcut',
-      locale
-    );
     event.preventDefault();
   };
 
@@ -304,13 +288,11 @@ class ContributionPage extends React.Component<ContributionPageProps, State> {
               <div className="links">
                 <Localized id="speak">
                   <LocaleNavLink
-                    className={getTrackClass('fs', `toggle-speak`)}
                     to={URLS.DEMO_SPEAK}
                   />
                 </Localized>
                 <Localized id="listen">
                   <LocaleNavLink
-                    className={getTrackClass('fs', `toggle-listen`)}
                     to={URLS.DEMO_LISTEN}
                   />
                 </Localized>
@@ -530,7 +512,7 @@ class ContributionPage extends React.Component<ContributionPageProps, State> {
 
         <div className="buttons">
           <div>
-            <LinkButton
+            {/* <LinkButton
               rounded
               outline
               className="guidelines-button"
@@ -540,12 +522,12 @@ class ContributionPage extends React.Component<ContributionPageProps, State> {
               <Localized id="guidelines">
                 <span />
               </Localized>
-            </LinkButton>
+            </LinkButton> */}
             <div className="extra-buttons">
               <ReportButton
                 onClick={() => this.setState({ showReportModal: true })}
               />
-              <Tooltip title="Shortcuts" arrow>
+              <Tooltip title="Sneltoetsen" arrow>
                 <Button
                   rounded
                   outline
@@ -562,7 +544,6 @@ class ContributionPage extends React.Component<ContributionPageProps, State> {
               outline
               className={[
                 'skip',
-                getTrackClass('fs', `skip-${type}`),
                 'fs-ignore-rage-clicks',
               ].join(' ')}
               disabled={!this.isLoaded}
@@ -600,7 +581,6 @@ class ContributionPage extends React.Component<ContributionPageProps, State> {
                   <PrimaryButton
                     className={[
                       'submit',
-                      getTrackClass('fs', `submit-${type}`),
                     ].join(' ')}
                     disabled={!this.isDone}
                     type="submit"

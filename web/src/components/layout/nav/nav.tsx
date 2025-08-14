@@ -1,8 +1,6 @@
 import { Localized } from '@fluent/react'
 import * as React from 'react'
 
-import { trackNav, getTrackClass } from '../../../services/tracker'
-
 import { LocaleNavLink, useLocale } from '../../locale-helpers'
 import { menuItems } from './menu-items'
 import ContributeMenu from './contribute-menu'
@@ -35,12 +33,10 @@ export const LocalizedNavLink = ({
   return (
     <Localized id={id}>
       <LocaleNavLink
-        className={getTrackClass('fs', id)}
         to={to}
         exact
         onClick={() => {
           onClick && onClick()
-          trackNav(id, locale)
         }}
         id={id}
       />

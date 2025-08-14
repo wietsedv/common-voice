@@ -4,7 +4,6 @@ import { useAction } from '../../hooks/store-hooks';
 import URLS from '../../urls';
 import { Notifications } from '../../stores/notifications';
 import { useTypedSelector } from '../../stores/tree';
-import { trackProfile } from '../../services/tracker';
 import { useLocale } from '../locale-helpers';
 
 export const LoginFailure = withRouter(
@@ -31,9 +30,6 @@ export const LoginSuccess = withRouter(
       if (isFetchingAccount) return;
       const redirectURL = sessionStorage.getItem('redirectURL');
       sessionStorage.removeItem('redirectURL');
-      if (account) {
-        trackProfile('login', locale);
-      }
 
       history.replace(
         account

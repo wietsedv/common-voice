@@ -18,7 +18,6 @@ import {
 import { CrossIcon, InfoIcon } from '../../../ui/icons';
 import { LabeledCheckbox } from '../../../ui/ui';
 import { Notifications } from '../../../../stores/notifications';
-import { trackChallenge } from '../../../../services/tracker';
 import OnboardingModal from '../../../onboarding-modal/onboarding-modal';
 import { isChallengeLive, pilotDates } from './constants';
 import Props from '../props';
@@ -111,7 +110,6 @@ function ChallengePage(props: Props & RouteComponentProps<any, any, any>) {
   useEffect(() => {
     api.fetchWeeklyProgress().then(value => value && setWeekly(value));
   }, []);
-  useEffect(() => trackChallenge('dashboard-view'), []);
 
   const isEnrolled = account?.enrollment?.team && account.enrollment.challenge;
 

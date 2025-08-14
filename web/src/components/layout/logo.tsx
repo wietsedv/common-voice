@@ -14,7 +14,7 @@ const Logo = ({ isReverse }: Props) => {
   return (
     <LocaleLink className="Logo" to="">
       <LogoImage isReverse={isReverse} />
-      <h3>{nativeNames[locale]}</h3>
+      {locale !== "nl" ? <h3>{nativeNames[locale]}</h3> : ""}
     </LocaleLink>
   );
 };

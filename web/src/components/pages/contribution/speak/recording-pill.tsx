@@ -5,7 +5,6 @@ import {
 } from '@fluent/react';
 import * as React from 'react';
 import { useRef, useState } from 'react';
-import { trackRecording } from '../../../../services/tracker';
 import { useLocale } from '../../../locale-helpers';
 import {
   PlayOutlineIcon,
@@ -46,8 +45,6 @@ function RecordingPill({
     const nextIsPlaying = !isPlaying;
 
     if (nextIsPlaying) {
-      trackRecording('listen', locale);
-
       audioContext.current = new (window.AudioContext || window.webkitAudioContext)();
       source.current = audioContext.current.createBufferSource();
 

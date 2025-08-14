@@ -5,7 +5,6 @@ import { PlayOutlineGreenIcon, MicIcon, SkipIcon } from '../ui/icons';
 import Modal from '../modal/modal';
 import URLS from '../../urls';
 import { LocaleLink } from '../locale-helpers';
-import { trackChallenge } from '../../services/tracker';
 import './onboarding-modal.css';
 
 interface Step {
@@ -62,7 +61,6 @@ const OnboardingModal = ({ onRequestClose }: Props) => {
   let [step, setStep] = useState<number>(0);
   const stepData = STEPS[step];
   const isLastStep = step === STEPS.length - 1;
-  useEffect(() => trackChallenge('modal-onboarding'), []);
 
   return (
     <Modal innerClassName="onboarding-modal" onRequestClose={onRequestClose}>

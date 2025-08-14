@@ -9,7 +9,6 @@ import Modal, { ModalProps } from '../modal/modal';
 import { FontIcon } from '../ui/icons';
 import { Button } from '../ui/ui';
 import { useAPI } from '../../hooks/store-hooks';
-import { trackChallenge } from '../../services/tracker';
 import { Enrollment } from 'common';
 
 import './invite-modal.css';
@@ -68,7 +67,6 @@ export default function Invite({
       return () => clearTimeout(timer);
     }
   }, [copiedRecently]);
-  useEffect(() => trackChallenge('modal-invite'), []);
 
   return (
     <Modal {...props} innerClassName="invite-modal">

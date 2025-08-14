@@ -15,7 +15,6 @@ import { COMMON_VOICE_EMAIL } from '../../../../../../constants'
 import useBulkSubmissionUpload from '../../../../../../hooks/use-bulk-submission-upload'
 import { useAccount } from '../../../../../../hooks/store-hooks'
 import { Sentences } from '../../../../../../stores/sentences'
-import { trackGtag } from '../../../../../../services/tracker-ga4'
 
 import './bulk-submission-write.css'
 
@@ -53,12 +52,6 @@ const BulkSubmissionWrite = () => {
     maxSize: MAX_FILE_SIZE,
   })
 
-  const handleToggle = (evt: React.SyntheticEvent<HTMLDetailsElement>) => {
-    trackGtag('what-needs-to-be-in-file-toggle', {
-      isOpen: evt.currentTarget.open,
-    })
-  }
-
   return (
     <div className="bulk-upload-container" data-testid="bulk-upload-container">
       <div className="upload-and-instruction">
@@ -87,7 +80,6 @@ const BulkSubmissionWrite = () => {
               <ExpandableInformation
                 summaryLocalizedId="what-needs-to-be-in-file"
                 icon={<LightBulbIcon />}
-                onToggle={handleToggle}
                 dataTestId="bulk-option-expandable-information">
                 <Localized
                   id="what-needs-to-be-in-file-explanation"
@@ -127,7 +119,7 @@ const BulkSubmissionWrite = () => {
       </div>
       <div className="buttons">
         <div>
-          <LinkButton
+          {/* <LinkButton
             rounded
             outline
             className="guidelines-button"
@@ -137,7 +129,7 @@ const BulkSubmissionWrite = () => {
             <Localized id="guidelines">
               <span />
             </Localized>
-          </LinkButton>
+          </LinkButton> */}
           <LinkButton
             rounded
             outline

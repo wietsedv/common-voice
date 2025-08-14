@@ -2,7 +2,7 @@
 
 write = Schrijven
 write-instruction = Een <icon></icon> zin uit het publieke domein toevoegen
-write-page-subtitle = Zinnen die hier zijn bijgedragen worden toegevoegd aan een openbaar beschikbare cc-0 gelicenseerde dataset.
+write-page-subtitle = Zinnen die hier zijn bijgedragen worden toegevoegd aan een openbaar beschikbare dataset.
 sentence =
     .label = Zin
 sentence-input-placeholder = Voer hier uw publieke domeinzin in
@@ -11,18 +11,17 @@ citation-input-placeholder = Verwijzing naar de bron van uw zin (vereist)
 citation =
     .label = Citaat
 sc-write-submit-confirm =
-    Ik bevestig dat deze zin <wikipediaLink>publiek domein</wikipediaLink> is en
-    ik toestemming heb om deze te uploaden.
+    Ik bevestig dat ik toestemming heb van de auteur om deze zin te uploaden.
 sc-review-write-title = Welke zinnen kan ik toevoegen?
 sc-review-small-batch-title = Meerdere zinnen toevoegen
-new-sentence-rule-1 = <noCopyright>Geen copyright</noCopyright>-beperkingen (<cc0>cc-0</cc0>)
+new-sentence-rule-1 = Toestemming van de auteur
 new-sentence-rule-2 = Minder dan 15 woorden
 new-sentence-rule-3 = Gebruik de juiste grammatica
 new-sentence-rule-4 = Gebruik correcte spelling en interpunctie
 new-sentence-rule-5 = Geen cijfers en speciale tekens
 new-sentence-rule-6 = Geen vreemde tekens
 new-sentence-rule-7 = Voeg de juiste bronvermelding toe
-new-sentence-rule-8 = In het beste geval natuurlijk en gemoedelijk (het zou gemakkelijk moeten zijn om de zin te lezen)
+new-sentence-rule-8 = Gewone taal wat gemakkelijk voor te lezen is
 login-instruction-multiple-sentences = <loginLink>Meld u aan</loginLink> of <loginLink>schrijf u in</loginLink> om meerdere zinnen toe te voegen
 how-to-cite = Hoe citeer ik?
 how-to-cite-explanation-bold = Citeer met een URL-koppeling of de volledige naam van het werk.
@@ -87,8 +86,7 @@ what-needs-to-be-in-file = Wat moet er in mijn bestand zitten?
 what-needs-to-be-in-file-explanation = Bekijk ons <templateFileLink>sjabloonbestand</templateFileLink>. Uw zinnen moeten vrij van auteursrechten zijn (CC0 of origineel werk met toestemming van de indiener) en duidelijk, grammaticaal correct en gemakkelijk te lezen zijn. Ingediende zinnen zouden een leeslengte van ongeveer 10 tot 15 seconden moeten hebben en mogen geen cijfers, eigennamen en speciale tekens bevatten.
 upload-progress-text = Upload bezig…
 sc-bulk-submit-confirm =
-    Ik bevestig dat deze zinnen <wikipediaLink>publiek domein</wikipediaLink> zijn en
-    ik toestemming heb om ze te uploaden.
+    Ik bevestig dat ik toestemming heb om deze zinnen te uploaden.
 bulk-upload-success-toast = Bulkupload zinnen voltooid
 bulk-upload-failed-toast = Upload mislukt, probeer het opnieuw.
 bulk-submission-success-header = Bedankt voor het indienen van uw bulkinzending!

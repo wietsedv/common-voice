@@ -4,7 +4,6 @@ import { useRef, useState } from 'react';
 import { connect } from 'react-redux';
 import { useAccount, useAction } from '../../../../hooks/store-hooks';
 import API from '../../../../services/api';
-import { trackDashboard } from '../../../../services/tracker';
 import { Locale } from '../../../../stores/locale';
 import StateTree from '../../../../stores/tree';
 import {
@@ -81,7 +80,6 @@ class UnconnectedLeaderboard extends React.Component<Props, State> {
 
   async fetchMore(cursor: [number, number]) {
     const { api, globalLocale, locale, type } = this.props;
-    trackDashboard('leaderboard-load-more', globalLocale);
     const newRows = await api.forLocale(locale).fetchLeaderboard(type, cursor);
     this.setState(
       ({ rows }) => {

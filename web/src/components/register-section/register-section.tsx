@@ -2,7 +2,6 @@ import cx from 'classnames';
 import { Localized } from '@fluent/react';
 import * as React from 'react';
 import { useState } from 'react';
-import { trackHome } from '../../services/tracker';
 import { BENEFITS, WHATS_PUBLIC } from '../../constants';
 import { useLocale } from '../locale-helpers';
 
@@ -40,7 +39,6 @@ export default function RegisterSection({
               onChange={() => {
                 setTab(l);
                 setIndex(0);
-                trackHome('change-benefits-tabs', locale);
               }}
             />
             <Localized id={l}>
@@ -58,12 +56,6 @@ export default function RegisterSection({
               className={i == index ? 'active' : ''}
               onClick={() => {
                 setIndex(i);
-                trackHome(
-                  isBenefits
-                    ? 'click-benefits-item'
-                    : 'click-whats-public-item',
-                  locale
-                );
               }}>
               <span>{i + 1}.</span>
               <Localized id={l}>

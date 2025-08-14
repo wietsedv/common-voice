@@ -3,7 +3,6 @@ import * as React from 'react';
 import { useState } from 'react';
 import { TextButton } from '../ui/ui';
 import URLS from '../../urls';
-import { trackGlobal } from '../../services/tracker';
 import ContactModal from '../contact-modal/contact-modal';
 import { useLocale, useLocalizedDiscourseURL } from '../locale-helpers';
 
@@ -22,7 +21,6 @@ export const GitHubLink = ({ dispatch, ...props }: SharedLinkProps) => {
       target="_blank"
       href={`${URLS.GITHUB_ROOT}`}
       rel="noopener noreferrer"
-      onClick={() => trackGlobal('github', locale)}
       {...props}
     />
   );
@@ -42,7 +40,6 @@ export const DeltaReadMoreLink = ({
       target="_blank"
       href={`${URLS.MOZILLA_BLOG_ROOT}/iterating-dataset-access-on-common-voice`}
       rel="noopener noreferrer"
-      onClick={() => trackGlobal('blog', locale)}
       {...props}
     />
   );
@@ -55,7 +52,6 @@ export const DiscourseLink = ({ dispatch, ...props }: SharedLinkProps) => {
     <a
       target="blank"
       href={discourseURL}
-      onClick={() => trackGlobal('discourse', locale)}
       {...props}
     />
   );
@@ -67,7 +63,6 @@ export const MatrixLink = ({ dispatch, ...props }: SharedLinkProps) => {
     <a
       target="blank"
       href="https://chat.mozilla.org/#/room/#common-voice:mozilla.org"
-      onClick={() => trackGlobal('matrix', locale)}
       {...props}
     />
   );
@@ -86,7 +81,6 @@ export const ContactLink = ({ dispatch, ...props }: SharedLinkProps) => {
       <TextButton
         {...props}
         onClick={() => {
-          trackGlobal('contact', locale);
           setShowContactModal(true);
         }}
       />

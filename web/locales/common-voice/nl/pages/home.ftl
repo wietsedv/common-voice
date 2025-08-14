@@ -81,10 +81,10 @@ add-questions = Vragen toevoegen <small>(binnenkort)</small>
 review-questions = Vragen beoordelen
 transcribe-audio = Audio transcriberen <small>(binnenkort)</small>
 press-and-stories = Pers en verhalen
-community-and-languages = Gemeenschap en talen
+community-and-languages = Gemeenschap en varianten
 coming-soon = Binnenkort beschikbaar
 about-us = Over ons
-scripted-speech = GESCRIPTE SPRAAK
+scripted-speech = VOORGELEZEN MATERIAAL
 spontaneous-speech = SPONTANE SPRAAK
 
 ## MENU ITEMS TOOLTIPS
@@ -111,7 +111,7 @@ community-and-languages-menu-item-aria-label = De door Common Voice ondersteunde
 hero-title = Technologie die uw taal spreekt
 # Text wrapped in <bold></bold> will be shown in bold font
 hero-subtitle-1 = <bold>Waarom zou AI maar voor een paar talen in de wereld moeten werken?</bold>
-hero-subtitle-2 = Onze taal is ons verhaal, onze gemeenschap, onze cultuur. Laten we de gegevenssets maken die we in de wereld willen zien.
+hero-subtitle-2 = Onze taal is ons verhaal, onze gemeenschap, onze cultuur. Help mee om uw taal te behouden in de digitale wereld!
 # icon is an arrow that points downwards
 get-started = Beginnen <icon><icon>
 
@@ -169,7 +169,7 @@ explore-datasets = Gegevenssets verkennen <icon></icon>
 
 get-involved-section-title = Ondersteun open, door de gemeenschap geleide gegevenssets
 read-sentences-link = Zinnen voorlezen
-validate-readings-link = Voorgelezen zinnen valideren
+validate-readings-link = Voorgelezen zinnen controleren
 contribute-link = Bijdragen aan tekstcorpus
 answer-questions-link = Vragen beantwoorden
 transcribe-answers-link = Antwoorden transcriberen

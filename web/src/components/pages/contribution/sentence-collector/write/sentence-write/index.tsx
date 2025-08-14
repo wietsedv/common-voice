@@ -79,7 +79,7 @@ export const SentenceWrite: React.FC<Props> = ({
 
       <div className="buttons">
         <div>
-          <LinkButton
+          {/* <LinkButton
             rounded
             outline
             className="guidelines-button"
@@ -89,7 +89,7 @@ export const SentenceWrite: React.FC<Props> = ({
             <Localized id="guidelines">
               <span />
             </Localized>
-          </LinkButton>
+          </LinkButton> */}
           <LinkButton
             rounded
             outline

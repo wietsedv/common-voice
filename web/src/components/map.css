@@ -1,20 +1,35 @@
 svg#map {
     width: 750px;
     height: 750px;
+    max-width: 100lvw;
+    max-height: 100lvw;
 
-.provincie {
-    fill: #ddd;
-    stroke: #fff;
-    stroke-width: 1;
-}
-.regio {
-    fill: #999;
-    stroke: #fff;
-    stroke-width: 1;
-    cursor: pointer;
-}
-.regio:hover {
-    fill: #ff7f0e;
-}
+      .provincie {
+        fill: #ddd;
+        stroke: #fff;
+        stroke-width: 2.0;
+      }
+      .regio {
+        fill: #138e055f;
+        stroke: #4c4a4f;
+        stroke-width: 3.0;
+      }
+      .variant-label {
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 600;
+        stroke: #fff;
+        stroke-width: 4px;
+        paint-order: stroke;
+        stroke-linejoin: round;
+      }
+      .variant-label:hover {
+        fill: #ae1c17;
+      }
+      .extra {
+        fill: none;
+        stroke: #000;
+        stroke-width: 2;
+      }
 
 }

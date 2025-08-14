@@ -18,3 +18,6 @@ sdz = Sallands
 stl = Stellingwerfs
 twd = Twents
 vel = Veluws
+
+urk = Urkers
+spk = Spakenburgers

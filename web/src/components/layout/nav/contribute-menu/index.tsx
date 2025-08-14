@@ -11,7 +11,6 @@ import ContributeMenuContent from '../contribute-menu-content'
 import { LocalizedNavLink, NavItem } from '../nav'
 import URLS from '../../../../urls'
 import { isContributable, useLocale } from '../../../locale-helpers'
-import { trackGtag } from '../../../../services/tracker-ga4'
 
 import './contribute-menu.css'
 
@@ -66,7 +65,6 @@ const ContributeMenu: React.FC<ContributeMenuProps> = ({
 
   const handleClick = () => {
     setShowMenu(menuLabel)
-    //trackGtag(`${menuLabel}-menu-label-click`)
   }
 
   if (!menuItems) {
