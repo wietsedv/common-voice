@@ -5,6 +5,8 @@ services:
       - voice-web
     container_name: db
     restart: unless-stopped
+    volumes:
+      - ./data/mysql:/var/lib/mysql
     environment:
       - MYSQL_DATABASE=voiceweb
       - MYSQL_USER=voicecommons
@@ -24,6 +26,8 @@ services:
     container_name: storage
     ports:
       - 8080:8080
+    volumes:
+      - ./data/storage:/storage
     networks:
       - voice-web
     command:
