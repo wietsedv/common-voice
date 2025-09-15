@@ -1,381 +1,397 @@
 import {
-  Localized,
-  withLocalization,
-  WithLocalizationProps,
-} from '@fluent/react'
-import classNames from 'classnames'
-import * as React from 'react'
-import { connect } from 'react-redux'
-import { RouteComponentProps, Redirect, withRouter } from 'react-router'
-import { Tooltip } from 'react-tooltip'
-import StateTree from '../../stores/tree'
-import { User } from '../../stores/user'
-import { Locale } from '../../stores/locale'
-import URLS from '../../urls'
-import { replacePathLocale } from '../../utility'
-import { LocaleNavLink } from '../locale-helpers'
-import { CogIcon, DashboardIcon, MenuIcon } from '../ui/icons'
-import { Avatar, LinkButton } from '../ui/ui'
-import Content from './content'
-import Footer from './footer'
-import LocalizationSelect from '../localization-select/localization-select'
-import LocalizationSelectComplex from '../localization-select/localization-select-complex'
-import Logo from './logo'
-import Nav from './nav/nav'
-import UserMenu from './user-menu'
-import cx from 'classnames'
-import WelcomeModal from '../welcome-modal/welcome-modal'
-import NonProductionBanner from './non-production-banner'
+	Localized,
+	type WithLocalizationProps,
+	withLocalization,
+} from "@fluent/react";
+import classNames from "classnames";
+import cx from "classnames";
 import {
-  ChallengeTeamToken,
-  challengeTeamTokens,
-  ChallengeToken,
-  challengeTokens,
-} from 'common'
-import API from '../../services/api'
-import { SecondaryNav } from './nav/secondary-nav'
+	type ChallengeTeamToken,
+	type ChallengeToken,
+	challengeTeamTokens,
+	challengeTokens,
+} from "common";
+import * as React from "react";
+import { connect } from "react-redux";
+import { Redirect, type RouteComponentProps, withRouter } from "react-router";
+import { Tooltip } from "react-tooltip";
+import type API from "../../services/api";
+import { Locale } from "../../stores/locale";
+import type StateTree from "../../stores/tree";
+import type { User } from "../../stores/user";
+import URLS from "../../urls";
+import { replacePathLocale } from "../../utility";
+import { LocaleNavLink } from "../locale-helpers";
+import LocalizationSelect from "../localization-select/localization-select";
+import LocalizationSelectComplex from "../localization-select/localization-select-complex";
+import { CogIcon, DashboardIcon, MenuIcon } from "../ui/icons";
+import { Avatar, LinkButton } from "../ui/ui";
+import WelcomeModal from "../welcome-modal/welcome-modal";
+import Content from "./content";
+import Footer from "./footer";
+import Logo from "./logo";
+import Nav from "./nav/nav";
+import { SecondaryNav } from "./nav/secondary-nav";
+import NonProductionBanner from "./non-production-banner";
+import UserMenu from "./user-menu";
 
 interface PropsFromState {
-  locale: Locale.State
-  user: User.State
-  api: API
+	locale: Locale.State;
+	user: User.State;
+	api: API;
 }
 
 interface PropsFromDispatch {
-  setLocale: typeof Locale.actions.set
+	setLocale: typeof Locale.actions.set;
 }
 
 interface LayoutProps
-  extends PropsFromState,
-    PropsFromDispatch,
-    WithLocalizationProps,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    RouteComponentProps<any, any, any> {
-  children?: React.ReactNode
-  shouldHideFooter?: boolean
+	extends PropsFromState,
+		PropsFromDispatch,
+		WithLocalizationProps,
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		RouteComponentProps<any, any, any> {
+	children?: React.ReactNode;
+	shouldHideFooter?: boolean;
 }
 
 interface LayoutState {
-  challengeTeamToken: ChallengeTeamToken
-  challengeToken: ChallengeToken
-  isMenuVisible: boolean
-  hasScrolled: boolean
-  showWelcomeModal: boolean
-  featureStorageKey?: string
-  shouldExpandNavItems: boolean
+	challengeTeamToken: ChallengeTeamToken;
+	challengeToken: ChallengeToken;
+	isMenuVisible: boolean;
+	hasScrolled: boolean;
+	showWelcomeModal: boolean;
+	featureStorageKey?: string;
+	shouldExpandNavItems: boolean;
 }
 
 class Layout extends React.PureComponent<LayoutProps, LayoutState> {
-  private installApp: HTMLElement
+	private installApp: HTMLElement;
 
-  state: LayoutState = {
-    challengeTeamToken: undefined,
-    challengeToken: undefined,
-    isMenuVisible: false,
-    hasScrolled: false,
+	state: LayoutState = {
+		challengeTeamToken: undefined,
+		challengeToken: undefined,
+		isMenuVisible: false,
+		hasScrolled: false,
 
-    showWelcomeModal: false,
-    featureStorageKey: null,
-    shouldExpandNavItems: false,
-  }
+		showWelcomeModal: false,
+		featureStorageKey: null,
+		shouldExpandNavItems: false,
+	};
 
-  async componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll)
-    this.visitHash()
+	async componentDidMount() {
+		window.addEventListener("scroll", this.handleScroll);
+		this.visitHash();
 
-    const challengeTeamToken = this.getTeamToken()
-    const challengeToken = this.getChallengeToken()
+		const challengeTeamToken = this.getTeamToken();
+		const challengeToken = this.getChallengeToken();
 
-    this.setState({
-      challengeTeamToken: challengeTeamToken,
-      challengeToken: challengeToken,
-      showWelcomeModal:
-        challengeTeamToken !== undefined && challengeToken !== undefined,
-    })
-  }
+		this.setState({
+			challengeTeamToken: challengeTeamToken,
+			challengeToken: challengeToken,
+			showWelcomeModal:
+				challengeTeamToken !== undefined && challengeToken !== undefined,
+		});
+	}
 
-  componentDidUpdate(prevProps: LayoutProps) {
-    const { pathname, key, hash } = this.props.location
-    const { setLocale, locale } = this.props
+	componentDidUpdate(prevProps: LayoutProps) {
+		const { pathname, key, hash } = this.props.location;
+		const { setLocale, locale } = this.props;
 
-    const hasPathnameChanged = pathname !== prevProps.location.pathname
-    const locationKeyHasChanged = key !== prevProps.location.key
-    const shouldScrollToHash = hash && locationKeyHasChanged
-    const hasLocaleChanged = prevProps.locale !== locale
+		const hasPathnameChanged = pathname !== prevProps.location.pathname;
+		const locationKeyHasChanged = key !== prevProps.location.key;
+		const shouldScrollToHash = hash && locationKeyHasChanged;
+		const hasLocaleChanged = prevProps.locale !== locale;
 
-    if (hasPathnameChanged) {
-      this.setState({ isMenuVisible: false })
-      window.scrollTo({ top: 0 })
-      this.visitHash()
-    }
+		if (hasPathnameChanged) {
+			this.setState({ isMenuVisible: false });
+			window.scrollTo({ top: 0 });
+			this.visitHash();
+		}
 
-    if (!hasPathnameChanged && shouldScrollToHash) {
-      this.visitHash()
-    }
+		if (!hasPathnameChanged && shouldScrollToHash) {
+			this.visitHash();
+		}
 
-    if (hasLocaleChanged) {
-      setLocale(locale)
-    }
-  }
+		if (hasLocaleChanged) {
+			setLocale(locale);
+		}
+	}
 
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll)
-  }
+	componentWillUnmount() {
+		window.removeEventListener("scroll", this.handleScroll);
+	}
 
-  private visitHash() {
-    if (location.hash) {
-      const hash = location.hash.split('?')[0]
-      const node = document.querySelector(hash)
-      if (node) {
-        node.scrollIntoView({ behavior: 'smooth' })
-      }
-    }
-  }
+	private visitHash() {
+		if (location.hash) {
+			const hash = location.hash.split("?")[0];
+			const node = document.querySelector(hash);
+			if (node) {
+				node.scrollIntoView({ behavior: "smooth" });
+			}
+		}
+	}
 
-  private handleScroll = () => {
-    const { scrollY } = window
-    this.setState({
-      hasScrolled: scrollY > 0,
-    })
-  }
+	private handleScroll = () => {
+		const { scrollY } = window;
+		this.setState({
+			hasScrolled: scrollY > 0,
+		});
+	};
 
-  private toggleMenu = () => {
-    this.setState({ isMenuVisible: !this.state.isMenuVisible })
-  }
+	private toggleMenu = () => {
+		this.setState({ isMenuVisible: !this.state.isMenuVisible });
+	};
 
-  private handleLocaleChange = async (locale: string) => {
-    const { history } = this.props
-    history.push(replacePathLocale(history.location.pathname, locale))
-  }
+	private handleLocaleChange = async (locale: string) => {
+		const { history } = this.props;
+		history.push(replacePathLocale(history.location.pathname, locale));
+	};
 
-  private getChallengeToken = () => {
-    return challengeTokens.find(challengeToken =>
-      this.props.location.search.includes(`challenge=${challengeToken}`)
-    )
-  }
+	private getChallengeToken = () => {
+		return challengeTokens.find((challengeToken) =>
+			this.props.location.search.includes(`challenge=${challengeToken}`),
+		);
+	};
 
-  private getTeamToken = () => {
-    return challengeTeamTokens.find(challengeTeamToken =>
-      this.props.location.search.includes(`team=${challengeTeamToken}`)
-    )
-  }
+	private getTeamToken = () => {
+		return challengeTeamTokens.find((challengeTeamToken) =>
+			this.props.location.search.includes(`team=${challengeTeamToken}`),
+		);
+	};
 
-  render() {
-    const { children, locale, location, user, shouldHideFooter, getString } =
-      this.props
-    const {
-      challengeTeamToken,
-      challengeToken,
-      hasScrolled,
-      isMenuVisible,
-      showWelcomeModal,
-    } = this.state
+	render() {
+		const { children, locale, location, user, shouldHideFooter, getString } =
+			this.props;
+		const {
+			challengeTeamToken,
+			challengeToken,
+			hasScrolled,
+			isMenuVisible,
+			showWelcomeModal,
+		} = this.state;
 
-    const CONTRIBUTION_PAGES = [
-      `/${locale}${URLS.SPEAK}`,
-      `/${locale}${URLS.LISTEN}`,
-      `/${locale}${URLS.WRITE}`,
-      `/${locale}${URLS.REVIEW}`,
-    ]
+		const CONTRIBUTION_PAGES = [
+			`/${locale}${URLS.SPEAK}`,
+			`/${locale}${URLS.LISTEN}`,
+			`/${locale}${URLS.WRITE}`,
+			`/${locale}${URLS.REVIEW}`,
+		];
 
-    const isBuildingProfile = location.pathname.includes(URLS.PROFILE_INFO)
-    const isDemoMode = location.pathname.includes(URLS.DEMO)
-    const isContributionPageActive = CONTRIBUTION_PAGES.includes(
-      location.pathname
-    )
-    const pathParts = location.pathname.split('/')
-    const className = cx(pathParts[2] ? pathParts.slice(2).join(' ') : 'home', {
-      'nav-modal-active': this.state.isMenuVisible,
-    })
+		const isBuildingProfile = location.pathname.includes(URLS.PROFILE_INFO);
+		const isDemoMode = location.pathname.includes(URLS.DEMO);
+		const isContributionPageActive = CONTRIBUTION_PAGES.includes(
+			location.pathname,
+		);
+		const pathParts = location.pathname.split("/");
+		const className = cx(pathParts[2] ? pathParts.slice(2).join(" ") : "home", {
+			"nav-modal-active": this.state.isMenuVisible,
+		});
 
-    const alreadyEnrolled =
-      this.state.showWelcomeModal && user.account?.enrollment?.challenge
-    const redirectURL = URLS.DASHBOARD + URLS.CHALLENGE
+		const alreadyEnrolled =
+			this.state.showWelcomeModal && user.account?.enrollment?.challenge;
+		const redirectURL = URLS.DASHBOARD + URLS.CHALLENGE;
 
-    const handleMenuIconClick = () => {
-      this.setState({ shouldExpandNavItems: !this.state.shouldExpandNavItems })
-    }
+		const handleMenuIconClick = () => {
+			this.setState({ shouldExpandNavItems: !this.state.shouldExpandNavItems });
+		};
 
-    const handleSecondaryNavMobileMenuClick = () => {
-      this.toggleMenu()
-      this.setState({ shouldExpandNavItems: true })
-    }
+		const handleSecondaryNavMobileMenuClick = () => {
+			this.toggleMenu();
+			this.setState({ shouldExpandNavItems: true });
+		};
 
-    return (
-      <div id="main" className={className}>
-        {alreadyEnrolled && <Redirect to={redirectURL} />}
-        {showWelcomeModal && !alreadyEnrolled && (
-          <WelcomeModal
-            onRequestClose={() => {
-              this.setState({ showWelcomeModal: false })
-            }}
-            challengeToken={challengeToken}
-            teamToken={challengeTeamToken}
-          />
-        )}
-        <div
-          className={cx('header-wrapper', {
-            'contribution-page-active': isContributionPageActive,
-          })}>
-          <header className={cx('header', { active: hasScrolled })}>
-            <div>
-              {isContributionPageActive && (
-                <MenuIcon
-                  onClick={handleMenuIconClick}
-                  className={cx(
-                    { active: this.state.shouldExpandNavItems },
-                    'desktop-menu-icon'
-                  )}
-                />
-              )}
-              {(!isContributionPageActive || this.state.isMenuVisible) && (
-                <MenuIcon
-                  onClick={this.toggleMenu}
-                  className={cx(
-                    { active: this.state.isMenuVisible },
-                    'mobile-menu-icon'
-                  )}
-                />
-              )}
-              <Logo />
-              {locale !== "nl" ?
-              <Nav
-                id="main-nav"
-                shouldExpandNavItems={
-                  this.state.shouldExpandNavItems || !isContributionPageActive
-                }
-                isContributionPageActive={isContributionPageActive}
-              /> : <div />}
-            </div>
-            <div>
-              {user.account ? (
-                <UserMenu />
-              ) : isBuildingProfile ? null : (
-                <>
-                  <Localized id="login-signup">
-                    <LinkButton
-                      className="login"
-                      href="/login"
-                      rounded
-                      outline
-                      data-testid="login-button"
-                      id="login-button"
-                    />
-                  </Localized>
-                  <Tooltip
-                    anchorSelect="#login-button"
-                    place="bottom"
-                    style={{ width: 'auto', maxWidth: '550px' }}>
-                    {getString('login-signup')}
-                  </Tooltip>
-                </>
-              )}
-              <LocalizationSelectComplex
-                locale={locale}
-                userLanguages={user.account && user.account.languages ? user.account.languages.map(lang => lang.locale) : []}
-                onLocaleChange={this.handleLocaleChange}
-              />
-              <button
-                id="hamburger-menu"
-                className={classNames({
-                  active: isMenuVisible,
-                  'logged-in': user.account,
-                })}>
-                {user.account ? (
-                  <LinkButton href="/profile" className="avatar">
-                    <Avatar url={user.account.avatar_url} />
-                  </LinkButton>
-                ) : (
-                  <Localized id="login">
-                    <LinkButton href="/login" rounded outline />
-                  </Localized>
-                )}
-              </button>
-            </div>
-          </header>
-          {isContributionPageActive && (
-            <SecondaryNav
-              handleSecondaryNavMobileMenuClick={
-                handleSecondaryNavMobileMenuClick
-              }
-              isDemoMode={isDemoMode}
-              isLoggedIn={Boolean(user.account)}
-            />
-          )}
-        </div>
-        {/* <NonProductionBanner /> */}
-        <main
-          id="content"
-          className={className}
-          data-testid={pathParts[2] ? pathParts.slice(2).join(' ') : 'home'}>
-          {children ? children : <Content location={location} />}
-        </main>
-        {/* {shouldHideFooter ? <></> : <Footer />} */}
-        <div
-          id="navigation-modal"
-          className={this.state.isMenuVisible ? 'active' : ''}>
-          <Nav
-            shouldExpandNavItems={
-              this.state.shouldExpandNavItems || !isContributionPageActive
-            }
-            isContributionPageActive={isContributionPageActive}
-            toggleMenu={this.toggleMenu}>
-            <div className="user-nav">
-              <LocalizationSelect
-                locale={locale}
-                onLocaleChange={this.handleLocaleChange}
-              />
+		return (
+			<div id="main" className={className}>
+				{alreadyEnrolled && <Redirect to={redirectURL} />}
+				{showWelcomeModal && !alreadyEnrolled && (
+					<WelcomeModal
+						onRequestClose={() => {
+							this.setState({ showWelcomeModal: false });
+						}}
+						challengeToken={challengeToken}
+						teamToken={challengeTeamToken}
+					/>
+				)}
+				<div
+					className={cx("header-wrapper", {
+						"contribution-page-active": isContributionPageActive,
+					})}
+				>
+					<header className={cx("header", { active: hasScrolled })}>
+						<div>
+							{isContributionPageActive && (
+								<MenuIcon
+									onClick={handleMenuIconClick}
+									className={cx(
+										{ active: this.state.shouldExpandNavItems },
+										"desktop-menu-icon",
+									)}
+								/>
+							)}
+							{(!isContributionPageActive || this.state.isMenuVisible) && (
+								<MenuIcon
+									onClick={this.toggleMenu}
+									className={cx(
+										{ active: this.state.isMenuVisible },
+										"mobile-menu-icon",
+									)}
+								/>
+							)}
+							<Logo />
+							{locale !== "nl" ? (
+								<Nav
+									id="main-nav"
+									shouldExpandNavItems={
+										this.state.shouldExpandNavItems || !isContributionPageActive
+									}
+									isContributionPageActive={isContributionPageActive}
+								/>
+							) : (
+								<div />
+							)}
+						</div>
+						<div>
+							{user.account ? (
+								<UserMenu />
+							) : isBuildingProfile ? null : (
+								<>
+									<Localized id="login-signup">
+										<LinkButton
+											className="login"
+											href="/login"
+											rounded
+											outline
+											data-testid="login-button"
+											id="login-button"
+										/>
+									</Localized>
+									<Tooltip
+										anchorSelect="#login-button"
+										place="bottom"
+										style={{ width: "auto", maxWidth: "550px" }}
+									>
+										{getString("login-signup")}
+									</Tooltip>
+								</>
+							)}
+							{locale !== "nl" && (
+								<LocalizationSelectComplex
+									locale={locale}
+									userLanguages={
+										user.account && user.account.languages
+											? user.account.languages.map((lang) => lang.locale)
+											: []
+									}
+									onLocaleChange={this.handleLocaleChange}
+								/>
+							)}
+							<button
+								id="hamburger-menu"
+								className={classNames({
+									active: isMenuVisible,
+									"logged-in": user.account,
+								})}
+							>
+								{user.account ? (
+									<LinkButton href="/profile" className="avatar">
+										<Avatar url={user.account.avatar_url} />
+									</LinkButton>
+								) : (
+									<Localized id="login">
+										<LinkButton href="/login" rounded outline />
+									</Localized>
+								)}
+							</button>
+						</div>
+					</header>
+					{isContributionPageActive && (
+						<SecondaryNav
+							handleSecondaryNavMobileMenuClick={
+								handleSecondaryNavMobileMenuClick
+							}
+							isDemoMode={isDemoMode}
+							isLoggedIn={Boolean(user.account)}
+						/>
+					)}
+				</div>
+				{/* <NonProductionBanner /> */}
+				<main
+					id="content"
+					className={className}
+					data-testid={pathParts[2] ? pathParts.slice(2).join(" ") : "home"}
+				>
+					{children ? children : <Content location={location} />}
+				</main>
+				{/* {shouldHideFooter ? <></> : <Footer />} */}
+				<div
+					id="navigation-modal"
+					className={this.state.isMenuVisible ? "active" : ""}
+				>
+					<Nav
+						shouldExpandNavItems={
+							this.state.shouldExpandNavItems || !isContributionPageActive
+						}
+						isContributionPageActive={isContributionPageActive}
+						toggleMenu={this.toggleMenu}
+					>
+						<div className="user-nav">
+							<LocalizationSelect
+								locale={locale}
+								onLocaleChange={this.handleLocaleChange}
+							/>
 
-              {user.account && (
-                <div>
-                  <LocaleNavLink className="user-nav-link" to={URLS.DASHBOARD}>
-                    <DashboardIcon />
-                    <Localized id="dashboard">
-                      <span />
-                    </Localized>
-                  </LocaleNavLink>
-                  <LocaleNavLink
-                    className="user-nav-link"
-                    to={URLS.PROFILE_SETTINGS}>
-                    <CogIcon />
-                    <Localized id="settings">
-                      <span />
-                    </Localized>
-                  </LocaleNavLink>
-                </div>
-              )}
-              {user.account ? (
-                <Localized id="logout">
-                  <LinkButton rounded href="/logout" className="auth-button" />
-                </Localized>
-              ) : (
-                <Localized id="login-signup">
-                  <LinkButton rounded href="/login" className="auth-button" />
-                </Localized>
-              )}
-            </div>
-          </Nav>
-        </div>
-      </div>
-    )
-  }
+							{user.account && (
+								<div>
+									<LocaleNavLink className="user-nav-link" to={URLS.DASHBOARD}>
+										<DashboardIcon />
+										<Localized id="dashboard">
+											<span />
+										</Localized>
+									</LocaleNavLink>
+									<LocaleNavLink
+										className="user-nav-link"
+										to={URLS.PROFILE_SETTINGS}
+									>
+										<CogIcon />
+										<Localized id="settings">
+											<span />
+										</Localized>
+									</LocaleNavLink>
+								</div>
+							)}
+							{user.account ? (
+								<Localized id="logout">
+									<LinkButton rounded href="/logout" className="auth-button" />
+								</Localized>
+							) : (
+								<Localized id="login-signup">
+									<LinkButton rounded href="/login" className="auth-button" />
+								</Localized>
+							)}
+						</div>
+					</Nav>
+				</div>
+			</div>
+		);
+	}
 }
 
 const mapStateToProps = (state: StateTree) => ({
-  locale: state.locale,
-  user: state.user,
-  api: state.api,
-})
+	locale: state.locale,
+	user: state.user,
+	api: state.api,
+});
 
 const mapDispatchToProps = {
-  setLocale: Locale.actions.set,
-}
+	setLocale: Locale.actions.set,
+};
 
 export default withRouter(
-  withLocalization(
-    connect<PropsFromState, PropsFromDispatch>(
-      mapStateToProps,
-      mapDispatchToProps
-    )(Layout)
-  )
-)
+	withLocalization(
+		connect<PropsFromState, PropsFromDispatch>(
+			mapStateToProps,
+			mapDispatchToProps,
+		)(Layout),
+	),
+);
