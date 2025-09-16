@@ -29,7 +29,7 @@ services:
     networks:
       - voice-web
     volumes:
-      - ./data/storage:/storage
+      - /mnt/blockstorage/praoten/storage:/storage
     command:
       [
         '-scheme',
