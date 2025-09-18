@@ -111,7 +111,7 @@ community-and-languages-menu-item-aria-label = De door Common Voice ondersteunde
 hero-title = Technologie die uw taal spreekt
 # Text wrapped in <bold></bold> will be shown in bold font
 hero-subtitle-1 = <bold>Waarom zou AI maar voor een paar talen in de wereld moeten werken?</bold>
-hero-subtitle-2 = Onze taal is ons verhaal, onze gemeenschap, onze cultuur. Help mee om uw taal te behouden in de digitale wereld!
+hero-subtitle-2 = De regionale taal is niet alleen de taal van thuis, op de voetbalclub, van de buren en van de straat. Deze moet ook de digitale wereld in! Wat lokaal leeft, moet ook digitaal kunnen groeien.
 # icon is an arrow that points downwards
 get-started = Beginnen <icon><icon>
 
