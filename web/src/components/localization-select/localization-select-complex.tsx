@@ -97,7 +97,7 @@ const LocalizationSelectComplex = ({ locale, userLanguages, onLocaleChange }: Pr
             <label {...getLabelProps()}>{label}</label>
           </VisuallyHidden>
           <button className="button" type="button" {...getToggleButtonProps()}>
-            {locale}
+            {getLocaleWithName(locale).name}
           </button>
           <div className="list-wrapper">
             <ul {...getMenuProps()}>

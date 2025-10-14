@@ -35,13 +35,10 @@ export const HeroSection: React.FC<Props> = ({ isLocaleContributable }) => {
 							<p />
 						</Localized>
 						<p>
-							<br/>Klik hiernaast/hieronder op de naam van het gebied waarvan je de
+							<br/>Klik hiernaast op de naam van het gebied waarvan je de
 							lokale variant spreekt, om jouw stem op te nemen en jouw taal te
 							helpen!
 						</p>
-						{/* <Localized id="get-started" elems={{ icon: <ArrowRight /> }}>
-              <LinkButton rounded to={`${URLS.ROOT}?page=home#action-items`} />
-            </Localized> */}
 					</div>
 				</div>
 				<div className="hero-image-container">

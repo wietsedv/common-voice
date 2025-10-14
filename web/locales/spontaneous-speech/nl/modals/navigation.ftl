@@ -7,6 +7,6 @@ check = Controleren
 # Link to the Transcribe page in the navigation modal for mobile users
 transcribe = Transcriberen
 loading = Laden…
-login-signup = Aanmelden / Registreren
-login = Aanmelden
-logout = Afmelden
+login-signup = Inloggen / Registreren
+login = Inloggen
+logout = Uitloggen

@@ -13,7 +13,7 @@ listen-abort-title = Valideren van fragmenten voltooien?
 listen-abort-cancel = Doorgaan met valideren
 listen-abort-confirm = Valideren voltooien
 # Menu item
-validate-readings = Voorgelezen zinnen valideren
+validate-readings = Zinnen Luisteren
 # text wrapped in <small></small> will be shown in a smaller font size
 validate-readings-coming-soon = Voorgelezen zinnen valideren <small>(binnenkort)</small>
 
