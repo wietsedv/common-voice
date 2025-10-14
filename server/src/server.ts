@@ -80,10 +80,10 @@ export default class Server {
         response.set('X-Content-Type-Options', 'nosniff')
         response.set('X-XSS-Protection', '1; mode=block')
         response.set('X-Frame-Options', 'DENY')
-        response.set(
-          'Strict-Transport-Security',
-          'max-age=' + SECONDS_IN_A_YEAR
-        )
+        // response.set(
+        //   'Strict-Transport-Security',
+        //   'max-age=' + SECONDS_IN_A_YEAR
+        // )
       },
     }
     app.set('trust proxy', true)
