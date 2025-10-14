@@ -34,10 +34,14 @@ export default class Bucket {
    * Fetch a public url for the resource.
    */
   public async getPublicUrl(key: string, bucketType?: string): Promise<string> {
-    const { DATASET_BUCKET_NAME, CLIP_BUCKET_NAME, ENVIRONMENT } = getConfig()
+    const { DATASET_BUCKET_NAME, CLIP_BUCKET_NAME, ENVIRONMENT, PROD } = getConfig()
 
     const bucket =
       bucketType === 'dataset' ? DATASET_BUCKET_NAME : CLIP_BUCKET_NAME
+
+    if (PROD) {
+      return `https://praoten.nl:8080/storage/v1/b/${bucket}/o/${key}?alt=media`
+    }
 
     if (ENVIRONMENT === 'local') {
       return `http://localhost:8080/storage/v1/b/${bucket}/o/${key}?alt=media`
