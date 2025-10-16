@@ -104,6 +104,21 @@
                     }
                 }
 
+                h2 {
+
+                    strong {
+                        /* text-decoration: underline; */
+                    background: linear-gradient(
+                        90deg,
+                        var(--dark-red) 0%,
+                        var(--dark-blue) 100%
+                    );
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    }
+                }
+
                 p {
                     font-size: 20px;
 
