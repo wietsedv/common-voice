@@ -108,21 +108,21 @@ function ProfileInfoLanguages({
               </ExpandableInformation>
             )}
 
-            <InputLanguageAccents
+            {/* <InputLanguageAccents
               locale={locale}
               accents={accents}
               accentsAll={accentsAll}
               userLanguages={userLanguages}
               setUserLanguages={setUserLanguages}
-            />
+            /> */}
 
-            {hasUserLanguages && (
+            {/* {hasUserLanguages && (
               <ExpandableInformation summaryLocalizedId="help-accent">
                 <Localized id="help-accent-explanation">
                   <div />
                 </Localized>
               </ExpandableInformation>
-            )}
+            )} */}
 
             {variantsAll[locale] && variant && (
               <VariantContributionOptions

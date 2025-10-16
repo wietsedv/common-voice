@@ -52,7 +52,7 @@ const Layout = ({ toLocaleRoute, user }: Props) => {
                 ? { icon: <UserIcon />, id: 'profile' }
                 : { icon: <UserPlusIcon />, id: 'build-profile' }),
             },
-            { route: avatarRoute, icon: <CameraIcon />, id: 'avatar' },
+            // { route: avatarRoute, icon: <CameraIcon />, id: 'avatar' },
             { route: prefRoute, icon: <CogIcon />, id: 'settings' },
             {
               route: deleteRoute,

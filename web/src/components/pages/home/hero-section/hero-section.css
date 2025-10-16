@@ -3,6 +3,7 @@
     justify-content: center;
     background: url('./assets/home-bg-waves.webp');
     background-size: 100% 100%;
+    position: relative;
 
     .hero-container {
         display: flex;
@@ -170,7 +171,7 @@
 
             @media (--xl-up) {
                 position: absolute;
-                top: 2.8%;
+                /* top: 2.8%; */
                 right: 0%;
             }
 

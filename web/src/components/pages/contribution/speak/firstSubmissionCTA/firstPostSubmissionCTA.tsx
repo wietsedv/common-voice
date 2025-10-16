@@ -152,7 +152,7 @@ export const FirstPostSubmissionCta: React.FC<FirstPostSubmissionCtaProps> = ({
         </ExpandableInformation>
       </div>
       <div className="submission-buttons">
-        <Localized id="add-information-button">
+        {/* <Localized id="add-information-button">
           <Button
             rounded
             className="add-information-button"
@@ -160,7 +160,7 @@ export const FirstPostSubmissionCta: React.FC<FirstPostSubmissionCtaProps> = ({
             data-testid="add-information-button"
             disabled={isAddInformationButtonDisabled}
           />
-        </Localized>
+        </Localized> */}
         <Localized id="continue-speaking-button">
           <Button
             rounded

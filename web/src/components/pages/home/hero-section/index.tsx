@@ -5,7 +5,7 @@ import classNames from "classnames";
 import type React from "react";
 import { usePreloadImage } from "../../../../hooks/use-preload-image";
 import URLS from "../../../../urls";
-import { LocaleLink } from "../../../locale-helpers";
+import { LocaleLink,useNativeLocaleNames } from "../../../locale-helpers";
 import { Map } from "../../../map";
 import { ArrowRight, MicIcon, Play } from "../../../ui/icons";
 import { LinkButton } from "../../../ui/ui";
@@ -19,6 +19,7 @@ type Props = {
 export const HeroSection: React.FC<Props> = ({ isLocaleContributable }) => {
 	// const imageUrl = require('./assets/hero-hd.webp')
 	// const isLoaded = usePreloadImage(imageUrl)
+  	// const nativeNames = useNativeLocaleNames();
 
 	const linkDisabled = !isLocaleContributable;
 
@@ -35,8 +36,8 @@ export const HeroSection: React.FC<Props> = ({ isLocaleContributable }) => {
 							<p />
 						</Localized>
 						<p>
-							<br/>Klik hiernaast op de naam van het gebied waarvan je de
-							lokale variant spreekt, om jouw stem op te nemen en jouw taal te
+							<br/><strong>Klik hiernaast op de naam van het gebied</strong> waarvan je de
+							lokale variant spreekt of waar je ongeveer vandaan komt, om jouw stem op te nemen en jouw taal te
 							helpen!
 						</p>
 					</div>
