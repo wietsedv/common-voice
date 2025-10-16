@@ -40,7 +40,6 @@ const SOURCES = {
     'https://praotn.nl',
     'https://proaten.nl',
     'https://proatn.nl',
-    'http://praoten.nl:*',
     'https://*.amazonaws.com',
     'https://*.amazon.com',
     'https://*.googleapis.com',

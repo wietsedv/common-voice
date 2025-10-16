@@ -23,6 +23,7 @@ import { setupUpdateValidatedSentencesQueue } from './infrastructure/queues/upda
 import { setupBulkSubmissionQueue } from './infrastructure/queues/bulkSubmissionQueue'
 import { importSentences } from './lib/model/db/import-sentences'
 import { setupAuthRouter } from './auth-router'
+import { createProxyMiddleware } from 'http-proxy-middleware'
 
 const MAINTENANCE_VERSION_KEY = 'maintenance-version'
 const FULL_CLIENT_PATH = path.join(__dirname, '..', '..', 'web')
@@ -125,6 +126,18 @@ export default class Server {
       app.use(await setupAuthRouter())
 
       app.use('/api/v1', this.api.getRouter())
+
+      // Proxy /storage requests to the storage provider
+      app.use(
+        '/storage',
+        createProxyMiddleware({
+          target: 'http://storage:8080/storage',
+          // changeOrigin: true,
+          // pathRewrite: { '^/storage': '/storage' },
+          logger: console,
+          secure: false,
+        })
+      )
 
       app.use(express.static(FULL_CLIENT_PATH, staticOptions))
 

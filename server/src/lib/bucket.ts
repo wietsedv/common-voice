@@ -40,7 +40,7 @@ export default class Bucket {
       bucketType === 'dataset' ? DATASET_BUCKET_NAME : CLIP_BUCKET_NAME
 
     if (PROD) {
-      return `http://praoten.nl:8080/storage/v1/b/${bucket}/o/${key}?alt=media`
+      return `https://praoten.nl/storage/v1/b/${bucket}/o/${key}?alt=media`
     }
 
     if (ENVIRONMENT === 'local') {
