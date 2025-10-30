@@ -74,7 +74,6 @@ const ContributeMenu: React.FC<ContributeMenuProps> = ({
           id={menuLabel}
           to={URLS.LANGUAGES}
           onClick={toggleMenu}
-          reloadDocument
         />
         <Tooltip
           anchorSelect={`#${menuLabel}`}
