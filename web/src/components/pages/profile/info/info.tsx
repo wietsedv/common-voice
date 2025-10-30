@@ -252,7 +252,7 @@ function ProfileInfo({
         </Localized>
       </div>
 
-      <ExpandableInformation summaryLocalizedId="help-sex-or-gender-changes">
+      {/* <ExpandableInformation summaryLocalizedId="help-sex-or-gender-changes">
         <Localized
           id="help-sex-or-gender-changes-explanation"
           elems={{
@@ -267,7 +267,7 @@ function ProfileInfo({
           }}>
           <div />
         </Localized>
-      </ExpandableInformation>
+      </ExpandableInformation> */}
 
       <ProfileInfoLanguages
         userLanguages={userLanguages}

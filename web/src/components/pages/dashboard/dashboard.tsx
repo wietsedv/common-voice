@@ -86,54 +86,6 @@ const TopBar = ({
   return (
     <div className={`top-bar${isChallengeEnrolled ? ' with-challenge' : ''}`}>
       <div className="underlined">
-        <nav>
-          {isChallengeEnrolled && (
-            <LocaleNavLink
-              key={URLS.CHALLENGE}
-              to={
-                URLS.DASHBOARD +
-                (dashboardLocale ? '/' + dashboardLocale : '') +
-                URLS.CHALLENGE
-              }>
-              <h2>Challenge</h2>
-            </LocaleNavLink>
-          )}
-          {[
-            ['stats', URLS.STATS],
-            ['goals', URLS.GOALS],
-          ].map(([label, path]) => (
-            <LocaleNavLink
-              key={path}
-              to={
-                URLS.DASHBOARD +
-                (dashboardLocale ? '/' + dashboardLocale : '') +
-                path
-              }>
-              <Localized id={label}>
-                {/* Localized injects content into child tag */}
-                {/* eslint-disable-next-line jsx-a11y/heading-has-content */}
-                <h2 />
-              </Localized>
-            </LocaleNavLink>
-          ))}
-          <LocaleNavLink
-            to={
-              URLS.DASHBOARD +
-              (dashboardLocale ? '/' + dashboardLocale : '') +
-              URLS.AWARDS
-            }>
-            <h2>
-              <Localized id="awards">
-                <span />
-              </Localized>{' '}
-              {unseenAwards > 0 && (
-                <span className="badge">
-                  {unseenAwards > 9 ? '9+' : unseenAwards}
-                </span>
-              )}
-            </h2>
-          </LocaleNavLink>
-        </nav>
         {isChallengeTabSelected ? (
           <div className="language challenge-language">
             <span>Language:</span>
@@ -141,12 +93,14 @@ const TopBar = ({
           </div>
         ) : (
           <div className="languages">
-            <span>
-              <Localized id="your-languages">
-                <span />
-              </Localized>
-              :
-            </span>
+            {titleBarLocales.length > 1 && (
+              <>
+              <span>
+                <Localized id="your-languages">
+                  <span />
+                </Localized>
+                :
+              </span>
             {titleBarLocales.map(l => (
               <label key={l}>
                 <input
@@ -164,6 +118,8 @@ const TopBar = ({
                 )}
               </label>
             ))}
+            </>
+            )}
             {dropdownLocales.length > 0 && (
               <select
                 className={

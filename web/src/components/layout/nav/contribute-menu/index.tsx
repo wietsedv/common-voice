@@ -74,6 +74,7 @@ const ContributeMenu: React.FC<ContributeMenuProps> = ({
           id={menuLabel}
           to={URLS.LANGUAGES}
           onClick={toggleMenu}
+          reloadDocument
         />
         <Tooltip
           anchorSelect={`#${menuLabel}`}
@@ -90,6 +91,28 @@ const ContributeMenu: React.FC<ContributeMenuProps> = ({
       </div>
     )
   }
+
+  return (
+    <div className="contribute-wrapper datasets">
+      <LocalizedNavLink
+        id={menuLabel}
+        to={menuItems[0].internalHref}
+        onClick={toggleMenu}
+      />
+      <Tooltip
+        anchorSelect={`#${menuLabel}`}
+        style={{
+          width: 'auto',
+          maxWidth: '550px',
+          fontFamily: 'Open Sans',
+          fontSize: '12px',
+          zIndex: '1',
+        }}
+        openEvents={{ mouseover: true }}>
+        {l10n.getString(menuTooltip)}
+      </Tooltip>
+    </div>
+  )
 
   const visibleMenuItems = isUserLoggedIn
     ? menuItems

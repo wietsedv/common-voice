@@ -279,8 +279,8 @@ export const LEGACY_ACCENTS: any = {
 
 export const AGES = {
   '': '',
-  teens: '< 19',
-  twenties: '19 - 29',
+  // teens: '< 19',
+  twenties: '18 - 29',
   thirties: '30 - 39',
   fourties: '40 - 49',
   fifties: '50 - 59',
