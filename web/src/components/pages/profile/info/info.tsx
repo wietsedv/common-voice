@@ -63,7 +63,7 @@ function ProfileInfo({
     visible: 0,
     age: '',
     gender: '',
-    sendEmails: false,
+    sendEmails: true,
     privacyAgreed: false,
   })
   const { username, visible, age, gender, sendEmails, privacyAgreed } =
@@ -291,22 +291,6 @@ function ProfileInfo({
             </Tooltip>
 
             <div className="checkboxes">
-              {/* <LabeledCheckbox
-                label={
-                  <>
-                    <Localized id="email-opt-in-info-title">
-                      <strong />
-                    </Localized>
-                    <Localized id="email-opt-in-info-sub-with-challenge">
-                      <span />
-                    </Localized>
-                  </>
-                }
-                onChange={handleChangeFor('sendEmails')}
-                checked={sendEmails}
-                name="email-opt-in"
-              /> */}
-
               <LabeledCheckbox
                 {...(user.account || isSubmitted ? { disabled: true } : {})}
                 label={
@@ -326,6 +310,21 @@ function ProfileInfo({
                 checked={privacyAgreed}
                 onChange={handleChangeFor('privacyAgreed')}
                 name="privacy"
+              />
+              <LabeledCheckbox
+                label={
+                  <>
+                    <Localized id="email-opt-in-info-title">
+                      <strong />
+                    </Localized>
+                    <Localized id="email-opt-in-info-sub-with-challenge">
+                      <span />
+                    </Localized>
+                  </>
+                }
+                onChange={handleChangeFor('sendEmails')}
+                checked={sendEmails}
+                name="email-opt-in"
               />
 
               <Localized id="read-terms-q">

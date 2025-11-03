@@ -40,7 +40,7 @@ validate = Valideren
 not-found-page-header = Niet gevonden
 not-found-page-content = De door u gezochte pagina kon niet worden gevonden.
 # Privacy and Terms checkbox
-accept-privacy-and-terms = Ik ga akkoord met de <termsLink>Voorwaarden</termsLink> en <privacyLink>Privacyverklaring</privacyLink> van Common Voice
+accept-privacy-and-terms = Ik ga akkoord met de <termsLink>Voorwaarden</termsLink> en <privacyLink>Privacyverklaring</privacyLink>
 # Locales
 bsy = Sabah Bisaya
 cdo = Fuzhou

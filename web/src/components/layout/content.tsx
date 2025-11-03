@@ -140,7 +140,8 @@ export default function Content({ location }: { location: any }) {
         <SentryRoute
           exact
           path={toLocaleRoute(URLS.PRIVACY)}
-          render={() => <DocumentPage key="p" name="privacy" />}
+          // render={() => <DocumentPage key="p" name="privacy" />}
+          render={() => {window.location.href = "/privacyverklaring.pdf"; return null;}}
         />
         <SentryRoute
           exact

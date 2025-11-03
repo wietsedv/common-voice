@@ -216,10 +216,16 @@ export default class Server {
   }
 
   private setupPrivacyAndTermsRoutes() {
+    // this.app.get(
+    //   '/privacy/:locale.html',
+    //   async ({ params: { locale } }, response) => {
+    //     response.send(await fetchLegalDocument('privacy_notice', locale))
+    //   }
+    // )
     this.app.get(
       '/privacy/:locale.html',
       async ({ params: { locale } }, response) => {
-        response.send(await fetchLegalDocument('privacy_notice', locale))
+        response.redirect('/privacyverklaring.pdf')
       }
     )
     this.app.get(
