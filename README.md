@@ -23,3 +23,11 @@ Updaten kan een paar minuten duren. Je kunt de logs van `web` volgen om te check
 ```bash
 docker logs -f web
 ```
+
+De laatste stap is `APPLICATION -- Maintenance complete`.
+
+## Belangrijke bestanden
+
+- Applicatie: `/home/martijnwieling/common-voice`
+- Database: `/home/martijnwieling/common-voice/data/mysql`
+- Audio bestanden: `/mnt/blockstorage/praoten/storage`
