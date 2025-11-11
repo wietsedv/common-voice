@@ -56,7 +56,7 @@ first-cta-gender-select-help-text =
 # SECOND POST SUBMISSION CTA
 second-cta-header-text = Bedankt voor het doneren van uw stem!
 second-cta-subtitle-text = Met een profiel kunt u uw activiteit bijhouden en verbinding maken met een gemeenschap van bijdragers aan spraakgegevens.
-already-have-an-account = Hebt u al een account? <login>Aannmelden</login>
+already-have-an-account = Heeft u al een account? <login>Inloggen</login>
 create-profile-button = Een profiel aanmaken
 # IMAGE TAGS
 img-alt-success-checkmark = succesvinkje

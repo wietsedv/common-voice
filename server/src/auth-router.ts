@@ -110,6 +110,51 @@ export const setupAuthRouter = async () => {
     )
   })
 
+  router.get('/register', (req: Request, res: Response) => {
+    const {
+      headers,
+      query,
+      session: { user },
+    } = req
+    const locale = headers.referer
+      ? getLocaleFromReferrer(headers.referer)
+      : 'en'
+
+    const state = AES.encrypt(
+      JSON.stringify({
+        locale,
+        ...(user && query.change_email !== undefined
+          ? {
+              old_user: user,
+              old_email: user.email,
+            }
+          : {}),
+        redirect: query.redirect || null,
+        enrollment: {
+          challenge: query.challenge || null,
+          team: query.team || null,
+          invite: query.invite || null,
+          referer: query.referer || null,
+        },
+      }),
+      SECRET
+    ).toString()
+
+    req.session.auth = {
+      state,
+    }
+
+    const redirectUri = `${req.protocol}://${req.get('host')}/callback`;
+    res.redirect(
+      client.authorizationUrl({
+        redirect_uri: redirectUri,
+        scope: 'openid email profile',
+        state,
+        screen_hint: 'signup',
+      })
+    )
+  })
+
   router.get(CALLBACK_URL, async (request: Request, response: Response) => {
     const params = client.callbackParams(request)
     if (!request.session.auth) {

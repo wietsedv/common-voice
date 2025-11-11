@@ -126,7 +126,7 @@ export const FirstPostSubmissionCta: React.FC<FirstPostSubmissionCtaProps> = ({
                 </LabeledSelect>
               </Localized>
         <div className="subtitle-text-container">
-          <h2 className="subtitle-text">Je opnames zijn opgeslagen onder persoonscode <strong>{userId.substring(0, 4)}</strong>. Deze code kunt u gebruiken om uw opnames te laten verwijderen. Als u een profiel aanmaakt is het bewaren van deze code niet nodig.</h2>
+          <h2 className="subtitle-text">Uw opnames zijn opgeslagen onder persoonscode <strong>{userId.substring(0, 4)}</strong>. Deze code kunt u gebruiken indien u uw opnames wilt laten verwijderen. Als u een profiel aanmaakt is het bewaren van deze code niet nodig.</h2>
         </div>
             </div>
           ))}
@@ -178,7 +178,7 @@ export const FirstPostSubmissionCta: React.FC<FirstPostSubmissionCtaProps> = ({
       <Localized
         id="create-profile-text"
         elems={{
-          createProfile: <a href="/login" />,
+          createProfile: <a href="/register" />,
         }}>
         <p className="create-profile-text" />
       </Localized>
