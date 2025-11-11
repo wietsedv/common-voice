@@ -8,12 +8,13 @@ import './secondSubmissionCTA.css';
 import { Button, LinkButton } from '../../../../ui/ui';
 
 type SecondPostSubmissionCtaProps = {
+  userId: string;
   onReset: () => void;
 };
 
 export const SecondPostSubmissionCTA: React.FC<
   SecondPostSubmissionCtaProps
-> = ({ onReset }) => {
+> = ({ userId, onReset }) => {
   const { height, width } = useWindowSize();
 
   const confettiSourceObject = {
@@ -60,6 +61,9 @@ export const SecondPostSubmissionCTA: React.FC<
           <Localized id="second-cta-subtitle-text">
             <h2 className="subtitle-text" />
           </Localized>
+        </div>
+        <div className="subtitle-text-container">
+          <h2 className="subtitle-text">Je opnames zijn opgeslagen onder persoonscode <strong>{userId.substring(0, 4)}</strong>. Deze code kunt u gebruiken om uw opnames te laten verwijderen. Als u een profiel aanmaakt is het bewaren van deze code niet nodig.</h2>
         </div>
 
         <div className="submission-buttons">

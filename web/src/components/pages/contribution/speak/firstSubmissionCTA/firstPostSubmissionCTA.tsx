@@ -21,6 +21,7 @@ export const USER_LANGUAGES = 'userLanguages';
 
 export type FirstPostSubmissionCtaProps = {
   locale: string;
+  userId: string;
   onReset: () => void;
   addNotification: typeof Notifications.actions.addPill;
   successUploadMessage: string;
@@ -29,6 +30,7 @@ export type FirstPostSubmissionCtaProps = {
 
 export const FirstPostSubmissionCta: React.FC<FirstPostSubmissionCtaProps> = ({
   locale,
+  userId,
   onReset,
   addNotification,
   successUploadMessage,
@@ -50,6 +52,7 @@ export const FirstPostSubmissionCta: React.FC<FirstPostSubmissionCtaProps> = ({
     isVariantInputVisible,
   } = useFirstPostSubmissionCTA({
     locale,
+    userId,
     onReset,
     addNotification,
     successUploadMessage,
@@ -122,6 +125,9 @@ export const FirstPostSubmissionCta: React.FC<FirstPostSubmissionCtaProps> = ({
                   <Options>{GENDERS}</Options>
                 </LabeledSelect>
               </Localized>
+        <div className="subtitle-text-container">
+          <h2 className="subtitle-text">Je opnames zijn opgeslagen onder persoonscode <strong>{userId.substring(0, 4)}</strong>. Deze code kunt u gebruiken om uw opnames te laten verwijderen. Als u een profiel aanmaakt is het bewaren van deze code niet nodig.</h2>
+        </div>
             </div>
           ))}
         </div>

@@ -12,7 +12,7 @@ describe('SecondPostSubmissionCta', () => {
   it('renders', () => {
     const mockOnReset = jest.fn();
 
-    renderWithProviders(<SecondPostSubmissionCTA onReset={mockOnReset} />);
+    renderWithProviders(<SecondPostSubmissionCTA userId="hjkdsahdsajkjkh21kjhjk" onReset={mockOnReset} />);
 
     const confetti = screen.getByTestId('confetti');
     const continueButton = screen.getByTestId('continue-speaking-button');

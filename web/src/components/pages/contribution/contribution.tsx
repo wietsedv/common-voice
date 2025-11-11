@@ -479,6 +479,7 @@ class ContributionPage extends React.Component<ContributionPageProps, State> {
         {noUserAccount && shouldShowFirstCTA && (
           <FirstPostSubmissionCta
             locale={this.props.locale}
+            userId={user.userId}
             onReset={onReset}
             addNotification={this.props.addNotification}
             successUploadMessage={getString('thanks-for-voice-toast')}
@@ -487,7 +488,7 @@ class ContributionPage extends React.Component<ContributionPageProps, State> {
         )}
 
         {noUserAccount && shouldShowSecondCTA && (
-          <SecondPostSubmissionCTA onReset={onReset} />
+          <SecondPostSubmissionCTA userId={user.userId} onReset={onReset} />
         )}
 
         {instruction({

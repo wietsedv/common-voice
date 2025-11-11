@@ -28,6 +28,7 @@ describe('FirstPostSubmissionCta', () => {
     renderWithProviders(
       <FirstPostSubmissionCta
         locale="en"
+        userId="hjkdsahdsajkjkh21kjhjk"
         onReset={jest.fn()}
         addNotification={jest.fn()}
         successUploadMessage="Thanks"
