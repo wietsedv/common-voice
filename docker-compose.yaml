@@ -63,6 +63,7 @@ services:
       context: .
       dockerfile: docker/Dockerfile
     container_name: web
+    restart: unless-stopped
     user: '${UID:-1000}:${GID:-1000}'
     links:
       - db
@@ -76,7 +77,8 @@ services:
       - voice-web
     ports:
       - 9000:9000
-    command: bash -c "/code/docker/wait-for-it.sh storage:8080 -- /code/docker/prepare_storage.sh && yarn --frozen-lockfile && yarn build && yarn start:prod"
+    # command: bash -c "/code/docker/wait-for-it.sh storage:8080 -- /code/docker/prepare_storage.sh && yarn --frozen-lockfile && yarn build && yarn start:prod"
+    command: bash -c "/code/docker/wait-for-it.sh storage:8080 -- /code/docker/prepare_storage.sh && yarn --frozen-lockfile && yarn start:prod"
 
 networks:
   voice-web:
