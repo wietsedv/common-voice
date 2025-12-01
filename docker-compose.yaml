@@ -71,8 +71,10 @@ services:
       - storage
     volumes:
       - .:/code
+      - .:/yarn_cache
     environment:
       - DOTENV_CONFIG_PATH=/code/.env-local-docker
+      - YARN_CACHE_FOLDER=/yarn_cache
     networks:
       - voice-web
     ports:
