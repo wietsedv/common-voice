@@ -1,4 +1,3 @@
-import * as request from 'request-promise-native'
 import { GenericStatistic, Sentence } from 'common'
 import DB, { getLocaleId } from './model/db'
 import { DBClip } from './model/db/tables/clip-table'
@@ -188,8 +187,9 @@ export default class Model {
     DAY / 2
   )
 
-  getLanguageStats = lazyCache(
-    'get-all-language-stats',
+  // getLanguageStats = lazyCache(
+  //   'get-all-language-stats',
+  getLanguageStats = 
     async (): Promise<any> => {
       const languages = await this.db.getAllLanguages()
       const allLanguageIds = languages.map(language => language.id)
@@ -237,6 +237,7 @@ export default class Model {
       ])
 
       const lastFetched = new Date().toISOString()
+      console.log("fetching languages")
 
       // map over every lang in db
       const languageStats = languages.map(lang => {
@@ -274,9 +275,9 @@ export default class Model {
       })
 
       return languageStats
-    },
-    DAY / 2
-  )
+    };//,
+  //   DAY / 2
+  // )
 
   getClipsStats = lazyCache(
     'overall-clips-stats',
