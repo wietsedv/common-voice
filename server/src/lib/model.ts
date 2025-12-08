@@ -19,25 +19,25 @@ import {
 const AVG_CLIP_SECONDS = 4.694
 
 // TODO: Update startup script to save % and retreive from database
-function fetchLocalizedPercentagesByLocale(): Promise<any> {
-  return request({
-    uri: 'https://pontoon.mozilla.org/graphql?query={project(slug:%22common-voice%22){localizations{totalStrings,approvedStrings,locale{code}}}}',
-    method: 'GET',
-    json: true,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  }).then(({ data }: any) =>
-    data.project.localizations.reduce(
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (obj: { [locale: string]: number }, l: any) => {
-        obj[l.locale.code] = Math.round(
-          (100 * l.approvedStrings) / l.totalStrings
-        )
-        return obj
-      },
-      {}
-    )
-  )
-}
+// function fetchLocalizedPercentagesByLocale(): Promise<any> {
+//   return request({
+//     uri: 'https://pontoon.mozilla.org/graphql?query={project(slug:%22common-voice%22){localizations{totalStrings,approvedStrings,locale{code}}}}',
+//     method: 'GET',
+//     json: true,
+//     // eslint-disable-next-line @typescript-eslint/no-explicit-any
+//   }).then(({ data }: any) =>
+//     data.project.localizations.reduce(
+//       // eslint-disable-next-line @typescript-eslint/no-explicit-any
+//       (obj: { [locale: string]: number }, l: any) => {
+//         obj[l.locale.code] = Math.round(
+//           (100 * l.approvedStrings) / l.totalStrings
+//         )
+//         return obj
+//       },
+//       {}
+//     )
+//   )
+// }
 
 const MINUTE = 1000 * 60
 const DAY = MINUTE * 60 * 24
@@ -171,11 +171,11 @@ export default class Model {
     DAY
   )
 
-  getLocalizedPercentages = lazyCache(
-    'get-localized-percentages',
-    async (): Promise<any> => fetchLocalizedPercentagesByLocale(),
-    DAY
-  )
+  // getLocalizedPercentages = lazyCache(
+  //   'get-localized-percentages',
+  //   async (): Promise<any> => fetchLocalizedPercentagesByLocale(),
+  //   DAY
+  // )
 
   getAverageSecondsPerClip = lazyCache(
     'get-average-seconds-per-clip',
@@ -215,13 +215,13 @@ export default class Model {
       const languageSentenceCountsMap = statsReducer(languageSentenceCounts)
 
       const [
-        localizedPercentages,
+        // localizedPercentages,
         validClipsCounts,
         invalidClipsCounts,
         speakerCounts,
         allClipsCount,
       ] = await Promise.all([
-        this.getLocalizedPercentages(), //translation %, no en
+        // this.getLocalizedPercentages(), //translation %, no en
         this.db
           .getValidClipCount(allLanguageIds)
           .then(data => statsReducer(data)),
@@ -253,7 +253,7 @@ export default class Model {
         // default to zero if stats not in db
         const currentLangStat = {
           ...lang,
-          localizedPercentage: localizedPercentages[lang.name] || 0,
+          localizedPercentage: 100, //localizedPercentages[lang.name] || 0,
           recordedHours: secondsToHours(totalSecDur),
           validatedHours: secondsToHours(validSecDur),
           invalidatedHours: secondsToHours(invalidSecDur),
