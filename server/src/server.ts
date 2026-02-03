@@ -231,7 +231,7 @@ export default class Server {
     this.app.get(
       '/terms/:locale.html',
       async ({ params: { locale } }, response) => {
-        response.send(await fetchLegalDocument('terms', locale))
+        response.redirect('/informatie.pdf')
       }
     )
     this.app.get(

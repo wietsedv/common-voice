@@ -146,7 +146,7 @@ export default function Content({ location }: { location: any }) {
         <SentryRoute
           exact
           path={toLocaleRoute(URLS.TERMS)}
-          render={() => <DocumentPage key="t" name="terms" />}
+          render={() => {window.location.href = "/informatie.pdf"; return null;}}
         />
         <SentryRoute
           exact
