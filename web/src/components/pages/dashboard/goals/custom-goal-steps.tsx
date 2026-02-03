@@ -316,7 +316,7 @@ export default [
               </div>
             </label>
             <Localized id="read-terms-q">
-              <LocaleLink to={URLS.TERMS} className="terms" blank />
+              <LocaleLink to={"/informatie.pdf"} className="terms" blank />
             </Localized>
           </>
         )}

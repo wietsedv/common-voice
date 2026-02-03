@@ -329,7 +329,7 @@ function ProfileInfo({
 
               <Localized id="read-terms-q">
                 <LocaleLink
-                  to={isEnrolledInChallenge ? URLS.CHALLENGE_TERMS : URLS.TERMS}
+                  to={"/informatie.pdf"}
                   className="terms"
                   blank
                 />

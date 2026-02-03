@@ -151,7 +151,7 @@ function Settings(props: Props) {
                 </Localized>
                 <br />
                 <Localized id="read-terms-q">
-                  <LocaleLink to={URLS.TERMS} className="terms" blank />
+                  <LocaleLink to={"/informatie.pdf"} className="terms" blank />
                 </Localized>
               </div>
             </div>
