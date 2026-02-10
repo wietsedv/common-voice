@@ -104,12 +104,12 @@ module.exports = (_env, argv) => {
 
   return {
     entry: './src/main.ts',
-    // output: {
-    //   path: OUTPUT_PATH,
-    //   filename: '[name].[contenthash].js',
-    //   publicPath: '/dist/',
-    //   hashDigestLength: HASH_LENGTH,
-    // },
+    output: {
+      path: OUTPUT_PATH,
+      filename: '[name].[contenthash].js',
+      publicPath: '/dist/',
+      hashDigestLength: HASH_LENGTH,
+    },
     stats: 'errors-only',
     devtool: IS_DEVELOPMENT ? 'eval-cheap-source-map' : undefined,
     resolve: {

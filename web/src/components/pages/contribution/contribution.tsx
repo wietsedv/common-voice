@@ -563,14 +563,7 @@ class ContributionPage extends React.Component<ContributionPageProps, State> {
                 {this.isDone && !user.privacyAgreed && (
                   <LabeledCheckbox
                     label={
-                      <Localized
-                        id="accept-privacy-and-terms"
-                        elems={{
-                          termsLink: <LocaleLink to={URLS.TERMS} blank />,
-                          privacyLink: <LocaleLink to={URLS.PRIVACY} blank />,
-                        }}>
-                        <span />
-                      </Localized>
+                      <>Ik ben meerderjarig, en ga akkoord met de <a href="/privacyverklaring.pdf" target='_blank'>privacyverklaring</a> en het gebruik van mijn data voor <a href="/informatie.pdf" target='_blank'>dit onderzoek</a>.</>
                     }
                     required
                     onChange={handlePrivacyAgreedChange}
@@ -588,7 +581,7 @@ class ContributionPage extends React.Component<ContributionPageProps, State> {
                     data-testid="submit-button"
                   />
                 </Localized>
-                {this.isDone && <div className="permission">Door indienen geeft u ons toestemming uw spraakopnames te gebruiken, en te delen met andere onderzoekers, met als doel spraaktechnologie voor het Nedersaksisch te ontwikkelen. De opnames worden nooit gebruikt om uw stem te kopiëren. <a href="/informatie.pdf" target='_blank'>Hier</a> kunt u alle details lezen.</div>}
+                {this.isDone && <div className="permission">Door indienen geeft u ons toestemming uw spraakopnames te gebruiken, en te delen met andere onderzoekers, met als doel spraaktechnologie voor het Nedersaksisch te ontwikkelen. De opnames worden nooit gebruikt om uw stem te kopiëren.</div>}
               </form>
             )}
           </div>
