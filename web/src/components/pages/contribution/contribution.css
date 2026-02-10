@@ -757,6 +757,14 @@
                 color: var(--anchor-text-blue);
             }
         }
+
+        .permission {
+            margin-block: 1em;
+
+            a {
+                text-decoration: underline;
+            }
+        }
     }
 }
 

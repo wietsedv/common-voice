@@ -23,3 +23,24 @@ document.addEventListener('DOMContentLoaded', async () => {
   const App = require('./components/app').default;
   render(React.createElement(App), document.getElementById('root'));
 });
+
+switch (window.location.hostname) {
+  case "proaten.nl":
+    document.title = "Proaten";
+    break;
+  case "proatn.nl":
+    document.title = "Proatn";
+    break;
+  case "praoten.nl":
+    document.title = "Praoten";
+    break;
+  case "praotn.nl":
+    document.title = "praotn";
+    break;
+  case "localhost":
+    document.title = "Praoten Dev";
+    break;
+
+  default:
+    break;
+}

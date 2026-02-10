@@ -588,6 +588,7 @@ class ContributionPage extends React.Component<ContributionPageProps, State> {
                     data-testid="submit-button"
                   />
                 </Localized>
+                {this.isDone && <div className="permission">Door indienen geeft u ons toestemming uw spraakopnames te gebruiken, en te delen met andere onderzoekers, met als doel spraaktechnologie voor het Nedersaksisch te ontwikkelen. De opnames worden nooit gebruikt om uw stem te kopiëren. <a href="/informatie.pdf" target='_blank'>Hier</a> kunt u alle details lezen.</div>}
               </form>
             )}
           </div>

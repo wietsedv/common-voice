@@ -67,7 +67,7 @@ const SOURCES = {
     '*.paypal.com',
     '*.paypalobjects.com',
     'pay.google.com ',
-    '*.src.mastercard.com',
+    '*.src.mastercard.com'
   ],
   'font-src': [
     "'self'",

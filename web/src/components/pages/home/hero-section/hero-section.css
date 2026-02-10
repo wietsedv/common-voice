@@ -54,7 +54,7 @@
             .hero-text-container {
                 display: flex;
                 flex-direction: column;
-                margin: 130px 0px 0px 0px;
+                margin: 65px 0px 0px 0px;
 
                 @media (--xl-up) {
                     width: 560px;
@@ -141,6 +141,10 @@
                     @media (--sm-down) {
                         font-size: 15px;
                     }
+                }
+
+                a {
+                    text-decoration: underline;
                 }
 
                 .button {

@@ -30,9 +30,7 @@ export const HeroSection: React.FC<Props> = ({ isLocaleContributable }) => {
 					<div className="hero-text-container">
 						<h1>Technologie die Nedersaksisch spreekt</h1>
 						<h2>
-							<strong>Klik hiernaast op de naam van het gebied</strong> waarvan je de
-							lokale variant spreekt of waar je ongeveer vandaan komt, om jouw stem op te nemen en jouw taal te
-							helpen!<br/><br />
+							Help ons om spraaktechnologie voor het Nedersaksisch te ontwikkelen door je stem op te nemen. <strong>Klik hiernaast op de naam van het gebied</strong> waarvan je de lokale variant spreekt of waar je ongeveer vandaan komt, om te starten! Lees <a href="/informatie.pdf" target="_blank">hier</a> alle informatie over het doel van deze dataverzameling.<br/><br />
 						</h2>
 						<Localized id="hero-subtitle-1" elems={{ bold: <b /> }}>
 							<p />
