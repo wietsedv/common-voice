@@ -23,17 +23,6 @@ const Home = () => {
 
   return (
     <Page className="home">
-      <div>
-		  <section className="hero-section">
-        <div className="hero-container">
-          <div className="hero-text-wrapper">
-            <div className="hero-text-container">
-              <h1>Deze website is nog in ontwikkeling. Kom later terug!</h1>
-            </div>
-          </div>
-        </div>
-      </section>
-      </div>
       <HeroSection isLocaleContributable={isLocaleContributable} />
       <ActionItemsSection isLocaleContributable={isLocaleContributable} />
       {/* <CommunitySection /> */}
