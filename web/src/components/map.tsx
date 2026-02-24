@@ -8,80 +8,7 @@ import "./map.css";
 
 export const Map: React.FC<{}> = () => {
 	const history = useHistory();
-	// const ref = React.useRef();
 
-	// useEffect(() => {
-	// 	const width = 750;
-	// 	const height = 750;
-
-	// 	const svg = d3.select(ref.current);
-
-	// 	const projection = d3
-	// 		.geoMercator()
-	// 		.center([6.3, 52.7]) // Center on the Netherlands
-	// 		.scale(12_000)
-	// 		.translate([width / 2, height / 2]);
-
-	// 	const path = d3.geoPath().projection(projection);
-
-	// 	Promise.all([
-	// 		d3.json("provincie_2025.geojson"),
-	// 		d3.json("lowsaxon.geojson"),
-	// 	]).then(([provincie, lowsaxon]) => {
-	// 		const tooltip = d3
-	// 			.select("body")
-	// 			.append("div")
-	// 			.attr("id", "map-tooltip")
-	// 			.attr("class", "tooltip")
-	// 			.style("position", "absolute")
-	// 			.style("z-index", "10")
-	// 			.style("opacity", 0)
-	// 			.style("background-color", "rgba(0, 0, 0, 0.75)")
-	// 			.style("color", "#fff")
-	// 			.style("padding", "5px")
-	// 			.style("border-radius", "5px")
-	// 			.style("pointer-events", "none");
-
-	// 		// provincies
-	// 		svg
-	// 			.selectAll(".provincie")
-	// 			.data((provincie as any).features)
-	// 			.enter()
-	// 			.append("path")
-	// 			.attr("class", "provincie")
-	// 			.attr("d", path);
-
-	// 		// regios
-	// 		svg
-	// 			.selectAll(".regio")
-	// 			.data((lowsaxon as any).features)
-	// 			.enter()
-	// 			.append("path")
-	// 			.attr("class", "regio")
-	// 			.attr("d", path)
-	// 			.on("mouseover", function (event, d) {
-	// 				d3.select(this).style("fill", "#3caa2f");
-	// 				tooltip.transition().duration(200).style("opacity", 0.9);
-	// 				tooltip
-	// 					.html((d as any).properties.statnaam)
-	// 					.style("left", event.pageX + 5 + "px")
-	// 					.style("top", event.pageY - 28 + "px");
-	// 			})
-	// 			.on("mouseout", function (d) {
-	// 				d3.select(this).style("fill", "#999");
-	// 				tooltip.transition().duration(500).style("opacity", 0);
-	// 			})
-	// 			.on("click", (event, d) => {
-	// 				const lang = (d as any).properties.lang;
-	// 				history.push(`/${lang}/speak`);
-	// 			});
-	// 	});
-
-	// 	return () => {
-	// 		d3.select(ref.current).selectAll("*").remove();
-	// 		d3.select("#map-tooltip").remove();
-	// 	};
-	// }, []);
 	return (
 		<svg id="map" viewBox="0 0 750 750">
 			<title>klik op jouw variant</title>
@@ -272,6 +199,15 @@ export const Map: React.FC<{}> = () => {
 			>
 				Midden-Drents
 			</text>
+			<text
+				className="variant-label"
+				x={180.06200882083044}
+				y={193.64665664653512}
+				textAnchor="middle"
+				onClick={() => window.open("https://commonvoice.mozilla.org/fy-NL", "_blank").focus()}
+			>
+				Fries
+			</text>
 			<path
 				className="extra"
 				d="M291.22419590427216,281.39341386191154L330.8367378200321,298.4591134987586"
@@ -303,6 +239,10 @@ export const Map: React.FC<{}> = () => {
 			<path
 				className="extra"
 				d="M319.06200882083044,232.0159672450627L413.87219028572736,246.57595365486122"
+			/>
+			<path
+				className="extra"
+				d="M180.06200882083044,200.0159672450627L220.87219028572736,220.57595365486122"
 			/>
 		</svg>
 	);
