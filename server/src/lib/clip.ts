@@ -204,7 +204,7 @@ export default class Clip {
     const format = headers['content-type']
     const size = headers['content-length']
 
-    if (!sentenceId || !client_id) {
+    if (!sentenceId || !client_id || size == "0") {
       this.clipSaveError(
         headers,
         response,
