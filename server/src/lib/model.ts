@@ -258,6 +258,7 @@ export default class Model {
           recordedHours: secondsToHours(totalSecDur),
           validatedHours: secondsToHours(validSecDur),
           invalidatedHours: secondsToHours(invalidSecDur),
+          recordingsCount: allClipsCount[lang.id] || 0,
           speakersCount: speakerCounts[lang.id] || 0,
           sentencesCount: {
             targetSentenceCount: lang.target_sentence_count,

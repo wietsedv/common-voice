@@ -18,6 +18,7 @@ export type LanguageStatistics = BaseLanguage & {
   recordedHours: number;
   validatedHours: number;
   speakersCount: number;
+  recordingsCount: number;
   sentencesCount: SentenceCount;
   localizedPercentage: number;
   locale?: string;

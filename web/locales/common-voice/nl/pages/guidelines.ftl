@@ -65,7 +65,7 @@ sentence-domain = Zinsdomein
 
 ## Sentence collection sidebar content
 
-public-domain-explanation-1 = Het is heel belangrijk dat alle tekstzinnen <publicDomain>publiek domein</publicDomain> (<cc0>cc0</cc0>) zijn, aangezien de Common Voice-dataset wordt uitgegeven onder een cc0-licentie. Upload een zin alleen als u hier zeker van bent en voeg altijd de relevante bronvermelding toe.
+public-domain-explanation-1 = Het is heel belangrijk dat alle tekstzinnen <publicDomain>publiek domein</publicDomain> (<cc0>cc0</cc0>) zijn, aangezien de Praoten-dataset wordt uitgegeven onder een cc0-licentie. Upload een zin alleen als u hier zeker van bent en voeg altijd de relevante bronvermelding toe.
 public-domain-explanation-2 = De beste zinnen voor het bouwen van een bruikbare spraakherkenningsengine zijn in moderne spreektaal. Enkele ideeën om u te helpen bij het aanmaken van zinnen zijn;
 public-domain-explanation-3 = Maak zelf moderne, informele zinnen of met uw vrienden of taalgemeenschap – bijvoorbeeld door middel van een ‘write-a-thon’
 public-domain-explanation-4 = Neem contact op met auteurs, toneelschrijvers of scenarioschrijvers en vraag of ze bereid zijn een klein deel van hun werken aan het publieke domein te wijden
@@ -73,11 +73,11 @@ public-domain-explanation-5 = Zoek naar tekst waarop het auteursrecht niet meer 
 public-domain-explanation-6 = Neem contact op met overheden, nonprofitorganisaties of mediaorganisaties om te zien of hun webinhoud, rapporten of andere inhoud kan worden toegewezen aan het publieke domein
 citing-sentences-explanation-1 = Het is belangrijk om bronvermeldingen op te nemen, zodat we kunnen controleren of zinnen zich in het publieke domein bevinden en er geen auteursrechtbeperkingen van toepassing zijn.
 citing-sentences-subheader-websites = Websites
-citing-sentences-subheader-websites-explanation = U kunt de website opnemen, bijvoorbeeld ‘Common Voice - https://commonvoice.mozilla.org/’
+citing-sentences-subheader-websites-explanation = U kunt de website opnemen, bijvoorbeeld ‘Praoten - https://commonvoice.mozilla.org/’
 citing-sentences-subheader-academic-reference = Academische referentie
 citing-sentences-subheader-academic-reference-explanation =
     U kunt een academische referentiestijl gebruiken, bijvoorbeeld Harvard-stijl
-    ‘Mozilla (2021) Common Voice. Beschikbaar op https://commonvoice.mozilla.org/ (Benaderd: 15 september 2021)’
+    ‘Mozilla (2021) Praoten. Beschikbaar op https://commonvoice.mozilla.org/ (Benaderd: 15 september 2021)’
 citing-sentences-subheader-offline-sources = Offline bronnen
 citing-sentences-subheader-offline-sources-explanation =
     Voor publiek-domeintekst die niet online beschikbaar is, kunt u de academische referentiestijl gebruiken,

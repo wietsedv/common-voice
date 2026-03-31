@@ -50,28 +50,6 @@ const ErrorPage = ({ children, errorCode, prevPath }: Props) => {
                   }}>
                   <p />
                 </Localized>
-                <div className="error-page__buttons">
-                  <RoundButton>
-                    <DiscourseLink>
-                      <VisuallyHidden>Discourse</VisuallyHidden>
-                      <DiscourseIconCode />
-                    </DiscourseLink>
-                  </RoundButton>
-
-                  <RoundButton>
-                    <GitHubLink>
-                      <VisuallyHidden>GitHub</VisuallyHidden>
-                      <GithubIconCode />
-                    </GitHubLink>
-                  </RoundButton>
-
-                  <RoundButton>
-                    <MatrixLink>
-                      <VisuallyHidden>Matrix</VisuallyHidden>
-                      <MatrixIcon />
-                    </MatrixLink>
-                  </RoundButton>
-                </div>
               </React.Fragment>
             )}
           </PageTextContent>

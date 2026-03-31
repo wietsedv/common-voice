@@ -16,9 +16,8 @@ thank-you-for-your-information = Bedankt voor uw informatie
 
 ## Gender dropdown
 
-male_masculine = Mannelijk/Mannelijk
-female_feminine = Vrouwelijk/Vrouwelijk
-intersex = Intersekse
-transgender = Transgender
+male_masculine = Man
+female_feminine = Vrouw
+intersex = Anders
 non-binary = Non-binair
 do_not_wish_to_say = Zeg ik liever niet

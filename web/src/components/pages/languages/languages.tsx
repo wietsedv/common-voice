@@ -143,36 +143,35 @@ const LanguagesPage = ({ getString }: WithLocalizationProps) => {
       sortFn: (l1: T, l2: T) => number
     ): (l1: T, l2: T) => number {
       return (l1, l2) => {
-        // Selected locale comes first
-        if (l1.locale === locale) {
-          return -1
-        }
-        if (l2.locale === locale) {
-          return 1
-        }
+        // // Selected locale comes first
+        // if (l1.locale === locale) {
+        //   return -1
+        // }
+        // if (l2.locale === locale) {
+        //   return 1
+        // }
 
-        // Browser locales are prioritized as well
-        if (navigator.languages.includes(l1.locale)) {
-          return -1
-        }
-        if (navigator.languages.includes(l2.locale)) {
-          return 1
-        }
+        // // Browser locales are prioritized as well
+        // if (navigator.languages.includes(l1.locale)) {
+        //   return -1
+        // }
+        // if (navigator.languages.includes(l2.locale)) {
+        //   return 1
+        // }
         return sortFn(l1, l2)
       }
     }
 
     newInProgress.sort(
       presortLanguages((l1, l2) =>
-        l1.sentencesCount.currentCount < l2.sentencesCount.currentCount ||
-        l1.localizedPercentage < l2.localizedPercentage
+        l1.locale > l2.locale
           ? 1
           : -1
       )
     )
     newLaunched.sort(
       presortLanguages((l1, l2) =>
-        l1.validatedHours < l2.validatedHours ? 1 : -1
+        l1.locale > l2.locale ? 1 : -1
       )
     )
 
@@ -308,6 +307,21 @@ const LanguagesPage = ({ getString }: WithLocalizationProps) => {
   // since all languages have the same lastFetched value we can use any language's lastFetched value
   const lastUpdatedTimeStamp = launched[0]?.lastFetched
 
+  const totalRecordingsCount = launched.reduce(
+    (total, language) => total + language.recordingsCount,
+    0
+  )
+
+  const totalRecordedHours = launched.reduce(
+    (total, language) => total + language.recordedHours,
+    0
+  )
+
+  const totalValidatedHours = launched.reduce(
+    (total, language) => total + language.validatedHours,
+    0
+  )
+
   return (
     <React.Fragment>
       {modalOptions && (
@@ -336,6 +350,9 @@ const LanguagesPage = ({ getString }: WithLocalizationProps) => {
                 />
               </p>
             )}
+            <p className="last-updated-timestamp">
+              Totaal aantal ingesproken zinnen: {totalRecordingsCount.toLocaleString("nl-NL")}, {Math.round(totalRecordedHours)} uur, validatievoortgang: {Math.round((totalValidatedHours / totalRecordedHours) * 100)}%
+            </p>
           </div>
           {/* <div className="text">
             <div className="inner">

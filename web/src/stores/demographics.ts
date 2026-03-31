@@ -293,8 +293,8 @@ export const AGES = {
 export const GENDERS: Gender = {
   male_masculine: 'Male/Masculine',
   female_feminine: 'Female/Feminine',
-  intersex: 'Intersex',
-  transgender: 'Transgender',
   'non-binary': 'Non-binary',
+  intersex: 'Intersex',
+  // transgender: 'Transgender',
   do_not_wish_to_say: "Don't wish to say",
 };

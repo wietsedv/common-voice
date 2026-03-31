@@ -1,13 +1,13 @@
 ## Home Page
 
-home-title = Het Common Voice-project is een initiatief van Mozilla om machines te helpen leren hoe echte mensen spreken.
-default-tagline = Common Voice is een initiatief om machines te helpen leren hoe echte mensen spreken.
+home-title = Het Praoten-project is een initiatief van Mozilla om machines te helpen leren hoe echte mensen spreken.
+default-tagline = Praoten is een initiatief om machines te helpen leren hoe echte mensen spreken.
 home-cta = Laat uw stem horen, draag hier bij!
 wall-of-text-start = Spraak is natuurlijk, spraak is menselijk. Daarom zijn we gefascineerd in het maken van een bruikbare spraaktechnologie voor onze machines. Maar voor het maken van spraaksystemen is een extreem grote hoeveelheid spraakgegevens nodig.
-wall-of-text-more-mobile = De meeste gegevens die door grote bedrijven worden gebruikt, zijn voor de meeste mensen niet beschikbaar. We denken dat dat innovatie belemmert. Daarom hebben we Project Common Voice gestart, een project dat spraakherkenning voor iedereen beschikbaar helpt te maken.
+wall-of-text-more-mobile = De meeste gegevens die door grote bedrijven worden gebruikt, zijn voor de meeste mensen niet beschikbaar. We denken dat dat innovatie belemmert. Daarom hebben we Project Praoten gestart, een project dat spraakherkenning voor iedereen beschikbaar helpt te maken.
 wall-of-text-more-desktop = U kunt nu uw stem doneren om ons te helpen een opensource-spraakdatabase te bouwen die iedereen kan gebruiken om innovatieve apps voor apparaten en het web te maken.<lineBreak></lineBreak>Lees een zin op om machines te helpen leren hoe echte mensen spreken. Controleer het werk van andere donateurs om de kwaliteit te verbeteren. Zo eenvoudig is het!
 wall-of-text-first = Spraak is natuurlijk, spraak is menselijk. Daarom zijn we enthousiast over het maken van een bruikbare spraaktechnologie voor onze machines. Maar voor het maken van spraaksystemen hebben ontwikkelaars een extreem grote hoeveelheid spraakgegevens nodig.
-wall-of-text-second = De meeste gegevens die door grote bedrijven worden gebruikt, zijn voor de meeste mensen niet beschikbaar. We denken dat dat innovatie belemmert. Daarom hebben we Common Voice gestart, een project dat helpt spraakherkenning voor iedereen open en toegankelijk te maken.
+wall-of-text-second = De meeste gegevens die door grote bedrijven worden gebruikt, zijn voor de meeste mensen niet beschikbaar. We denken dat dat innovatie belemmert. Daarom hebben we Praoten gestart, een project dat helpt spraakherkenning voor iedereen open en toegankelijk te maken.
 show-wall-of-text = Meer lezen
 help-us-title = Help ons zinnen te valideren!
 help-us-explain = Klik op de afspeelknop, luister en vertel ons: wordt de onderstaande zin juist uitgesproken?
@@ -15,7 +15,7 @@ no-clips-to-validate = Het lijkt erop dat er in deze taal geen te beluisteren fr
 toggle-play-tooltip = Druk op { shortcut-play-toggle } om de afspeelmodus in/uit te schakelen
 speak-paragraph = Het opnemen van spraakfragmenten is een integraal onderdeel van het bouwen van onze open gegevensset; volgens sommigen is het ook het leuke deel.
 speak-goal-text = Opgenomen fragmenten
-listen-paragraph = Validatie van gedoneerde fragmenten is net zo belangrijk als de missie van Common Voice. Luister eens en help ons kwalitatief hoogwaardige opensource-spraakgegevens te creëren.
+listen-paragraph = Validatie van gedoneerde fragmenten is net zo belangrijk als de missie van Praoten. Luister eens en help ons kwalitatief hoogwaardige opensource-spraakgegevens te creëren.
 listen-goal-text = Gevalideerde fragmenten
 hours-recorded = Opgenomen uren
 hours-validated = Gevalideerde uren
@@ -44,7 +44,7 @@ x-years-short =
 help-make-dataset = Help ons een openbaar toegankelijke gegevensset van hoge kwaliteit te bouwen
 sign-up-account = Een account aanmaken
 email-subscription-title = schrijf u in voor e-mailupdates
-email-subscription-title-new = Registreer voor nieuwsbrieven van Common Voice, herinneringen aan uw doelstellingen en updates over uw voortgang.
+email-subscription-title-new = Registreer voor nieuwsbrieven van Praoten, herinneringen aan uw doelstellingen en updates over uw voortgang.
 
 ## Account Benefits
 
@@ -68,7 +68,7 @@ username-email-not-demographic = Uw gebruikersnaam en e-mailadres zullen niet me
 ## Landing
 
 welcome-staff = Welkom medewerkers van { $company }!
-help-contribute = U kunt een diverse, open-source gegevensset helpen bouwen door een Common Voice-profiel te maken en uw stem te doneren.
+help-contribute = U kunt een diverse, open-source gegevensset helpen bouwen door een Praoten-profiel te maken en uw stem te doneren.
 login-company = Aanmelden / inschrijven met { $company }-e-mailadres
 profile-not-required = Een profiel is niet nodig om bij te dragen, hoewel het wel nuttig is
 read-more-about = Meer info op onze pagina Over
@@ -90,18 +90,18 @@ spontaneous-speech = SPONTANE SPRAAK
 ## MENU ITEMS TOOLTIPS
 
 about-menu-tooltip = Partnerschappen, Pers en verhalen, Gemeenschap en talen
-about-us-menu-item-tooltip = Lees meer over de missie en het team achter Common Voice
+about-us-menu-item-tooltip = Lees meer over de missie en het team achter Praoten
 about-us-menu-item-aria-label = Optiesmenu Over ons
 partnerships-menu-item-tooltip = Partner worden
 press-and-stories-menu-item-tooltip = Bezoek onze blog of schrijf over ons
-community-and-languages-menu-item-tooltip = Talen en gemeenschappen en Common Voice ontdekken
+community-and-languages-menu-item-tooltip = Talen en gemeenschappen en Praoten ontdekken
 
 ## MENU ITEM ARIA LABELS
 
 about-us-menu-aria-label = Optiesmenu Over
-partnerships-menu-item-aria-label = Meer over partnerschappen met Common Voice
-press-and-stories-menu-item-aria-label = Persberichten en verhalen met betrekking tot Common Voice benaderen
-community-and-languages-menu-item-aria-label = De door Common Voice ondersteunde gemeenschap en talen verkennen
+partnerships-menu-item-aria-label = Meer over partnerschappen met Praoten
+press-and-stories-menu-item-aria-label = Persberichten en verhalen met betrekking tot Praoten benaderen
+community-and-languages-menu-item-aria-label = De door Praoten ondersteunde gemeenschap en talen verkennen
 
 ## NEW HOME PAGE KEYS
 
@@ -117,7 +117,7 @@ get-started = Beginnen <icon><icon>
 
 ## Action items section
 
-action-items-section-title = Common Voice is een gratis, opensourceplatform voor door de gemeenschap geleide gegevenscreatie
+action-items-section-title = Praoten is een gratis, opensourceplatform voor door de gemeenschap geleide gegevenscreatie
 action-items-section-subtitle = Iedereen kan zijn of haar taal behouden, nieuw leven inblazen en verbeteren door tekst- en spraakgegevenssets te delen, maken en beheren.
 scripted-card-header = Scriptspraak
 scripted-card-content = Lees zinnen in uw taal hardop en draag bij aan de meest diverse spraakgegevensset door publieksparticipatie ter wereld.
@@ -144,11 +144,11 @@ ask-mozilla-share-content = Hebt u een eerdere of aankomende gebeurtenis? Deel h
 # label for button
 ask-mozilla-share-action = Uw evenement delen
 download-contribution-certificate = Uw bijdragecertificaat downloaden
-download-contribution-certificate-content = Download een certificaat voor uw evenementen of uzelf als u aan Common Voice hebt bijgedragen – dit is niet mogelijk zonder u!
+download-contribution-certificate-content = Download een certificaat voor uw evenementen of uzelf als u aan Praoten hebt bijgedragen – dit is niet mogelijk zonder u!
 # label for button
 download-contribution-certificate-action = Uw certificaat ophalen
 contribute-github = Bijdragen op GitHub
-contribute-github-content = Dit project zou niet mogelijk zijn zonder mensen zoals u. 🎉 Er zijn veel manieren om aan Common Voice deel te  nemen – u hoeft niet te weten hoe u code moet schrijven om bij te dragen!
+contribute-github-content = Dit project zou niet mogelijk zijn zonder mensen zoals u. 🎉 Er zijn veel manieren om aan Praoten deel te  nemen – u hoeft niet te weten hoe u code moet schrijven om bij te dragen!
 # label for button
 contribute-github-action = Bijdragen op GitHub
 

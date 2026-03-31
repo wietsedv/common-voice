@@ -3,7 +3,7 @@
 request-language-heading = Navraag doen naar een nieuwe taal
 request-language-explanation-1 =
     Controleer of uw taal wordt vermeld op de
-    <languagesPageLink>Common Voice-talenpagina</languagesPageLink>.
+    <languagesPageLink>Praoten-talenpagina</languagesPageLink>.
     Zo niet, vul dan dit formulier in en we <strong>sturen u een handig e-mailbericht
     waarin wordt uitgelegd hoe u uw taal kunt laten opzetten</strong>.
 request-language-form-email =
@@ -22,7 +22,7 @@ request-language-google-recaptcha-error = Er is iets misgegaan met reCAPTCHA. Pr
 request-language-success-heading = Bedankt! U hebt een nieuwe taalaanvraag verzonden
 request-language-success-list-1 =
     U zou binnenkort een e-mailbericht moeten ontvangen met uitleg
-    over de stappen om uw taal aan Common Voice toe te voegen
+    over de stappen om uw taal aan Praoten toe te voegen
 request-language-success-list-2 =
     Onze gemeenschapsmanager zal contact met u opnemen om
     extra ondersteuning aan te bieden, en om u te laten weten of er
@@ -38,6 +38,6 @@ request-for-scripted-speech-toggle = Verzoek om voorgelezen materiaal
 request-for-spontaneous-speech-toggle = Verzoek om spontane spraak
 need-help-deciding-platform = Hulp nodig bij uw keuze?
 # text wrapped in <strong></strong> will be shown as bold
-need-help-deciding-platform-explanation-1 = <strong>Voorgelezen materiaal</strong> (traditioneel wat u kent als Common Voice) is waar u zinnen in uw taal hardop kunt voorlezen.
-need-help-deciding-platform-explanation-2 = <strong>Spontane spraak</strong> is een nieuw onderdeel van Common Voice, waar u op een meer organische, informele manier op vragen kunt reageren.
+need-help-deciding-platform-explanation-1 = <strong>Voorgelezen materiaal</strong> (traditioneel wat u kent als Praoten) is waar u zinnen in uw taal hardop kunt voorlezen.
+need-help-deciding-platform-explanation-2 = <strong>Spontane spraak</strong> is een nieuw onderdeel van Praoten, waar u op een meer organische, informele manier op vragen kunt reageren.
 need-help-deciding-platform-explanation-3 = Als u uw taal niet in een van de delen van het platform ziet, selecteer dan beide.

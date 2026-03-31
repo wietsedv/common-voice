@@ -9,8 +9,8 @@ clips-with-count-pluralized =
         [one] <bold>{ $count }</bold> fragment
        *[other] <bold>{ $count }</bold> fragmenten
     }
-goal-help-recording = U hebt Common Voice geholpen <goalPercentage></goalPercentage> van het dagelijkse doel van { $goalValue } opnamen te bereiken!
-goal-help-validation = U hebt Common Voice geholpen <goalPercentage></goalPercentage> van het dagelijkse doel van { $goalValue } validaties te bereiken!
+goal-help-recording = U hebt Praoten geholpen <goalPercentage></goalPercentage> van het dagelijkse doel van { $goalValue } opnamen te bereiken!
+goal-help-validation = U hebt Praoten geholpen <goalPercentage></goalPercentage> van het dagelijkse doel van { $goalValue } validaties te bereiken!
 contribute-more = Klaar om er nog { $count } te doen?
 speak-empty-state = Er zijn in deze variant geen fragmenten meer die opgenomen hoeven te worden…
 no-sentences-for-variants = Uw taalvariant bevat mogelijk geen verdere zinnen! Als u tevreden bent, kunt u uw instellingen wijzigen om andere zinnen in uw taal te zien.
@@ -24,7 +24,7 @@ keep-track-profile = Houd uw voortgang bij met een profiel
 login-to-get-started = Meld u aan of registreer om te beginnen
 target-segment-first-card = U draagt bij aan ons eerste doelsegment
 target-segment-generic-card = U draagt bij aan een doelsegment
-target-segment-first-banner = Help bij het maken van het eerste doelsegment in het { $locale } van Common Voice
+target-segment-first-banner = Help bij het maken van het eerste doelsegment in het { $locale } van Praoten
 target-segment-add-voice = Uw stem toevoegen
 target-segment-learn-more = Meer info
 change-preferences = Voorkeuren wijzigen
@@ -75,7 +75,7 @@ shortcut-discard-ongoing-recording = Esc
 shortcut-discard-ongoing-recording-label = Lopende opname verwerpen
 shortcut-submit = Terug
 shortcut-submit-label = Voorgelezen zinnen opslaan
-request-language-text = Ziet u uw taal nog niet op Common Voice?
+request-language-text = Ziet u uw taal nog niet op Praoten?
 request-language-button = Een taal aanvragen
 
 ## Listen Shortcuts

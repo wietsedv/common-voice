@@ -22,7 +22,7 @@ const LanguageCardDataLaunched = ({
 }: {
   language: LanguageStatistics
 }) => {
-  const { recordedHours, validatedHours, speakersCount, sentencesCount } =
+  const { recordedHours, validatedHours, speakersCount, recordingsCount, sentencesCount } =
     language
 
   const validationPercent =
@@ -65,7 +65,9 @@ const LanguageCardDataLaunched = ({
           <IconSentences className={styles.DataItemHeadingIcon} />
           <Localized id="sentences" />
         </h4>
-        <p className={styles.DataItemValue}>{sentencesCount.currentCount}</p>
+        <p className={styles.DataItemValue}>
+          {recordingsCount} / {sentencesCount.currentCount}
+        </p>
       </div>
     </div>
   )

@@ -47,8 +47,8 @@ help-reach-hours-pluralized =
     }
 help-reach-hours-general-pluralized =
     { $hours ->
-        [one] Help Common Voice{ $hours } uurin een taal te bereiken met een persoonlijke doelstelling
-       *[other] Help Common Voice{ $hours } uurin een taal te bereiken met een persoonlijke doelstelling
+        [one] Help Praoten{ $hours } uurin een taal te bereiken met een persoonlijke doelstelling
+       *[other] Help Praoten{ $hours } uurin een taal te bereiken met een persoonlijke doelstelling
     }
 set-a-goal = Een doel stellen
 cant-decide = Kunt u geen besluit nemen?
@@ -118,10 +118,10 @@ how-many-a-week = Geweldig! Hoeveel fragmenten per week?
 which-goal-type = Wilt u spreken, luisteren of allebei?
 receiving-emails-info =
     U ontvangt momenteel e-mailberichten zoals herinneringen aan doelen, updates
-    over uw voortgang en nieuwsbrieven over Common Voice
+    over uw voortgang en nieuwsbrieven over Praoten
 not-receiving-emails-info =
     Er is momenteel ingesteld dat u <bold>GEEN</bold> e-mailberichten zoals herinneringen aan doelen,
-    updates over uw voortgang en nieuwsbrieven over Common Voice ontvangt
+    updates over uw voortgang en nieuwsbrieven over Praoten ontvangt
 n-clips-pluralized =
     { $count ->
         [one] { $count } fragment

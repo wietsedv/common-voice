@@ -20,4 +20,4 @@ twd = Twents
 vel = Veluws
 
 urk = Urkers
-spk = Spakenburgers
+spk = Spakenburgs

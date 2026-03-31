@@ -1,10 +1,10 @@
 # PARTNERSHIPS PAGE
 partnerships-header = Partners
-partnerships-header-text = Er komt veel kijken bij Common Voice! We doen het niet alleen. Wilt u met ons samenwerken? We horen graag van u.
+partnerships-header-text = Er komt veel kijken bij Praoten! We doen het niet alleen. Wilt u met ons samenwerken? We horen graag van u.
 partnerships-get-in-touch = Contact opnemen
-partnerships-become-a-partner = Word een Common Voice-partner
+partnerships-become-a-partner = Word een Praoten-partner
 partnerships-community-header = Gemeenschap, creatievelingen en het maatschappelijk middenveld
-partnerships-community-description = De gemeenschap is het kloppende hart van Common Voice – de leden komen van over de hele wereld en zijn taalactivisten, wetenschappers en kunstenaars. U kunt meer informatie vinden over hoe u mee kunt doen op onze pagina <about>Over</about> en in ons <community>Gemeenschapsplaybook</community>. Als u geïnteresseerd bent in een diepere samenwerking tussen organisaties, <emailFragment>neem dan contact met ons op.</emailFragment>
+partnerships-community-description = De gemeenschap is het kloppende hart van Praoten – de leden komen van over de hele wereld en zijn taalactivisten, wetenschappers en kunstenaars. U kunt meer informatie vinden over hoe u mee kunt doen op onze pagina <about>Over</about> en in ons <community>Gemeenschapsplaybook</community>. Als u geïnteresseerd bent in een diepere samenwerking tussen organisaties, <emailFragment>neem dan contact met ons op.</emailFragment>
 partnerships-foundations-header = Stichtingen
 partnerships-foundations-description = We werken samen met stichtingen, het maatschappelijk middenveld en gemeenschapspartners om het internet gezonder te maken, met een bijzondere focus op Oost-Afrika. Meer info over ons <programmaticWork>programmatische werk.</programmaticWork>
 partnerships-governments-header = Overheden

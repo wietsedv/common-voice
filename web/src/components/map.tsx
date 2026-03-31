@@ -134,7 +134,7 @@ export const Map: React.FC<{}> = () => {
 				textAnchor="middle"
 				onClick={() => history.push("/spk/speak")}
 			>
-				Spakenburgers
+				Spakenburgs
 			</text>
 			<text
 				className="variant-label"

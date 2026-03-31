@@ -2,7 +2,7 @@
 
 welcome-to-spontaneous-speech = Welkom bij Spontane spraak
 # <br></br> represents a newline break
-wall-of-text = Common Voice lanceert een tweede platform gericht op het verzamelen van organische, spontane spraak zonder script. Dit helpt veel gemeenschappen om sneller gegevens te verzamelen, en is nuttig voor gegevenswetenschappers en ontwikkelaars.
+wall-of-text = Praoten lanceert een tweede platform gericht op het verzamelen van organische, spontane spraak zonder script. Dit helpt veel gemeenschappen om sneller gegevens te verzamelen, en is nuttig voor gegevenswetenschappers en ontwikkelaars.
 why-spontaneous-speech = Waarom we dit Spontane spraak-prototype hebben gebouwd
 # text wrapped with <mark></mark> will have a light red background
 why-card-1-text = Nuttig voor <mark>organische spraakcontexten</mark> en gebruiksgevallen (b.v. wanneer u wilt dat spraakherkenning werkt met mensen die zonder script en in de omgangstaal spreken)
@@ -29,8 +29,8 @@ data-bubble-subtitle = We geven de gegevensset periodiek vrij
 contact-us = Contact
 contact-us-title = Interesse om aan dit project mee te werken of met ons samen te werken?
 contact-us-email = Stuur een e-mailbericht aan: <emailFragment>wietse.de.vries@rug.nl</emailFragment>
-signup-form-title = Neemt u al deel aan onze Beta-testgroep voor het Spontane spraak-project van Common Voice?
-signup-terms = Door op ‘Een koppeling naar mijn e-mailadres verzenden’ te klikken, gaat u akkoord met onze <termsLink>Servicevoorwaarden</termsLink> en ons <privacyLink>Privacybeleid</privacyLink>, en met het feit dat Mozilla u informatie per e-mail verstuurt over hoe u kunt deelnemen aan Betatesten voor het Spontane spraak-project van Common Voice.
+signup-form-title = Neemt u al deel aan onze Beta-testgroep voor het Spontane spraak-project van Praoten?
+signup-terms = Door op ‘Een koppeling naar mijn e-mailadres verzenden’ te klikken, gaat u akkoord met onze <termsLink>Servicevoorwaarden</termsLink> en ons <privacyLink>Privacybeleid</privacyLink>, en met het feit dat Mozilla u informatie per e-mail verstuurt over hoe u kunt deelnemen aan Betatesten voor het Spontane spraak-project van Praoten.
 signup-input-placeholder = Voer uw e-mailadres in
 signup-button-value = Een koppeling naar mijn e-mailadres verzenden
 footer-text-privacy = <privacyLink>Privacy</privacyLink>

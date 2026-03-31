@@ -19,7 +19,7 @@ record-again-instruction2 = Ga zo door, neem nog een keer op <recordIcon></recor
 record-last-instruction = <checkIcon></checkIcon> De laatste!
 review-tooltip = Neem deze zin opnieuw op
 share-clip = Uw opname delen
-share-common-voice = Common Voice delen
+share-common-voice = Praoten delen
 review-instruction = Beoordeel uw fragmenten en neem ze zo nodig opnieuw op
 record-submit-tooltip = { $actionType } Indienen wanneer gereed
 clips-uploaded = Fragmenten geüpload
@@ -36,7 +36,7 @@ review-rerecord = Opnieuw opnemen
 review-cancel = Inzending annuleren
 review-keep-recordings = Opnamen behouden
 review-delete-recordings = Mijn opnamen verwijderen
-review-terms = Door gebruik te maken van Common Voice, gaat u akkoord met onze <termsLink>Voorwaarden</termsLink> en <privacyLink>Privacyverklaring</privacyLink>
+review-terms = Door gebruik te maken van Praoten, gaat u akkoord met onze <termsLink>Voorwaarden</termsLink> en <privacyLink>Privacyverklaring</privacyLink>
 terms-agree = Ik ga akkoord
 terms-disagree = Ik ga niet akkoord
 # FIRST POST SUBMISSION CTA

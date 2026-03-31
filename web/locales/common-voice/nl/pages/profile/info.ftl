@@ -29,10 +29,9 @@ native-language =
 profile-form-add-accent = Nieuw aangepast accent ‘{ $inputValue }’ toevoegen
 profile-form-submit-save = Opslaan
 profile-form-submit-saved = Opgeslagen
-male_masculine = Mannelijk/Mannelijk
-female_feminine = Vrouwelijk/Vrouwelijk
-intersex = Intersekse
-transgender = Transgender
+male_masculine = Man
+female_feminine = Vrouw
+intersex = Anders
 non-binary = Non-binair
 do_not_wish_to_say = Zeg ik liever niet
 # Gender

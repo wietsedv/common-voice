@@ -1,10 +1,10 @@
 ## ABOUT US
 
-about-title = Waarom Common Voice?
+about-title = Waarom Praoten?
 about-header-description-v2 =
-    <p>Common Voice is een openbaar beschikbare spraakgegevensset, mogelijk gemaakt door de stemmen van vrijwillige donateurs over de hele wereld. Mensen die spraaktoepassingen willen bouwen, kunnen de gegevensset gebruiken om machine learning-modellen te trainen.</p>
+    <p>Praoten is een openbaar beschikbare spraakgegevensset, mogelijk gemaakt door de stemmen van vrijwillige donateurs over de hele wereld. Mensen die spraaktoepassingen willen bouwen, kunnen de gegevensset gebruiken om machine learning-modellen te trainen.</p>
     <p>Momenteel zijn de meeste spraakgegevenssets eigendom van bedrijven, wat innovatie verstikt. Spraakgegevenssets bevatten ook een oververtegenwoordiging van witte, Engelstalige mannen. Dit betekent dat spraakgestuurde technologie voor veel talen helemaal niet werkt, en waar het wel werkt, presteert het mogelijk niet voor iedereen even goed. We willen dat veranderen door mensen overal te mobiliseren om hun stem te delen.</p>
-how-does-it-work-title-v2 = Hoe werkt Common Voice?
+how-does-it-work-title-v2 = Hoe werkt Praoten?
 how-does-it-work-text = We crowdsourcen een open source stemgegevensset. Doneer uw stem, valideer de nauwkeurigheid van opnames van anderen, en maak de gegevensset beter voor iedereen.
 
 ## How does it work section
@@ -15,14 +15,14 @@ about-localization-subtitle = De websitetekst wordt in die taal vertaald.
 about-sentence-collection-title = Zinnenverzameling
 about-sentence-collection-subtitle = Zinnen worden verzameld die mensen hardop kunnen lezen.
 about-new-lang-title = Lancering nieuwe taal
-about-new-lang-subtitle = We lanceren de Common Voice-website in deze taal.
+about-new-lang-subtitle = We lanceren de Praoten-website in deze taal.
 about-voice-contrib-title = Spraakbijdrage
 about-voice-contrib-subtitle = Mensen komen hun spraak bijdragen.
 about-voice-validation-title = Spraakvalidatie
 about-voice-validation-subtitle = Anderen valideren die spraakfragmenten.
 about-dataset-release-title = Vrijgave gegevensset
 about-dataset-release-subtitle = We geven de gegevensset elke drie maanden vrij.
-about-subscribe-text = In contact blijven met Common Voice?
+about-subscribe-text = In contact blijven met Praoten?
 about-speak = Spreken
 about-speak-text = Bijdragers nemen spraakfragmenten op door te lezen van een databank van gedoneerde zinnen.
 about-listen-queue = Luisterwachtrij
@@ -32,35 +32,35 @@ about-listen-text = Gebruikers valideren de nauwkeurigheid van gedoneerde fragme
 about-is-it-valid = Is het fragment geldig?
 about-is-it-valid-text = Een spraakfragment wordt gemarkeerd als ‘geldig’ wanneer een gebruiker het een ja-stem geeft.
 about-yes-votes = ≥ 2 ja-stemmen
-about-yes-votes-text = Om opgenomen te worden in de Common Voice-gegevensset moet een fragment worden gevalideerd door twee afzonderlijke gebruikers.
+about-yes-votes-text = Om opgenomen te worden in de Praoten-gegevensset moet een fragment worden gevalideerd door twee afzonderlijke gebruikers.
 about-no-votes = ≥ 2 nee-stemmen
 about-no-votes-text = Wanneer een gebruiker een spraakfragment afwijst, keert deze terug naar de wachtrij. Bij een tweede afwijzing wordt het spraakfragment verplaatst naar het Fragmentenkerkhof.
-about-dataset-new = Common Voice-gegevensset
-about-dataset-new-text = De Common Voice-gegevensset bevat honderdduizenden spraakfragmenten die ontwikkelaars spraakherkenningshulpmiddelen helpen bouwen.
+about-dataset-new = Praoten-gegevensset
+about-dataset-new-text = De Praoten-gegevensset bevat honderdduizenden spraakfragmenten die ontwikkelaars spraakherkenningshulpmiddelen helpen bouwen.
 about-clip-graveyard = Fragmentenkerkhof
-about-clip-graveyard-text = Het Fragmentenkerkhof bestaat uit stemfragmenten die de Common Voice-gegevensset niet hebben gehaald. Net als de gegevensset kan het Fragmentenkerkhof worden gedownload.
+about-clip-graveyard-text = Het Fragmentenkerkhof bestaat uit stemfragmenten die de Praoten-gegevensset niet hebben gehaald. Net als de gegevensset kan het Fragmentenkerkhof worden gedownload.
 about-get-involved = Meedoen
 about-get-involved-text-2 =
-    Wilt u helpen Common Voice nog beter te maken?
+    Wilt u helpen Praoten nog beter te maken?
     Geweldig! Neem contact op via e-mail of <discourseLink>Discourse</discourseLink>-
     forums, meld problemen met de website via <githubLink>GitHub</githubLink>, of doe
     mee met de gemeenschapschat op <matrixLink>Matrix</matrixLink>.
 about-stay-in-touch = Hoe houd ik contact?
 about-stay-in-touch-button = Registreren
-about-stay-in-touch-text-1 = <emailFragment>Schrijf u in</emailFragment> voor onze e-maillijst om te leren hoe u kunt deelnemen aan campagnes, evenementen en gezamenlijke ontwerpfuncties op Common Voice.
+about-stay-in-touch-text-1 = <emailFragment>Schrijf u in</emailFragment> voor onze e-maillijst om te leren hoe u kunt deelnemen aan campagnes, evenementen en gezamenlijke ontwerpfuncties op Praoten.
 about-stay-in-touch-text-2 = U kunt anderen in de Mozilla-taalgemeenschappen ontmoeten door lid te worden van <discourseLink>Discourse</discourseLink> voor actuele gesprekken, of <matrixLink>Matrix</matrixLink> voor snel advies.
 about-nav-why-common-voice = Waarom?
 about-nav-how-it-works = Hoe?
 about-nav-partners = Partners
 about-nav-get-involved = Meedoen
-about-nav-how-it-works-2 = Hoe werkt Common Voice?
+about-nav-how-it-works-2 = Hoe werkt Praoten?
 about-nav-playbook = Lees hoe u kunt deelnemen
 
 ## Community Playbook Content
 ## What is a language
 
-about-playbook-what-is-language = Wat is een taal op Common Voice?
-about-playbook-what-is-language-content-1 = Er zijn veel manieren om over taal na te denken. Ten behoeve van spraakherkenningsmodellen stelt Common Voice voor om te focussen op ‘wederzijdse begrijpelijkheid’, of ‘kunnen sprekers van deze taal elkaar in het algemeen verstaan als ze dat proberen?’
+about-playbook-what-is-language = Wat is een taal op Praoten?
+about-playbook-what-is-language-content-1 = Er zijn veel manieren om over taal na te denken. Ten behoeve van spraakherkenningsmodellen stelt Praoten voor om te focussen op ‘wederzijdse begrijpelijkheid’, of ‘kunnen sprekers van deze taal elkaar in het algemeen verstaan als ze dat proberen?’
 about-playbook-what-is-language-content-2 = We willen dat spraakmodellen beter zijn in het verstaan van een breed scala aan sprekers. Om dit te laten gebeuren, moet een spraakgegevensset veel verschillende mensen vertegenwoordigen.
 about-playbook-what-is-language-content-3 = Sommige talen hebben een enorme variatie in grammatica, woordenschat en uitspraak. Om deze reden <ctaLink>introduceren we ‘Varianten’</ctaLink> in 2022. Dit geeft gemeenschappen een manier om hun talen te onderscheiden binnen de grotere gegevensset.
 
@@ -73,7 +73,7 @@ about-playbook-how-add-language-translating-content-1 = <translateVideoLink>Beki
 about-playbook-how-add-language-translating-content-2 =
     We gebruiken een Mozilla-tool genaamd <pontoonLink>Pontoon</pontoonLink> voor vertalingen. Pontoon heeft veel talen,
     maar als het die van u niet heeft, kunt u <pontoonRequestLink>verzoeken om uw taal toe te voegen</pontoonRequestLink>.
-    Om vervolgens de taal beschikbaar te maken voor het Common Voice-project,
+    Om vervolgens de taal beschikbaar te maken voor het Praoten-project,
     <githubRepoLink>vraagt u de nieuwe taal op GitHub aan</githubRepoLink>. <localizationFragment>Meer info over websitevertalingen</localizationFragment>.
 about-playbook-how-add-language-collecting-sentences-heading = Zinnen verzamelen
 about-playbook-how-add-language-collecting-sentences-content-1 = <sentenceCollectorVideo>Bekijk onze handleiding over het gebruik van de Sentence Collector</sentenceCollectorVideo>.
@@ -86,8 +86,8 @@ about-playbook-how-add-language-collecting-sentences-content-3 = <sentenceCollec
 ## How does localization work
 
 about-playbook-how-localize = Hoe werkt websitelocalisatie?
-about-playbook-how-localize-content-1 = De vertaling van de Common Voice-website gebeurt op <strong>Pontoon</strong>.
-about-playbook-how-localize-content-2 = <pontoonAccountLink>Maak een account aan</pontoonAccountLink> als u er nog geen hebt. Kies vervolgens uw taal <strong>(‘Team’)</strong> en kies vervolgens het project, <pontoonCvLink>Common Voice</pontoonCvLink>. Er zullen bestanden zijn om te vertalen. Klik op een ervan, dan toont Pontoon woorden in het Engels en een vak om ze te vertalen.
+about-playbook-how-localize-content-1 = De vertaling van de Praoten-website gebeurt op <strong>Pontoon</strong>.
+about-playbook-how-localize-content-2 = <pontoonAccountLink>Maak een account aan</pontoonAccountLink> als u er nog geen hebt. Kies vervolgens uw taal <strong>(‘Team’)</strong> en kies vervolgens het project, <pontoonCvLink>Praoten</pontoonCvLink>. Er zullen bestanden zijn om te vertalen. Klik op een ervan, dan toont Pontoon woorden in het Engels en een vak om ze te vertalen.
 about-playbook-how-localize-content-3 = De vertaling is uit het Engels, maar u kunt <strong>Suggesties</strong> in andere talen zien. Klik op het pictogram <strong>Profiel</strong>, vervolgens op de koppeling <strong>Settings</strong> en voeg eventuele talen toe die u spreekt. In de rechterbenedenhoek staat een lijst met vertalingen genaamd <strong>Locales</strong>. Vertalingen verschijnen na een dag op de website.
 about-playbook-how-localize-content-4 = De website kan worden gelanceerd wanneer 75% is voltooid.
 about-playbook-how-localize-content-5 = Bekijk onze video-uitleg om te helpen
@@ -110,8 +110,8 @@ about-playbook-how-record-content-5 = <accuracyLink>Meer info over nauwkeurighei
 
 ## How to grow language
 
-about-playbook-how-grow-language = Hoe kunnen we effectief een taal laten groeien op Common Voice?
-about-playbook-how-grow-language-content-1 = Het creëren van kansen voor een diversiteit aan mensen om bij te dragen aan Common Voice zorgt ervoor dat de gegevensset zoveel mogelijk mensen bedient. We hebben hulpbronnen en sjablonen gemaakt die u kunt gebruiken!
+about-playbook-how-grow-language = Hoe kunnen we effectief een taal laten groeien op Praoten?
+about-playbook-how-grow-language-content-1 = Het creëren van kansen voor een diversiteit aan mensen om bij te dragen aan Praoten zorgt ervoor dat de gegevensset zoveel mogelijk mensen bedient. We hebben hulpbronnen en sjablonen gemaakt die u kunt gebruiken!
 about-playbook-how-grow-language-content-2 = Evenementen
 about-playbook-how-grow-language-content-3 = U kunt evenementen organiseren om mensen te helpen een bijdrage te leveren. Het is makkelijker dan u denkt. U kunt het online doen met een videoconferentiehulpmiddel, of persoonlijk als dat veilig is. <eventTemplate>Bekijk onze sjablonen en hulpbronnen voor lopende evenementen</eventTemplate>.
 about-playbook-how-grow-language-content-4 = Sociale media
@@ -137,7 +137,7 @@ about-playbook-how-access-dataset-content-2 = Als u op zoek bent naar hulpmiddel
 ## How are decisions made
 
 about-playbook-how-project-governance = Hoe worden projectbeslissingen genomen?
-about-playbook-how-project-governance-content-1 = Mozilla Common Voice wordt mogelijk gemaakt door een diverse gemeenschap van activisten, taalkundigen, gegevenswetenschappers, academici en software-engineers van over de hele wereld. Het project wordt beheerd door de Mozilla Foundation.
+about-playbook-how-project-governance-content-1 = Mozilla Praoten wordt mogelijk gemaakt door een diverse gemeenschap van activisten, taalkundigen, gegevenswetenschappers, academici en software-engineers van over de hele wereld. Het project wordt beheerd door de Mozilla Foundation.
 about-playbook-how-project-governance-content-2 = Ons bestuur is gebaseerd op de pijlers van:
 about-playbook-how-project-governance-content-3 = Privacy, veiligheid en transparantie.
 about-playbook-how-project-governance-content-4 = Deelname van en besluitvorming door de gemeenschap.
@@ -145,9 +145,9 @@ about-playbook-how-project-governance-content-5 = Waarde en erkenning.
 about-playbook-how-project-governance-content-6 = Wederzijdse verantwoordelijkheid.
 about-playbook-how-project-governance-content-7 = <governanceLink>Meer info over hoe we worden bestuurd</governanceLink>
 
-## How is Common Voice funded
+## How is Praoten funded
 
-about-playbook-how-funded = Hoe wordt Common Voice gefinancierd?
-about-playbook-how-funded-content-1 = Common Voice is een project van de Mozilla Foundation, een US 501c3. Het project wordt momenteel volledig gefinancierd door <philantropicGrantLink>filantropische subsidies</philantropicGrantLink> en donaties van mensen over de hele wereld.
+about-playbook-how-funded = Hoe wordt Praoten gefinancierd?
+about-playbook-how-funded-content-1 = Praoten is een project van de Mozilla Foundation, een US 501c3. Het project wordt momenteel volledig gefinancierd door <philantropicGrantLink>filantropische subsidies</philantropicGrantLink> en donaties van mensen over de hele wereld.
 about-playbook-how-funded-content-2 = Het kost veel geld om continu de gegevenssets te hosten en uit te geven, het platform te verbeteren en <africaMradiLink>gemeenschapsprogramma’s</africaMradiLink> uit te voeren.
 about-playbook-how-funded-content-3 = Als u of uw organisatie een wederkerige bijdrage wil doen aan het project, dan kunt u een <donateLink>donatie</donateLink> doen of contact opnemen met ons partnerteam via <emailFragment>wietse.de.vries@rug.nl</emailFragment>.
