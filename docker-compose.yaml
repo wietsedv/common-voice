@@ -22,7 +22,7 @@ services:
     networks:
       - voice-web
   storage:
-    image: fsouza/fake-gcs-server
+    image: fsouza/fake-gcs-server:1.54
     container_name: storage
     # ports:
     #   - 8080:8080
