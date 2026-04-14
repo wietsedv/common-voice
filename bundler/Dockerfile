@@ -17,7 +17,7 @@ WORKDIR /home/node
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
 RUN git clone --depth 1 -b release-v1.0.0 https://github.com/common-voice/mp3-duration-reporter.git
 RUN cd mp3-duration-reporter && /home/node/.cargo/bin/cargo install --path .
-RUN git clone --depth 1 -b release-v1.2.1 https://github.com/common-voice/CorporaCreator.git
+RUN git clone --depth 1 -b release-v1.3.0 https://github.com/common-voice/CorporaCreator.git
 RUN pip3 install numpy
 RUN cd CorporaCreator && python3 setup.py install --user
 
