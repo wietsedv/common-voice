@@ -41,23 +41,23 @@ services:
         '-backend',
         'filesystem',
       ]
-  # bundler:
-  #   build:
-  #     context: ./bundler
-  #     dockerfile: Dockerfile
-  #   container_name: bundler
-  #   user: '${UID:-1000}:${GID:-1000}'
-  #   links:
-  #     - db
-  #     - redis
-  #     - storage
-  #   volumes:
-  #     - ./bundler:/home/node/code
-  #   networks:
-  #     - voice-web
-  #   # ports:
-  #   #   - 9001:9001
-  #   command: bash -c "npm ci && npm run build && npm start"
+  bundler:
+    build:
+      context: ./bundler
+      dockerfile: Dockerfile
+    container_name: bundler
+    user: '${UID:-1000}:${GID:-1000}'
+    links:
+      - db
+      - redis
+      - storage
+    volumes:
+      - ./bundler:/home/node/code
+    networks:
+      - voice-web
+    # ports:
+    #   - 9001:9001
+    command: bash -c "npm ci && npm run build && npm start"
   web:
     build:
       context: .
