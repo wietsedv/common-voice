@@ -12,17 +12,22 @@ Releases are built within the Docker container by SCS Bundler. It requires a dat
 cd js/cli
 
 # Full release
-node start-dataset-release.js \
-  -t full -u '2026-04-13 23:59:59' \
-  -r pr-corpus-26.0-2026-04-13 \
-  -p pr-corpus-25.0-2025-04-13
+# node start-dataset-release.js \
+#   -t full -u '2026-04-13 23:59:59' \
+#   -r pr-corpus-26.0-2026-04-13 \
+#   -p pr-corpus-25.0-2025-04-13
 
+# node start-dataset-release.js \
+#   -t full \
+#   -f '2026-01-01 00:00:00' \
+#   -u '2026-04-13 23:59:59' \
+#   -l act,drt-MD,drt-NV,drt-ZO,drt-ZW,gos-HO,gos-VE,gos-WE,gos-WO,sdz,stl,twd,vel,urk,spk \
+#   -r pr-corpus-26.0-2026-04-13
 
 node start-dataset-release.js \
   -t full \
   -f '2026-01-01 00:00:00' \
   -u '2026-04-13 23:59:59' \
-  -l act,drt-MD,drt-NV,drt-ZO,drt-ZW,gos-HO,gos-VE,gos-WE,gos-WO,sdz,stl,twd,vel,urk,spk \
   -r pr-corpus-26.0-2026-04-13
 ```
 

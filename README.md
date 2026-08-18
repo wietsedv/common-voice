@@ -31,3 +31,43 @@ De laatste stap is `APPLICATION -- Maintenance complete`.
 - Applicatie: `/home/martijnwieling/common-voice`
 - Database: `/home/martijnwieling/common-voice/data/mysql`
 - Audio bestanden: `/mnt/blockstorage/praoten/storage`
+
+
+## Leaderboard
+
+### meest actieve sprekers
+
+```sql
+SELECT 
+            locales.native_name as variant,
+            email,
+            username as gebruikersnaam,
+            COUNT(clips.id) AS opnames,
+            ROUND(SUM(clips.duration) / 60000, 1) as minuten
+      FROM user_clients
+      LEFT JOIN clips ON user_clients.client_id = clips.client_id AND clips.locale_id = 4
+      JOIN locales ON clips.locale_id = locales.id
+      GROUP BY user_clients.client_id
+        HAVING opnames > 0 AND email IS NOT NULL
+      ORDER BY opnames DESC
+      LIMIT 3;
+```
+
+### meest actieve beoordelaars
+
+```sql
+SELECT 
+            locales.native_name as variant,
+            email,
+            username as gebruikersnaam,
+            COUNT(votes.id) AS beoordelingen
+      FROM user_clients
+      LEFT JOIN votes ON user_clients.client_id = votes.client_id
+      LEFT JOIN clips ON votes.clip_id = clips.id AND clips.locale_id = 19
+      JOIN locales ON clips.locale_id = locales.id
+      WHERE votes.created_at >= CURDATE() - INTERVAL 30 DAY
+      GROUP BY user_clients.client_id
+        HAVING beoordelingen > 0 AND email IS NOT NULL
+      ORDER BY beoordelingen DESC
+      LIMIT 3;
+```
